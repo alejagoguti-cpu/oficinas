@@ -35,8 +35,8 @@
             </div>
             <nav class="hidden md:flex space-x-8 text-sm font-semibold text-gray-700">
                 <a href="#distribucion" class="hover:text-blue-900 transition">Corte Arquitectónico</a>
-                <a href="#soluciones" class="hover:text-blue-900 transition">Tipos de Oficina</a>
                 <a href="#ubicacion" class="hover:text-blue-900 transition">Ubicación & Mapa</a>
+                <a href="#contacto" class="hover:text-blue-900 transition">Reserva Tu Oficina</a>
             </nav>
             <div class="flex items-center space-x-4">
                 <a href="#contacto" class="bg-blue-900 text-white text-sm font-semibold px-5 py-2.5 rounded-lg hover:bg-blue-800 transition shadow-md">
@@ -206,7 +206,7 @@
                             <img src="corte_arquitectonico.jpg" alt="Corte Arquitectónico Rivers Mall" class="w-full h-full object-cover object-center transition duration-500">
                             <div class="absolute inset-0 bg-slate-950/15"></div>
 
-                            <!-- HOTSPOT 1: ESCALERAS ELÉCTRICAS (Punto exacto de la imagen) -->
+                            <!-- HOTSPOT 1: ESCALERAS ELÉCTRICAS -->
                             <div class="absolute top-[37%] right-[38%] z-20 flex items-center">
                                 <button id="hs-btn-escaleras" onclick="toggleCutawayHotspot('escaleras')" class="w-10 h-10 rounded-full bg-blue-600 text-white shadow-2xl font-bold flex items-center justify-center hover:bg-blue-500 transition duration-300 border-2 border-white group">
                                     <span id="hs-icon-escaleras" class="text-lg font-extrabold">+</span>
@@ -219,7 +219,7 @@
                                 </div>
                             </div>
 
-                            <!-- HOTSPOT 2: PISO 3 OFICINAS PRIVADAS (Parte Superior) -->
+                            <!-- HOTSPOT 2: PISO 3 OFICINAS PRIVADAS -->
                             <div class="absolute top-[18%] right-[45%] z-20 flex items-center">
                                 <button id="hs-btn-oficinas" onclick="toggleCutawayHotspot('oficinas')" class="w-10 h-10 rounded-full bg-blue-600 text-white shadow-2xl font-bold flex items-center justify-center hover:bg-blue-500 transition duration-300 border-2 border-white group">
                                     <span id="hs-icon-oficinas" class="text-lg font-extrabold">+</span>
@@ -232,7 +232,7 @@
                                 </div>
                             </div>
 
-                            <!-- HOTSPOT 3: BAÑOS PÚBLICOS (Derecha Nivel 2) -->
+                            <!-- HOTSPOT 3: BAÑOS PÚBLICOS -->
                             <div class="absolute top-[28%] right-[15%] z-20 flex items-center">
                                 <button id="hs-btn-banos" onclick="toggleCutawayHotspot('banos')" class="w-10 h-10 rounded-full bg-blue-600 text-white shadow-2xl font-bold flex items-center justify-center hover:bg-blue-500 transition duration-300 border-2 border-white group">
                                     <span id="hs-icon-banos" class="text-lg font-extrabold">+</span>
@@ -245,7 +245,7 @@
                                 </div>
                             </div>
 
-                            <!-- HOTSPOT 4: GIMNASIO (Sótano Derecha) -->
+                            <!-- HOTSPOT 4: GIMNASIO -->
                             <div class="absolute top-[78%] right-[25%] z-20 flex items-center">
                                 <button id="hs-btn-gym" onclick="toggleCutawayHotspot('gym')" class="w-10 h-10 rounded-full bg-blue-600 text-white shadow-2xl font-bold flex items-center justify-center hover:bg-blue-500 transition duration-300 border-2 border-white group">
                                     <span id="hs-icon-gym" class="text-lg font-extrabold">+</span>
@@ -258,7 +258,7 @@
                                 </div>
                             </div>
 
-                            <!-- HOTSPOT 5: PARQUEADERO (Sótano Izquierda) -->
+                            <!-- HOTSPOT 5: PARQUEADERO -->
                             <div class="absolute top-[82%] left-[30%] z-20 flex items-center">
                                 <button id="hs-btn-parking" onclick="toggleCutawayHotspot('parking')" class="w-10 h-10 rounded-full bg-blue-600 text-white shadow-2xl font-bold flex items-center justify-center hover:bg-blue-500 transition duration-300 border-2 border-white group">
                                     <span id="hs-icon-parking" class="text-lg font-extrabold">+</span>
@@ -279,6 +279,53 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location & Interactive Satellite Map Section -->
+    <section id="ubicacion" class="py-16 bg-slate-900 text-white border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-xs font-bold text-blue-400 uppercase tracking-widest block mb-2">Localización Exacta</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Ubicación Estratégica en Cúcuta</h2>
+                <p class="mt-4 text-gray-300">Coordenadas del proyecto: <strong class="text-white font-mono bg-blue-950 px-2 py-1 rounded border border-blue-800">7.8808, -72.4888</strong>. Visualización interactiva en vista satelital.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                <!-- Interactive Satellite Map iFrame (t=k for Satellite View) -->
+                <div class="lg:col-span-8 rounded-2xl overflow-hidden shadow-2xl border border-gray-700 h-[480px] relative">
+                    <iframe 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        loading="lazy" 
+                        allowfullscreen 
+                        src="https://maps.google.com/maps?q=7.880799337061506,-72.48875378186216&hl=es&z=18&t=k&output=embed">
+                    </iframe>
+                    <div class="absolute top-4 left-4 bg-slate-950/80 backdrop-blur-md px-3 py-1.5 rounded-lg border border-slate-700 text-xs font-bold text-blue-300">
+                        <i class="fa-solid fa-satellite mr-1.5"></i> Vista Satélite Interactiva (Terreno Proyecto)
+                    </div>
+                </div>
+
+                <!-- Location Highlights -->
+                <div class="lg:col-span-4 space-y-6">
+                    <div class="bg-slate-800/80 p-6 rounded-xl border border-gray-700">
+                        <i class="fa-solid fa-route text-2xl text-blue-400 mb-3"></i>
+                        <h4 class="font-bold text-lg text-white mb-2">Excelente Conectividad</h4>
+                        <p class="text-sm text-gray-300 leading-relaxed">Fácil acceso desde las principales avenidas y vías arteriales de Cúcuta, facilitando la llegada de clientes y colaboradores.</p>
+                    </div>
+
+                    <div class="bg-slate-800/80 p-6 rounded-xl border border-gray-700">
+                        <i class="fa-solid fa-compass text-2xl text-blue-400 mb-3"></i>
+                        <h4 class="font-bold text-lg text-white mb-2">Entorno Dinámico</h4>
+                        <p class="text-sm text-gray-300 leading-relaxed">Ubicado dentro del complejo del Centro Comercial Rivers Mall, rodeado de servicios, banca y comercio de primer nivel.</p>
+                    </div>
+
+                    <a href="https://www.google.com/maps/search/?api=1&query=7.880799337061506,-72.48875378186216" target="_blank" class="block w-full py-3.5 bg-blue-600 hover:bg-blue-500 text-center font-bold text-white rounded-xl transition text-sm shadow-md">
+                        <i class="fa-solid fa-map-location-dot mr-2"></i> Abrir en Google Maps Satélite
+                    </a>
                 </div>
             </div>
         </div>
@@ -342,49 +389,50 @@
         </div>
     </div>
 
-    <!-- Contact & Lead Form Section -->
-    <section id="contacto" class="py-20 bg-white border-b border-gray-200">
+    <!-- Contact & Lead Form Section Placed AT THE END (As Requested) -->
+    <section id="contacto" class="py-20 bg-white border-t border-gray-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
                 <div class="lg:col-span-6 space-y-6">
                     <span class="text-xs font-bold text-blue-900 uppercase tracking-widest block">Comercialización Directa</span>
-                    <h2 class="text-4xl sm:text-5xl font-extrabold text-gray-900">Reserva la oficina ideal en Rivers Mall Cúcuta</h2>
+                    <h2 class="text-4xl sm:text-5xl font-extrabold text-gray-900 leading-tight">Reserva la oficina ideal en Rivers Mall Cúcuta</h2>
                     <p class="text-gray-600 leading-relaxed text-sm sm:text-base">
                         Completa tus datos para recibir el <strong>dossier comercial completo</strong>, disponibilidades actualizadas del Piso 3 para equipos de 5 a 10 personas, esquemas de pago y agendar una visita guiada.
                     </p>
                     <div class="space-y-4 pt-2">
-                        <div class="flex items-center space-x-3 text-sm text-gray-700">
-                            <span class="w-8 h-8 rounded-full bg-blue-100 text-blue-900 flex items-center justify-center font-bold text-xs"><i class="fa-solid fa-phone"></i></span>
-                            <span>Atención comercial directa y personalizada</span>
+                        <div class="flex items-center space-x-3.5 text-sm text-gray-700">
+                            <span class="w-9 h-9 rounded-full bg-blue-100 text-blue-900 flex items-center justify-center font-bold text-xs shrink-0"><i class="fa-solid fa-phone"></i></span>
+                            <span class="font-medium">Atención comercial directa y personalizada</span>
                         </div>
-                        <div class="flex items-center space-x-3 text-sm text-gray-700">
-                            <span class="w-8 h-8 rounded-full bg-blue-100 text-blue-900 flex items-center justify-center font-bold text-xs"><i class="fa-solid fa-ruler-combined"></i></span>
-                            <span>Formatos modulables diseñados para 5 a 10 personas</span>
+                        <div class="flex items-center space-x-3.5 text-sm text-gray-700">
+                            <span class="w-9 h-9 rounded-full bg-blue-100 text-blue-900 flex items-center justify-center font-bold text-xs shrink-0"><i class="fa-solid fa-ruler-combined"></i></span>
+                            <span class="font-medium">Formatos modulables diseñados para 5 a 10 personas</span>
                         </div>
                     </div>
                 </div>
 
                 <div class="lg:col-span-6">
                     <div class="bg-gray-50 p-8 sm:p-10 rounded-3xl border border-gray-200 shadow-xl">
-                        <form onsubmit="event.preventDefault(); alert('¡Gracias por tu interés en Rivers Mall Cúcuta! Un asesor comercial se pondrá en contacto pronto.');" class="space-y-4">
+                        <form onsubmit="event.preventDefault(); alert('¡Gracias por tu interés en Rivers Mall Cúcuta! Un asesor comercial se pondrá en contacto pronto.');" class="space-y-5">
                             <div>
-                                <label class="block text-xs font-bold uppercase tracking-wider text-gray-700 mb-1">Nombre Completo o Empresa</label>
+                                <label class="block text-xs font-bold uppercase tracking-wider text-gray-700 mb-1.5">Nombre Completo o Empresa</label>
                                 <input type="text" required placeholder="Ej. Constructora / Empresa / Nombre" class="w-full px-4 py-3.5 rounded-xl border border-gray-300 focus:ring-2 focus:ring-blue-600 focus:outline-none text-sm bg-white">
                             </div>
                             <div>
-                                <label class="block text-xs font-bold uppercase tracking-wider text-gray-700 mb-1">Correo Electrónico</label>
+                                <label class="block text-xs font-bold uppercase tracking-wider text-gray-700 mb-1.5">Correo Electrónico</label>
                                 <input type="email" required placeholder="contacto@empresa.com" class="w-full px-4 py-3.5 rounded-xl border border-gray-300 focus:ring-2 focus:ring-blue-600 focus:outline-none text-sm bg-white">
                             </div>
                             <div>
-                                <label class="block text-xs font-bold uppercase tracking-wider text-gray-700 mb-1">Tamaño del Equipo</label>
-                                <select class="w-full px-4 py-3.5 rounded-xl border border-gray-300 focus:ring-2 focus:ring-blue-600 focus:outline-none text-sm bg-white">
+                                <label class="block text-xs font-bold uppercase tracking-wider text-gray-700 mb-1.5">Tamaño del Equipo</label>
+                                <select class="w-full px-4 py-3.5 rounded-xl border border-gray-300 focus:ring-2 focus:ring-blue-600 focus:outline-none text-sm bg-white font-medium">
                                     <option>Equipo de 5 a 10 personas</option>
                                     <option>Equipo de 1 a 4 personas</option>
                                     <option>Equipo de 11 a 25 personas</option>
                                 </select>
                             </div>
                             <div>
-                                <label class="block text-xs font-bold uppercase tracking-wider text-gray-700 mb-1">Teléfono / WhatsApp</label>
+                                <label class="block text-xs font-bold uppercase tracking-wider text-gray-700 mb-1.5">Teléfono / WhatsApp</label>
                                 <input type="tel" required placeholder="+57 300 000 0000" class="w-full px-4 py-3.5 rounded-xl border border-gray-300 focus:ring-2 focus:ring-blue-600 focus:outline-none text-sm bg-white">
                             </div>
                             <button type="submit" class="w-full py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl transition text-base shadow-lg">
@@ -393,56 +441,13 @@
                         </form>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Location & Interactive Map Section -->
-    <section id="ubicacion" class="py-16 bg-slate-900 text-white border-b border-gray-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-12">
-                <span class="text-xs font-bold text-blue-400 uppercase tracking-widest block mb-2">Localización Exacta</span>
-                <h2 class="text-3xl font-extrabold text-white">Ubicación Estratégica en Cúcuta</h2>
-                <p class="mt-4 text-gray-300">Coordenadas del proyecto: <strong class="text-white font-mono bg-blue-950 px-2 py-1 rounded border border-blue-800">7.8808, -72.4888</strong>. Situado en un punto focal de desarrollo y alta conectividad vial.</p>
-            </div>
-
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-                <!-- Map iFrame -->
-                <div class="lg:col-span-8 rounded-2xl overflow-hidden shadow-2xl border border-gray-700 h-[450px]">
-                    <iframe 
-                        width="100%" 
-                        height="100%" 
-                        style="border:0;" 
-                        loading="lazy" 
-                        allowfullscreen 
-                        src="https://maps.google.com/maps?q=7.880799337061506,-72.48875378186216&hl=es&z=17&output=embed">
-                    </iframe>
-                </div>
-
-                <!-- Location Highlights -->
-                <div class="lg:col-span-4 space-y-6">
-                    <div class="bg-slate-800/80 p-6 rounded-xl border border-gray-700">
-                        <i class="fa-solid fa-route text-2xl text-blue-400 mb-3"></i>
-                        <h4 class="font-bold text-lg text-white mb-2">Excelente Conectividad</h4>
-                        <p class="text-sm text-gray-300 leading-relaxed">Fácil acceso desde las principales avenidas y vías arteriales de Cúcuta, facilitando la llegada de clientes y colaboradores.</p>
-                    </div>
-
-                    <div class="bg-slate-800/80 p-6 rounded-xl border border-gray-700">
-                        <i class="fa-solid fa-compass text-2xl text-blue-400 mb-3"></i>
-                        <h4 class="font-bold text-lg text-white mb-2">Entorno Dinámico</h4>
-                        <p class="text-sm text-gray-300 leading-relaxed">Ubicado dentro del complejo del Centro Comercial Rivers Mall, rodeado de servicios, banca y comercio de primer nivel.</p>
-                    </div>
-
-                    <a href="https://www.google.com/maps/search/?api=1&query=7.880799337061506,-72.48875378186216" target="_blank" class="block w-full py-3.5 bg-blue-600 hover:bg-blue-500 text-center font-bold text-white rounded-xl transition text-sm shadow-md">
-                        <i class="fa-solid fa-map-location-dot mr-2"></i> Abrir en Google Maps
-                    </a>
-                </div>
             </div>
         </div>
     </section>
 
     <!-- Call to Action Footer -->
-    <footer class="bg-slate-950 text-white py-12">
+    <footer class="bg-slate-950 text-white py-12 border-t border-slate-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center">
             <div class="mb-6 md:mb-0 text-center md:text-left">
                 <div class="font-extrabold text-2xl tracking-wider text-blue-400 mb-1">RIVERS MALL</div>
@@ -544,7 +549,6 @@
             }
         };
 
-        // Precise Section Cutaway Hotspots Toggle Logic
         function toggleCutawayHotspot(itemKey) {
             const allHotspots = ['escaleras', 'oficinas', 'banos', 'gym', 'parking'];
             allHotspots.forEach(key => {
@@ -677,7 +681,7 @@
 
         function nextSlide() {
             if (!currentLevel) return;
-            const slides = iterationData[currentLevel].slides;
+            const slides.length = iterationData[currentLevel].slides.length;
             currentIndex = (currentIndex + 1) % slides.length;
             updateSlide();
         }
@@ -686,7 +690,6 @@
             if (e.key === 'Escape') closeModal();
         });
 
-        // Initialize Escaleras hotspot open by default to demonstrate exact match
         window.addEventListener('DOMContentLoaded', () => {
             toggleCutawayHotspot('escaleras');
         });
