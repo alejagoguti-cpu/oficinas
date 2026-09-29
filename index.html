@@ -466,12 +466,12 @@
             }).addTo(map);
 
             const polygonCoords = [
-                [7.881180, -72.488660],
-                [7.881020, -72.488420],
-                [7.880650, -72.488410],
-                [7.880220, -72.488720],
-                [7.880380, -72.488960],
-                [7.880850, -72.488880]
+                [7.881000, -72.488650], // Top point near pin / white building corner
+                [7.880850, -72.488420], // Top right corner towards Av Pinar
+                [7.880450, -72.488500], // Middle right along Av Pinar
+                [7.880220, -72.488730], // Bottom curve corner near south roundabout road
+                [7.880350, -72.488950], // Bottom left corner
+                [7.880650, -72.488820]  // Middle left edge towards tower
             ];
 
             const polygon = L.polygon(polygonCoords, {
