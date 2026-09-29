@@ -123,29 +123,32 @@
         </div>
     </section>
 
-    <!-- Vertical Layout + Cutaway Section -->
+    <!-- Vertical Layout + Interactive Iterations Modal/Carousel -->
     <section id="distribucion" class="py-16 bg-gray-50 border-b border-gray-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
                 <span class="text-xs font-bold text-blue-900 uppercase tracking-widest block mb-2">Arquitectura & Distribución Vertical</span>
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900">Estructura & Corte Arquitectónico</h2>
-                <p class="mt-4 text-gray-600">Visualiza el flujo multinivel y la disposición de cada elemento en la edificación.</p>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900">Estructura & Iteraciones de Diseño</h2>
+                <p class="mt-4 text-gray-600">Haz clic en cualquier nivel para desplegar el carrusel interactivo con las iteraciones y opciones de diseño.</p>
             </div>
 
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
-                <!-- Left Column: Floor Stack Explanations with Fixed Badge Sizes & Layout -->
+                <!-- Left Column: Interactive Clickable Floor Cards -->
                 <div class="lg:col-span-6 flex flex-col justify-between space-y-4">
                     
-                    <!-- Floor 3: Offices -->
-                    <div class="flex-1 bg-gradient-to-r from-blue-900 to-slate-900 text-white rounded-2xl p-6 shadow-xl border border-blue-800 flex flex-col justify-center">
+                    <!-- Floor 3 Card (Clickable) -->
+                    <div onclick="openModal('l3')" class="flex-1 bg-gradient-to-r from-blue-900 to-slate-900 text-white rounded-2xl p-6 shadow-xl border border-blue-800 flex flex-col justify-center cursor-pointer hover:scale-[1.02] transition duration-300 group">
                         <div class="flex items-center justify-between mb-3">
                             <div class="flex items-center space-x-4">
-                                <div class="bg-blue-500 text-white font-extrabold text-base w-16 h-12 rounded-xl flex items-center justify-center shadow-lg shrink-0 px-2 tracking-tight">
+                                <div class="bg-blue-500 text-white font-extrabold text-base w-16 h-12 rounded-xl flex items-center justify-center shadow-lg shrink-0 px-2 tracking-tight group-hover:bg-blue-400 transition">
                                     L3
                                 </div>
                                 <div>
-                                    <span class="text-xs text-blue-300 font-bold uppercase tracking-wider">Tercer Nivel • Zona Exclusiva</span>
-                                    <h3 class="text-xl font-bold text-white">Oficinas Corporativas Privadas</h3>
+                                    <div class="flex items-center space-x-2">
+                                        <span class="text-xs text-blue-300 font-bold uppercase tracking-wider">Tercer Nivel • Zona Exclusiva</span>
+                                        <span class="text-[10px] bg-blue-500/30 text-blue-200 px-2 py-0.5 rounded-full font-semibold"><i class="fa-solid fa-images mr-1"></i> Ver Iteraciones</span>
+                                    </div>
+                                    <h3 class="text-xl font-bold text-white group-hover:text-blue-200 transition">Oficinas Corporativas Privadas</h3>
                                 </div>
                             </div>
                             <div class="flex space-x-2 shrink-0">
@@ -162,16 +165,19 @@
                         </p>
                     </div>
 
-                    <!-- Middle Floors: Bathrooms, ATMs & Commerce -->
-                    <div class="flex-1 bg-white rounded-2xl p-6 shadow-sm border border-gray-200 hover:border-blue-300 transition flex flex-col justify-center">
+                    <!-- Middle Floors Card (Clickable) -->
+                    <div onclick="openModal('l1l2')" class="flex-1 bg-white rounded-2xl p-6 shadow-sm border border-gray-200 hover:border-blue-500 hover:shadow-md transition duration-300 flex flex-col justify-center cursor-pointer group">
                         <div class="flex items-center justify-between mb-3">
                             <div class="flex items-center space-x-4">
-                                <div class="bg-slate-800 text-white font-extrabold text-xs leading-none w-16 h-12 rounded-xl flex items-center justify-center shrink-0 px-1 text-center tracking-tighter">
+                                <div class="bg-slate-800 text-white font-extrabold text-xs leading-none w-16 h-12 rounded-xl flex items-center justify-center shrink-0 px-1 text-center tracking-tighter group-hover:bg-blue-900 transition">
                                     L1 / L2
                                 </div>
                                 <div>
-                                    <span class="text-xs text-gray-500 font-bold uppercase tracking-wider">Niveles Intermedios • Comercio & Servicios</span>
-                                    <h3 class="text-lg font-bold text-gray-900">Plaza Comercial, Baños & Cajeros</h3>
+                                    <div class="flex items-center space-x-2">
+                                        <span class="text-xs text-gray-500 font-bold uppercase tracking-wider">Niveles Intermedios • Comercio & Servicios</span>
+                                        <span class="text-[10px] bg-blue-100 text-blue-900 px-2 py-0.5 rounded-full font-semibold"><i class="fa-solid fa-images mr-1"></i> Ver Iteraciones</span>
+                                    </div>
+                                    <h3 class="text-lg font-bold text-gray-900 group-hover:text-blue-900 transition">Plaza Comercial, Baños & Cajeros</h3>
                                 </div>
                             </div>
                             <div class="flex space-x-2 shrink-0">
@@ -191,16 +197,19 @@
                         </p>
                     </div>
 
-                    <!-- Basement: Gym & Parking -->
-                    <div class="flex-1 bg-slate-100 rounded-2xl p-6 shadow-sm border border-gray-300 hover:border-blue-300 transition flex flex-col justify-center">
+                    <!-- Basement Card (Clickable) -->
+                    <div onclick="openModal('s')" class="flex-1 bg-slate-100 rounded-2xl p-6 shadow-sm border border-gray-300 hover:border-blue-500 hover:shadow-md transition duration-300 flex flex-col justify-center cursor-pointer group">
                         <div class="flex items-center justify-between mb-3">
                             <div class="flex items-center space-x-4">
-                                <div class="bg-blue-900 text-white font-extrabold text-base w-16 h-12 rounded-xl flex items-center justify-center shrink-0 px-2 tracking-tight">
+                                <div class="bg-blue-900 text-white font-extrabold text-base w-16 h-12 rounded-xl flex items-center justify-center shrink-0 px-2 tracking-tight group-hover:bg-blue-800 transition">
                                     S
                                 </div>
                                 <div>
-                                    <span class="text-xs text-blue-900 font-bold uppercase tracking-wider">Sótano • Salud & Estacionamiento</span>
-                                    <h3 class="text-lg font-bold text-gray-900">Gimnasio Equipado & Parqueaderos</h3>
+                                    <div class="flex items-center space-x-2">
+                                        <span class="text-xs text-blue-900 font-bold uppercase tracking-wider">Sótano • Salud & Estacionamiento</span>
+                                        <span class="text-[10px] bg-blue-200 text-blue-950 px-2 py-0.5 rounded-full font-semibold"><i class="fa-solid fa-images mr-1"></i> Ver Iteraciones</span>
+                                    </div>
+                                    <h3 class="text-lg font-bold text-gray-900 group-hover:text-blue-900 transition">Gimnasio Equipado & Parqueaderos</h3>
                                 </div>
                             </div>
                             <div class="flex space-x-2 shrink-0">
@@ -237,6 +246,59 @@
             </div>
         </div>
     </section>
+
+    <!-- Modal Carousel for Design Iterations -->
+    <div id="iterationModal" class="fixed inset-0 z-50 hidden bg-slate-950/80 backdrop-blur-md flex items-center justify-center p-4 sm:p-6">
+        <div class="bg-white rounded-2xl max-w-4xl w-full overflow-hidden shadow-2xl border border-gray-200 flex flex-col max-h-[90vh]">
+            
+            <!-- Modal Header -->
+            <div class="px-6 py-4 bg-slate-900 text-white flex items-center justify-between border-b border-slate-800">
+                <div>
+                    <span id="modalLevelTag" class="text-xs font-bold text-blue-400 uppercase tracking-widest block">Iteraciones de Diseño</span>
+                    <h3 id="modalTitle" class="text-xl font-bold">Nivel Seleccionado</h3>
+                </div>
+                <button onclick="closeModal()" class="w-10 h-10 rounded-full bg-slate-800 hover:bg-slate-700 text-white flex items-center justify-center transition">
+                    <i class="fa-solid fa-xmark text-lg"></i>
+                </button>
+            </div>
+
+            <!-- Modal Content / Carousel -->
+            <div class="p-6 overflow-y-auto flex-1 bg-gray-50 flex flex-col justify-center items-center">
+                
+                <div class="relative w-full rounded-xl overflow-hidden shadow-lg border border-gray-200 bg-slate-900 group">
+                    <img id="carouselImage" src="" alt="Iteración de Diseño" class="w-full h-[400px] object-cover transition-all duration-300">
+                    
+                    <!-- Carousel Controls -->
+                    <button onclick="prevSlide()" class="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-slate-900/80 hover:bg-blue-600 text-white flex items-center justify-center transition shadow-lg border border-white/20">
+                        <i class="fa-solid fa-chevron-left text-lg"></i>
+                    </button>
+                    <button onclick="nextSlide()" class="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-slate-900/80 hover:bg-blue-600 text-white flex items-center justify-center transition shadow-lg border border-white/20">
+                        <i class="fa-solid fa-chevron-right text-lg"></i>
+                    </button>
+
+                    <!-- Image Info Overlay -->
+                    <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-slate-950/90 via-slate-950/50 to-transparent p-4 text-white">
+                        <span id="carouselCounter" class="text-xs font-bold text-blue-400 uppercase tracking-wider block mb-1">Iteración 1 de 3</span>
+                        <h4 id="carouselCaption" class="text-base font-bold">Opción de Diseño A</h4>
+                    </div>
+                </div>
+
+                <!-- Carousel Dots Indicator -->
+                <div id="carouselDots" class="flex space-x-2 mt-4">
+                    <!-- Dots inserted dynamically -->
+                </div>
+
+            </div>
+
+            <!-- Modal Footer -->
+            <div class="px-6 py-4 bg-white border-t border-gray-200 flex justify-between items-center">
+                <span class="text-xs text-gray-500 font-medium">Usa las flechas para navegar entre las propuestas de diseño.</span>
+                <button onclick="closeModal()" class="px-5 py-2.5 bg-blue-900 text-white font-bold rounded-lg hover:bg-blue-800 transition text-sm">
+                    Cerrar Galería
+                </button>
+            </div>
+        </div>
+    </div>
 
     <!-- Location & Interactive Map Section -->
     <section id="ubicacion" class="py-16 bg-slate-900 text-white border-b border-gray-800">
@@ -296,6 +358,125 @@
             </div>
         </div>
     </footer>
+
+    <!-- JavaScript for Interactive Iteration Modal & Carousel -->
+    <script>
+        const iterationData = {
+            'l3': {
+                tag: 'TERCER NIVEL • OFICINAS CORPORATIVAS',
+                title: 'Iteraciones de Diseño: Piso 3 Oficinas Privadas',
+                slides: [
+                    {
+                        img: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80',
+                        caption: 'Iteración 1: Layout Abierto con Fachada de Vidrio y Módulos Ejecutivo'
+                    },
+                    {
+                        img: 'https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=1200&q=80',
+                        caption: 'Iteración 2: Suites Privadas con Recepción Exclusiva e Iluminación Natural'
+                    },
+                    {
+                        img: 'https://images.unsplash.com/photo-1577495508048-b635879837f1?auto=format&fit=crop&w=1200&q=80',
+                        caption: 'Iteración 3: Planta Corporativa Integrada para Equipos de Alto Rendimiento'
+                    }
+                ]
+            },
+            'l1l2': {
+                tag: 'NIVELES 1 Y 2 • PLAZA COMERCIAL & SERVICIOS',
+                title: 'Iteraciones de Diseño: Comercio, Baños & Cajeros',
+                slides: [
+                    {
+                        img: 'hero_rivers_mall.jpg',
+                        caption: 'Iteración 1: Fachada Lateral con Locales Ancla Ara, Cruz Verde y Parqueadero'
+                    },
+                    {
+                        img: 'https://images.unsplash.com/photo-1519567241046-7f570eee3ce6?auto=format&fit=crop&w=1200&q=80',
+                        caption: 'Iteración 2: Atrio Principal Comercial con Escaleras Eléctricas y Zona Bancaria'
+                    },
+                    {
+                        img: 'https://images.unsplash.com/photo-1567449303078-57ad995bd301?auto=format&fit=crop&w=1200&q=80',
+                        caption: 'Iteración 3: Corredor de Servicios Sanitarios, Cajeros y Locales de Moda'
+                    }
+                ]
+            },
+            's': {
+                tag: 'SÓTANO • SALUD & ESTACIONAMIENTO',
+                title: 'Iteraciones de Diseño: Gimnasio & Parqueaderos Subterráneos',
+                slides: [
+                    {
+                        img: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1200&q=80',
+                        caption: 'Iteración 1: Gimnasio Equipado de Alto Rendimiento para Ejecutivos'
+                    },
+                    {
+                        img: 'https://images.unsplash.com/photo-1506521781263-d8422e82f27a?auto=format&fit=crop&w=1200&q=80',
+                        caption: 'Iteración 2: Acceso y Distribución de Rampa para Parqueaderos Cubiertos'
+                    },
+                    {
+                        img: 'https://images.unsplash.com/photo-1571902943202-507ec2618e8f?auto=format&fit=crop&w=1200&q=80',
+                        caption: 'Iteración 3: Zona de Lockers, Duchas y Conexión Vertical con Ascensores'
+                    }
+                ]
+            }
+        };
+
+        let currentLevel = null;
+        let currentIndex = 0;
+
+        function openModal(levelKey) {
+            currentLevel = levelKey;
+            currentIndex = 0;
+            const data = iterationData[levelKey];
+            if (!data) return;
+
+            document.getElementById('modalLevelTag').innerText = data.tag;
+            document.getElementById('modalTitle').innerText = data.title;
+            
+            updateSlide();
+            document.getElementById('iterationModal').classList.remove('hidden');
+        }
+
+        function closeModal() {
+            document.getElementById('iterationModal').classList.add('hidden');
+        }
+
+        function updateSlide() {
+            if (!currentLevel) return;
+            const slides = iterationData[currentLevel].slides;
+            const slide = slides[currentIndex];
+
+            document.getElementById('carouselImage').src = slide.img;
+            document.getElementById('carouselCaption').innerText = slide.caption;
+            document.getElementById('carouselCounter').innerText = `Iteración ${currentIndex + 1} de ${slides.length}`;
+
+            // Render Dots
+            const dotsContainer = document.getElementById('carouselDots');
+            dotsContainer.innerHTML = '';
+            slides.forEach((_, idx) => {
+                const dot = document.createElement('button');
+                dot.className = `w-3 h-3 rounded-full transition-all ${idx === currentIndex ? 'bg-blue-600 w-6' : 'bg-gray-300'}`;
+                dot.onclick = () => { currentIndex = idx; updateSlide(); };
+                dotsContainer.appendChild(dot);
+            });
+        }
+
+        function prevSlide() {
+            if (!currentLevel) return;
+            const slides = iterationData[currentLevel].slides;
+            currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+            updateSlide();
+        }
+
+        function nextSlide() {
+            if (!currentLevel) return;
+            const slides = iterationData[currentLevel].slides;
+            currentIndex = (currentIndex + 1) % slides.length;
+            updateSlide();
+        }
+
+        // Close on ESC key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeModal();
+        });
+    </script>
 
 </body>
 </html>
