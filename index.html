@@ -9,6 +9,16 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
         body { font-family: 'Plus Jakarta Sans', sans-serif; }
+
+        /* Hotspot Pulse animation */
+        @keyframes pulse-ring {
+            0% { transform: scale(0.95); opacity: 0.8; }
+            50% { transform: scale(1.3); opacity: 0.3; }
+            100% { transform: scale(0.95); opacity: 0.8; }
+        }
+        .hotspot-pulse {
+            animation: pulse-ring 2s infinite ease-in-out;
+        }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-900 antialiased">
@@ -38,7 +48,6 @@
 
     <!-- Hero Section with Actual Render Background -->
     <section class="relative bg-gradient-to-r from-slate-950 via-slate-900/90 to-blue-950/80 text-white py-16 lg:py-24 overflow-hidden">
-        <!-- Background image with real Rivers Mall render -->
         <div class="absolute inset-0 opacity-30 bg-cover bg-center" style="background-image: url('hero_rivers_mall.jpg');"></div>
         <div class="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/80 to-transparent"></div>
         
@@ -123,32 +132,29 @@
         </div>
     </section>
 
-    <!-- Vertical Layout + Interactive Iterations Modal/Carousel -->
+    <!-- Vertical Layout + Interactive Cutaway Image with WeWork-style (+) Hotspots -->
     <section id="distribucion" class="py-16 bg-gray-50 border-b border-gray-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
                 <span class="text-xs font-bold text-blue-900 uppercase tracking-widest block mb-2">Arquitectura & Distribución Vertical</span>
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900">Estructura & Iteraciones de Diseño</h2>
-                <p class="mt-4 text-gray-600">Haz clic en cualquier nivel para desplegar el carrusel interactivo con las iteraciones y opciones de diseño.</p>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900">Estructura & Corte Interactivo</h2>
+                <p class="mt-4 text-gray-600">Explora el edificio: haz clic en los botones <strong>(+)</strong> sobre el mapa para interactuar al estilo WeWork.</p>
             </div>
 
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
-                <!-- Left Column: Interactive Clickable Floor Cards -->
+                <!-- Left Column: Floor Stack Explanations -->
                 <div class="lg:col-span-6 flex flex-col justify-between space-y-4">
                     
-                    <!-- Floor 3 Card (Clickable) -->
-                    <div onclick="openModal('l3')" class="flex-1 bg-gradient-to-r from-blue-900 to-slate-900 text-white rounded-2xl p-6 shadow-xl border border-blue-800 flex flex-col justify-center cursor-pointer hover:scale-[1.02] transition duration-300 group">
+                    <!-- Floor 3 Card -->
+                    <div id="card-l3" onclick="selectLevel('l3')" class="flex-1 bg-gradient-to-r from-blue-900 to-slate-900 text-white rounded-2xl p-6 shadow-xl border-2 border-blue-500 flex flex-col justify-center cursor-pointer hover:scale-[1.01] transition duration-300">
                         <div class="flex items-center justify-between mb-3">
                             <div class="flex items-center space-x-4">
-                                <div class="bg-blue-500 text-white font-extrabold text-base w-16 h-12 rounded-xl flex items-center justify-center shadow-lg shrink-0 px-2 tracking-tight group-hover:bg-blue-400 transition">
+                                <div class="bg-blue-500 text-white font-extrabold text-base w-16 h-12 rounded-xl flex items-center justify-center shadow-lg shrink-0 px-2 tracking-tight">
                                     L3
                                 </div>
                                 <div>
-                                    <div class="flex items-center space-x-2">
-                                        <span class="text-xs text-blue-300 font-bold uppercase tracking-wider">Tercer Nivel • Zona Exclusiva</span>
-                                        <span class="text-[10px] bg-blue-500/30 text-blue-200 px-2 py-0.5 rounded-full font-semibold"><i class="fa-solid fa-images mr-1"></i> Ver Iteraciones</span>
-                                    </div>
-                                    <h3 class="text-xl font-bold text-white group-hover:text-blue-200 transition">Oficinas Corporativas Privadas</h3>
+                                    <span class="text-xs text-blue-300 font-bold uppercase tracking-wider">Tercer Nivel • Zona Exclusiva</span>
+                                    <h3 class="text-xl font-bold text-white">Oficinas Corporativas Privadas</h3>
                                 </div>
                             </div>
                             <div class="flex space-x-2 shrink-0">
@@ -165,19 +171,16 @@
                         </p>
                     </div>
 
-                    <!-- Middle Floors Card (Clickable) -->
-                    <div onclick="openModal('l1l2')" class="flex-1 bg-white rounded-2xl p-6 shadow-sm border border-gray-200 hover:border-blue-500 hover:shadow-md transition duration-300 flex flex-col justify-center cursor-pointer group">
+                    <!-- Middle Floors Card -->
+                    <div id="card-l1l2" onclick="selectLevel('l1l2')" class="flex-1 bg-white rounded-2xl p-6 shadow-sm border-2 border-gray-200 hover:border-blue-400 transition duration-300 flex flex-col justify-center cursor-pointer">
                         <div class="flex items-center justify-between mb-3">
                             <div class="flex items-center space-x-4">
-                                <div class="bg-slate-800 text-white font-extrabold text-xs leading-none w-16 h-12 rounded-xl flex items-center justify-center shrink-0 px-1 text-center tracking-tighter group-hover:bg-blue-900 transition">
+                                <div class="bg-slate-800 text-white font-extrabold text-xs leading-none w-16 h-12 rounded-xl flex items-center justify-center shrink-0 px-1 text-center tracking-tighter">
                                     L1 / L2
                                 </div>
                                 <div>
-                                    <div class="flex items-center space-x-2">
-                                        <span class="text-xs text-gray-500 font-bold uppercase tracking-wider">Niveles Intermedios • Comercio & Servicios</span>
-                                        <span class="text-[10px] bg-blue-100 text-blue-900 px-2 py-0.5 rounded-full font-semibold"><i class="fa-solid fa-images mr-1"></i> Ver Iteraciones</span>
-                                    </div>
-                                    <h3 class="text-lg font-bold text-gray-900 group-hover:text-blue-900 transition">Plaza Comercial, Baños & Cajeros</h3>
+                                    <span class="text-xs text-gray-500 font-bold uppercase tracking-wider">Niveles Intermedios • Comercio & Servicios</span>
+                                    <h3 class="text-lg font-bold text-gray-900">Plaza Comercial, Baños & Cajeros</h3>
                                 </div>
                             </div>
                             <div class="flex space-x-2 shrink-0">
@@ -197,19 +200,16 @@
                         </p>
                     </div>
 
-                    <!-- Basement Card (Clickable) -->
-                    <div onclick="openModal('s')" class="flex-1 bg-slate-100 rounded-2xl p-6 shadow-sm border border-gray-300 hover:border-blue-500 hover:shadow-md transition duration-300 flex flex-col justify-center cursor-pointer group">
+                    <!-- Basement Card -->
+                    <div id="card-s" onclick="selectLevel('s')" class="flex-1 bg-slate-100 rounded-2xl p-6 shadow-sm border-2 border-gray-300 hover:border-blue-400 transition duration-300 flex flex-col justify-center cursor-pointer">
                         <div class="flex items-center justify-between mb-3">
                             <div class="flex items-center space-x-4">
-                                <div class="bg-blue-900 text-white font-extrabold text-base w-16 h-12 rounded-xl flex items-center justify-center shrink-0 px-2 tracking-tight group-hover:bg-blue-800 transition">
+                                <div class="bg-blue-900 text-white font-extrabold text-base w-16 h-12 rounded-xl flex items-center justify-center shrink-0 px-2 tracking-tight">
                                     S
                                 </div>
                                 <div>
-                                    <div class="flex items-center space-x-2">
-                                        <span class="text-xs text-blue-900 font-bold uppercase tracking-wider">Sótano • Salud & Estacionamiento</span>
-                                        <span class="text-[10px] bg-blue-200 text-blue-950 px-2 py-0.5 rounded-full font-semibold"><i class="fa-solid fa-images mr-1"></i> Ver Iteraciones</span>
-                                    </div>
-                                    <h3 class="text-lg font-bold text-gray-900 group-hover:text-blue-900 transition">Gimnasio Equipado & Parqueaderos</h3>
+                                    <span class="text-xs text-blue-900 font-bold uppercase tracking-wider">Sótano • Salud & Estacionamiento</span>
+                                    <h3 class="text-lg font-bold text-gray-900">Gimnasio Equipado & Parqueaderos</h3>
                                 </div>
                             </div>
                             <div class="flex space-x-2 shrink-0">
@@ -228,17 +228,64 @@
 
                 </div>
 
-                <!-- Right Column: Architectural Cutaway Image -->
+                <!-- Right Column: Interactive Architectural Cutaway Image with WeWork-style Hotspots -->
                 <div class="lg:col-span-6 flex">
-                    <div class="relative w-full h-full rounded-2xl overflow-hidden shadow-2xl border border-gray-300 group flex flex-col">
-                        <div class="relative w-full flex-1 min-h-[480px] overflow-hidden bg-slate-900">
-                            <img src="corte_arquitectonico.jpg" alt="Corte Arquitectónico Rivers Mall" class="w-full h-full object-cover object-center transform group-hover:scale-105 transition duration-500">
-                            <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-slate-950/90 via-slate-900/60 to-transparent p-6 text-white">
-                                <div class="inline-block px-3 py-1 bg-blue-600 text-xs font-bold uppercase rounded tracking-wider mb-2">
-                                    Vista Isométrica en Corte
+                    <div class="relative w-full h-full rounded-2xl overflow-hidden shadow-2xl border border-gray-300 flex flex-col bg-slate-900">
+                        <div class="relative w-full flex-1 min-h-[480px] overflow-hidden">
+                            
+                            <!-- Dynamic Image background changes based on selection or iteration -->
+                            <img id="cutawayImage" src="corte_arquitectonico.jpg" alt="Corte Arquitectónico Rivers Mall" class="w-full h-full object-cover object-center transition duration-500">
+                            
+                            <!-- Overlay dark gradient -->
+                            <div class="absolute inset-0 bg-slate-950/20"></div>
+
+                            <!-- HOTSPOT 1: Floor 3 (Top Level) -->
+                            <div class="absolute top-[22%] right-[32%] z-20 flex items-center">
+                                <button id="hs-btn-l3" onclick="toggleHotspot('l3')" class="w-10 h-10 rounded-full bg-white text-gray-900 shadow-xl font-bold flex items-center justify-center hover:bg-blue-600 hover:text-white transition duration-300 border-2 border-blue-900 group">
+                                    <span id="hs-icon-l3" class="text-lg font-extrabold">+</span>
+                                    <span class="absolute w-10 h-10 rounded-full bg-white/50 hotspot-pulse -z-10"></span>
+                                </button>
+                                <!-- Floating Pill Tooltip (WeWork style) -->
+                                <div id="hs-pill-l3" class="hidden ml-3 bg-white/95 backdrop-blur-md text-gray-900 px-4 py-2.5 rounded-full shadow-2xl border border-gray-200 text-xs font-bold flex items-center space-x-2 animate-fade-in">
+                                    <span class="w-2 h-2 rounded-full bg-blue-600"></span>
+                                    <span>Piso 3: Oficinas Privadas & Salas de Juntas</span>
+                                    <button onclick="openModal('l3'); event.stopPropagation();" class="ml-2 underline text-blue-600 hover:text-blue-800 font-extrabold text-[11px]">Ver Fotos</button>
                                 </div>
-                                <h4 class="text-lg font-bold">Diagrama Transversal Rivers Mall</h4>
-                                <p class="text-xs text-gray-300">Corte 3D interactivo mostrando el sótano (gimnasio/parqueadero), plaza comercial (cajeros/baños) y piso 3 (oficinas).</p>
+                            </div>
+
+                            <!-- HOTSPOT 2: Middle Level (L1/L2 Commerce) -->
+                            <div class="absolute top-[52%] right-[38%] z-20 flex items-center">
+                                <button id="hs-btn-l1l2" onclick="toggleHotspot('l1l2')" class="w-10 h-10 rounded-full bg-white text-gray-900 shadow-xl font-bold flex items-center justify-center hover:bg-blue-600 hover:text-white transition duration-300 border-2 border-blue-900 group">
+                                    <span id="hs-icon-l1l2" class="text-lg font-extrabold">+</span>
+                                    <span class="absolute w-10 h-10 rounded-full bg-white/50 hotspot-pulse -z-10"></span>
+                                </button>
+                                <!-- Floating Pill Tooltip -->
+                                <div id="hs-pill-l1l2" class="hidden ml-3 bg-white/95 backdrop-blur-md text-gray-900 px-4 py-2.5 rounded-full shadow-2xl border border-gray-200 text-xs font-bold flex items-center space-x-2">
+                                    <span class="w-2 h-2 rounded-full bg-blue-600"></span>
+                                    <span>Niveles 1-2: Ara, Cruz Verde, Cajeros & Baños</span>
+                                    <button onclick="openModal('l1l2'); event.stopPropagation();" class="ml-2 underline text-blue-600 hover:text-blue-800 font-extrabold text-[11px]">Ver Fotos</button>
+                                </div>
+                            </div>
+
+                            <!-- HOTSPOT 3: Basement (Gym & Parking) -->
+                            <div class="absolute top-[82%] right-[42%] z-20 flex items-center">
+                                <button id="hs-btn-s" onclick="toggleHotspot('s')" class="w-10 h-10 rounded-full bg-white text-gray-900 shadow-xl font-bold flex items-center justify-center hover:bg-blue-600 hover:text-white transition duration-300 border-2 border-blue-900 group">
+                                    <span id="hs-icon-s" class="text-lg font-extrabold">+</span>
+                                    <span class="absolute w-10 h-10 rounded-full bg-white/50 hotspot-pulse -z-10"></span>
+                                </button>
+                                <!-- Floating Pill Tooltip -->
+                                <div id="hs-pill-s" class="hidden ml-3 bg-white/95 backdrop-blur-md text-gray-900 px-4 py-2.5 rounded-full shadow-2xl border border-gray-200 text-xs font-bold flex items-center space-x-2">
+                                    <span class="w-2 h-2 rounded-full bg-blue-600"></span>
+                                    <span>Sótano: Gimnasio & Parqueadero Cubierto</span>
+                                    <button onclick="openModal('s'); event.stopPropagation();" class="ml-2 underline text-blue-600 hover:text-blue-800 font-extrabold text-[11px]">Ver Fotos</button>
+                                </div>
+                            </div>
+
+                            <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-slate-950/90 via-slate-900/60 to-transparent p-6 text-white pointer-events-none">
+                                <div class="inline-block px-3 py-1 bg-blue-600 text-xs font-bold uppercase rounded tracking-wider mb-2">
+                                    Corte Interactivo Estilo WeWork
+                                </div>
+                                <h4 class="text-lg font-bold">Haz clic en los botones (+) para ver detalles de cada nivel</h4>
                             </div>
                         </div>
                     </div>
@@ -248,7 +295,7 @@
     </section>
 
     <!-- Modal Carousel for Design Iterations -->
-    <div id="iterationModal" class="fixed inset-0 z-50 hidden bg-slate-950/80 backdrop-blur-md flex items-center justify-center p-4 sm:p-6">
+    <div id="iterationModal" class="fixed inset-0 z-50 hidden bg-slate-950/85 backdrop-blur-md flex items-center justify-center p-4 sm:p-6">
         <div class="bg-white rounded-2xl max-w-4xl w-full overflow-hidden shadow-2xl border border-gray-200 flex flex-col max-h-[90vh]">
             
             <!-- Modal Header -->
@@ -359,7 +406,7 @@
         </div>
     </footer>
 
-    <!-- JavaScript for Interactive Iteration Modal & Carousel -->
+    <!-- JavaScript for WeWork Style Hotspots & Iteration Modal -->
     <script>
         const iterationData = {
             'l3': {
@@ -368,15 +415,15 @@
                 slides: [
                     {
                         img: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80',
-                        caption: 'Iteración 1: Layout Abierto con Fachada de Vidrio y Módulos Ejecutivo'
+                        caption: 'Iteración 1: Sillas ergonómicas, mesas modulares y fachada de vidrio con luz natural'
                     },
                     {
                         img: 'https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=1200&q=80',
-                        caption: 'Iteración 2: Suites Privadas con Recepción Exclusiva e Iluminación Natural'
+                        caption: 'Iteración 2: Suites privadas con recepción exclusiva y gabinetes personales'
                     },
                     {
                         img: 'https://images.unsplash.com/photo-1577495508048-b635879837f1?auto=format&fit=crop&w=1200&q=80',
-                        caption: 'Iteración 3: Planta Corporativa Integrada para Equipos de Alto Rendimiento'
+                        caption: 'Iteración 3: Sala de juntas privada con conectividad A/V de alta resolución'
                     }
                 ]
             },
@@ -386,15 +433,15 @@
                 slides: [
                     {
                         img: 'hero_rivers_mall.jpg',
-                        caption: 'Iteración 1: Fachada Lateral con Locales Ancla Ara, Cruz Verde y Parqueadero'
+                        caption: 'Iteración 1: Fachada lateral con locales ancla Ara, Cruz Verde y parqueaderos'
                     },
                     {
                         img: 'https://images.unsplash.com/photo-1519567241046-7f570eee3ce6?auto=format&fit=crop&w=1200&q=80',
-                        caption: 'Iteración 2: Atrio Principal Comercial con Escaleras Eléctricas y Zona Bancaria'
+                        caption: 'Iteración 2: Atrio comercial principal con escaleras eléctricas y cajeros bancarios'
                     },
                     {
                         img: 'https://images.unsplash.com/photo-1567449303078-57ad995bd301?auto=format&fit=crop&w=1200&q=80',
-                        caption: 'Iteración 3: Corredor de Servicios Sanitarios, Cajeros y Locales de Moda'
+                        caption: 'Iteración 3: Corredor gastronómico, tiendas de moda y servicios sanitarios amplios'
                     }
                 ]
             },
@@ -404,20 +451,72 @@
                 slides: [
                     {
                         img: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1200&q=80',
-                        caption: 'Iteración 1: Gimnasio Equipado de Alto Rendimiento para Ejecutivos'
+                        caption: 'Iteración 1: Gimnasio equipado con máquinas de cardio y fuerza para ejecutivos'
                     },
                     {
                         img: 'https://images.unsplash.com/photo-1506521781263-d8422e82f27a?auto=format&fit=crop&w=1200&q=80',
-                        caption: 'Iteración 2: Acceso y Distribución de Rampa para Parqueaderos Cubiertos'
+                        caption: 'Iteración 2: Rampa de parqueaderos subterráneos con marcación de vías y señalización'
                     },
                     {
                         img: 'https://images.unsplash.com/photo-1571902943202-507ec2618e8f?auto=format&fit=crop&w=1200&q=80',
-                        caption: 'Iteración 3: Zona de Lockers, Duchas y Conexión Vertical con Ascensores'
+                        caption: 'Iteración 3: Vestieres privados, lockers de seguridad y conectividad vertical'
                     }
                 ]
             }
         };
 
+        const activeHotspots = {
+            l3: false,
+            l1l2: false,
+            s: false
+        };
+
+        function toggleHotspot(levelKey) {
+            // Close other pills
+            ['l3', 'l1l2', 's'].forEach(key => {
+                if (key !== levelKey) {
+                    document.getElementById(`hs-pill-${key}`).classList.add('hidden');
+                    document.getElementById(`hs-btn-${key}`).classList.remove('bg-blue-600', 'text-white');
+                    document.getElementById(`hs-btn-${key}`).classList.add('bg-white', 'text-gray-900');
+                    document.getElementById(`hs-icon-${key}`).innerText = '+';
+                    activeHotspots[key] = false;
+                }
+            });
+
+            // Toggle selected pill
+            const pill = document.getElementById(`hs-pill-${levelKey}`);
+            const btn = document.getElementById(`hs-btn-${levelKey}`);
+            const icon = document.getElementById(`hs-icon-${levelKey}`);
+
+            if (pill.classList.contains('hidden')) {
+                pill.classList.remove('hidden');
+                btn.classList.remove('bg-white', 'text-gray-900');
+                btn.classList.add('bg-blue-600', 'text-white');
+                icon.innerText = '−';
+                activeHotspots[levelKey] = true;
+                selectLevel(levelKey);
+            } else {
+                pill.classList.add('hidden');
+                btn.classList.remove('bg-blue-600', 'text-white');
+                btn.classList.add('bg-white', 'text-gray-900');
+                icon.innerText = '+';
+                activeHotspots[levelKey] = false;
+            }
+        }
+
+        function selectLevel(levelKey) {
+            // Highlight left cards
+            ['l3', 'l1l2', 's'].forEach(key => {
+                const card = document.getElementById(`card-${key}`);
+                if (key === levelKey) {
+                    card.classList.add('border-blue-500', 'ring-2', 'ring-blue-400/50');
+                } else {
+                    card.classList.remove('border-blue-500', 'ring-2', 'ring-blue-400/50');
+                }
+            });
+        }
+
+        // Carousel Modal Logic
         let currentLevel = null;
         let currentIndex = 0;
 
@@ -472,9 +571,14 @@
             updateSlide();
         }
 
-        // Close on ESC key
+        // Close modal on ESC
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape') closeModal();
+        });
+
+        // Initialize Hotspot L3 open by default (WeWork style)
+        window.addEventListener('DOMContentLoaded', () => {
+            toggleHotspot('l3');
         });
     </script>
 
