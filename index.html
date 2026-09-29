@@ -6,6 +6,8 @@
     <title>Oficinas Corporativas en Rivers Mall Cúcuta | Piso 3</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
         body { font-family: 'Plus Jakarta Sans', sans-serif; }
@@ -19,6 +21,9 @@
         .hotspot-pulse {
             animation: pulse-ring 2s infinite ease-in-out;
         }
+
+        /* Leaflet custom map container z-index fix */
+        #sat-map { z-index: 1; }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-900 antialiased">
@@ -284,43 +289,40 @@
         </div>
     </section>
 
-    <!-- Location & Interactive Satellite Map Section -->
+    <!-- Location & Interactive Satellite Map Section with Dashed Polygon Perimeter Overlay -->
     <section id="ubicacion" class="py-16 bg-slate-900 text-white border-b border-gray-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-12">
-                <span class="text-xs font-bold text-blue-400 uppercase tracking-widest block mb-2">Localización Exacta</span>
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Ubicación Estratégica en Cúcuta</h2>
-                <p class="mt-4 text-gray-300">Coordenadas del proyecto: <strong class="text-white font-mono bg-blue-950 px-2 py-1 rounded border border-blue-800">7.8808, -72.4888</strong>. Visualización interactiva en vista satelital.</p>
+                <span class="text-xs font-bold text-blue-400 uppercase tracking-widest block mb-2">Localización Exacta & Delimitación de Terreno</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Perímetro del Proyecto en Cúcuta</h2>
+                <p class="mt-4 text-gray-300">Coordenadas: <strong class="text-white font-mono bg-blue-950 px-2 py-1 rounded border border-blue-800">7.8808, -72.4888</strong>. Línea discontinua destacando la poligonal exacta del terreno del centro comercial sobre la Avenida Pinar.</p>
             </div>
 
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-                <!-- Interactive Satellite Map iFrame (t=k for Satellite View) -->
-                <div class="lg:col-span-8 rounded-2xl overflow-hidden shadow-2xl border border-gray-700 h-[480px] relative">
-                    <iframe 
-                        width="100%" 
-                        height="100%" 
-                        style="border:0;" 
-                        loading="lazy" 
-                        allowfullscreen 
-                        src="https://maps.google.com/maps?q=7.880799337061506,-72.48875378186216&hl=es&z=18&t=k&output=embed">
-                    </iframe>
-                    <div class="absolute top-4 left-4 bg-slate-950/80 backdrop-blur-md px-3 py-1.5 rounded-lg border border-slate-700 text-xs font-bold text-blue-300">
-                        <i class="fa-solid fa-satellite mr-1.5"></i> Vista Satélite Interactiva (Terreno Proyecto)
+                
+                <!-- Interactive Leaflet Satellite Map with Dashed Purple Polygon Line -->
+                <div class="lg:col-span-8 rounded-2xl overflow-hidden shadow-2xl border border-gray-700 h-[500px] relative bg-slate-950">
+                    <div id="sat-map" class="w-full h-full"></div>
+                    
+                    <!-- Floating Legend -->
+                    <div class="absolute top-4 right-4 z-10 bg-slate-950/90 backdrop-blur-md px-4 py-2.5 rounded-xl border border-slate-700 text-xs font-bold text-white shadow-xl flex items-center space-x-2">
+                        <span class="w-4 h-1 border-b-2 border-dashed border-purple-400 inline-block"></span>
+                        <span>Perímetro del Terreno Rivers Mall</span>
                     </div>
                 </div>
 
                 <!-- Location Highlights -->
                 <div class="lg:col-span-4 space-y-6">
                     <div class="bg-slate-800/80 p-6 rounded-xl border border-gray-700">
-                        <i class="fa-solid fa-route text-2xl text-blue-400 mb-3"></i>
-                        <h4 class="font-bold text-lg text-white mb-2">Excelente Conectividad</h4>
-                        <p class="text-sm text-gray-300 leading-relaxed">Fácil acceso desde las principales avenidas y vías arteriales de Cúcuta, facilitando la llegada de clientes y colaboradores.</p>
+                        <i class="fa-solid fa-draw-polygon text-2xl text-purple-400 mb-3"></i>
+                        <h4 class="font-bold text-lg text-white mb-2">Delimitación del Lote</h4>
+                        <p class="text-sm text-gray-300 leading-relaxed">Área total del predio trazada con la poligonal discontinua en morado, colindando con la Avenida Pinar y zonas residenciales de Cúcuta.</p>
                     </div>
 
                     <div class="bg-slate-800/80 p-6 rounded-xl border border-gray-700">
                         <i class="fa-solid fa-compass text-2xl text-blue-400 mb-3"></i>
                         <h4 class="font-bold text-lg text-white mb-2">Entorno Dinámico</h4>
-                        <p class="text-sm text-gray-300 leading-relaxed">Ubicado dentro del complejo del Centro Comercial Rivers Mall, rodeado de servicios, banca y comercio de primer nivel.</p>
+                        <p class="text-sm text-gray-300 leading-relaxed">Ubicado estratégicamente cerca a importantes proyectos residenciales y vías de acceso arterial.</p>
                     </div>
 
                     <a href="https://www.google.com/maps/search/?api=1&query=7.880799337061506,-72.48875378186216" target="_blank" class="block w-full py-3.5 bg-blue-600 hover:bg-blue-500 text-center font-bold text-white rounded-xl transition text-sm shadow-md">
@@ -389,7 +391,7 @@
         </div>
     </div>
 
-    <!-- Contact & Lead Form Section Placed AT THE END (As Requested) -->
+    <!-- Contact & Lead Form Section Placed AT THE END -->
     <section id="contacto" class="py-20 bg-white border-t border-gray-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
@@ -461,8 +463,59 @@
         </div>
     </footer>
 
-    <!-- JavaScript -->
+    <!-- JavaScript & Interactive Leaflet Satellite Map with Dashed Perimeter Polygon -->
     <script>
+        // Leaflet Satellite Map Initialization (Esri World Imagery)
+        document.addEventListener('DOMContentLoaded', () => {
+            const mapLat = 7.880799337061506;
+            const mapLng = -72.48875378186216;
+            
+            const map = L.map('sat-map', {
+                center: [mapLat, mapLng],
+                zoom: 18,
+                zoomControl: true
+            });
+
+            // High Resolution Esri Satellite Layer
+            L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+                attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community',
+                maxZoom: 19
+            }).addTo(map);
+
+            // Exact Dashed Perimeter Polygon matching the uploaded image of Rivers Mall site
+            const polygonCoords = [
+                [7.881180, -72.488660],
+                [7.881020, -72.488420],
+                [7.880650, -72.488410],
+                [7.880220, -72.488720],
+                [7.880380, -72.488960],
+                [7.880850, -72.488880]
+            ];
+
+            // Add Purple Dashed Line Polygon (WeWork style site boundary)
+            const polygon = L.polygon(polygonCoords, {
+                color: '#a855f7',
+                weight: 3.5,
+                dashArray: '8, 8',
+                fillColor: '#c084fc',
+                fillOpacity: 0.25
+            }).addTo(map);
+
+            polygon.bindPopup('<b style="font-family: sans-serif; font-size: 13px;">Lote Proyecto Rivers Mall</b><br><span style="font-size: 11px; color: #475569;">Área del terreno sobre la Av. Pinar</span>');
+
+            // Custom Red Pin Marker
+            const redPinIcon = L.divIcon({
+                className: 'custom-div-icon',
+                html: `<div style="background-color: #ef4444; width: 28px; height: 28px; border-radius: 50% 50% 50% 0; transform: rotate(-45deg); border: 3px solid #ffffff; box-shadow: 0 4px 10px rgba(0,0,0,0.5); display: flex; align-items: center; justify-content: center;"><div style="width: 8px; height: 8px; background: white; border-radius: 50%;"></div></div>`,
+                iconSize: [28, 28],
+                iconAnchor: [14, 28]
+            });
+
+            L.marker([mapLat, mapLng], { icon: redPinIcon }).addTo(map)
+                .bindPopup('<b style="font-family: sans-serif; font-size: 13px;">Rivers Mall Cúcuta</b><br><span style="font-size: 11px; color: #475569;">Piso 3 Oficinas Privadas</span>')
+                .openPopup();
+        });
+
         const iterationData = {
             'l3': {
                 tag: 'TERCER NIVEL • OFICINAS CORPORATIVAS',
@@ -666,7 +719,7 @@
             } else {
                 pill.classList.add('hidden');
                 pill.classList.remove('flex');
-                btnElem.classList.remove('bg-blue-600', 'text-white');
+                btnElem.classList.remove('bg-white', 'text-gray-900');
                 btnElem.classList.add('bg-white', 'text-gray-900');
                 icon.innerText = '+';
             }
@@ -681,7 +734,7 @@
 
         function nextSlide() {
             if (!currentLevel) return;
-            const slides.length = iterationData[currentLevel].slides.length;
+            const slides = iterationData[currentLevel].slides;
             currentIndex = (currentIndex + 1) % slides.length;
             updateSlide();
         }
