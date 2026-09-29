@@ -55,7 +55,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="max-w-2xl">
                 
-                <!-- White Floating Card with Custom Copy -->
+                <!-- White Floating Card -->
                 <div class="bg-white text-gray-900 p-8 sm:p-12 rounded-3xl shadow-2xl border border-gray-100">
                     
                     <span class="inline-block px-3.5 py-1 bg-blue-50 text-blue-900 text-xs font-bold uppercase tracking-wider rounded-full mb-4">
@@ -103,17 +103,17 @@
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
-    <!-- Vertical Layout + Interactive Cutaway Image -->
+    <!-- Vertical Layout + Interactive Cutaway Image with Precise Element Hotspots -->
     <section id="distribucion" class="py-16 bg-gray-50 border-b border-gray-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
                 <span class="text-xs font-bold text-blue-900 uppercase tracking-widest block mb-2">Arquitectura & Distribución Vertical</span>
                 <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900">Estructura & Corte Interactivo</h2>
-                <p class="mt-4 text-gray-600">Explora las áreas: haz clic en cualquier nivel o en las imágenes del carrusel para interactuar con las burbujas estilo WeWork.</p>
+                <p class="mt-4 text-gray-600">Haz clic sobre los botones (+) ubicados exactamente en cada elemento (escaleras, baños, gimnasio, oficinas y parqueaderos) para desplegar su información específica.</p>
             </div>
 
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
-                <!-- Left Column: Floor Stack Explanations -->
+                <!-- Left Column: Floor Stack Cards -->
                 <div class="lg:col-span-6 flex flex-col justify-between space-y-4">
                     
                     <!-- Floor 3 Card -->
@@ -151,7 +151,7 @@
                                 </div>
                                 <div>
                                     <span class="text-xs text-gray-500 font-bold uppercase tracking-wider">Niveles Intermedios • Comercio & Servicios</span>
-                                    <h3 class="text-lg font-bold text-gray-900">Plaza Comercial, Baños & Cajeros</h3>
+                                    <h3 class="text-lg font-bold text-gray-900">Plaza Comercial, Baños & Escaleras</h3>
                                 </div>
                             </div>
                             <div class="flex space-x-2 shrink-0">
@@ -199,48 +199,74 @@
 
                 </div>
 
-                <!-- Right Column: Interactive Architectural Cutaway Image with WeWork Hotspots -->
+                <!-- Right Column: Precise Hotspots directly placed on exact architectural items -->
                 <div class="lg:col-span-6 flex">
                     <div class="relative w-full h-full rounded-2xl overflow-hidden shadow-2xl border border-gray-300 flex flex-col bg-slate-900">
-                        <div class="relative w-full flex-1 min-h-[480px] overflow-hidden">
+                        <div class="relative w-full flex-1 min-h-[500px] overflow-hidden">
                             <img src="corte_arquitectonico.jpg" alt="Corte Arquitectónico Rivers Mall" class="w-full h-full object-cover object-center transition duration-500">
-                            <div class="absolute inset-0 bg-slate-950/20"></div>
+                            <div class="absolute inset-0 bg-slate-950/15"></div>
 
-                            <!-- HOTSPOT 1: Floor 3 (Top Level) -->
-                            <div class="absolute top-[22%] right-[32%] z-20 flex items-center">
-                                <button id="hs-btn-l3" onclick="toggleHotspot('l3')" class="w-10 h-10 rounded-full bg-white text-gray-900 shadow-xl font-bold flex items-center justify-center hover:bg-blue-600 hover:text-white transition duration-300 border-2 border-blue-900 group">
-                                    <span id="hs-icon-l3" class="text-lg font-extrabold">+</span>
-                                    <span class="absolute w-10 h-10 rounded-full bg-white/50 hotspot-pulse -z-10"></span>
+                            <!-- HOTSPOT 1: ESCALERAS ELÉCTRICAS (Punto exacto de la imagen) -->
+                            <div class="absolute top-[37%] right-[38%] z-20 flex items-center">
+                                <button id="hs-btn-escaleras" onclick="toggleCutawayHotspot('escaleras')" class="w-10 h-10 rounded-full bg-blue-600 text-white shadow-2xl font-bold flex items-center justify-center hover:bg-blue-500 transition duration-300 border-2 border-white group">
+                                    <span id="hs-icon-escaleras" class="text-lg font-extrabold">+</span>
+                                    <span class="absolute w-10 h-10 rounded-full bg-blue-400/50 hotspot-pulse -z-10"></span>
                                 </button>
-                                <div id="hs-pill-l3" class="hidden ml-3 bg-white/95 backdrop-blur-md text-gray-900 px-4 py-2.5 rounded-full shadow-2xl border border-gray-200 text-xs font-bold flex items-center space-x-2">
-                                    <span class="w-2 h-2 rounded-full bg-blue-600"></span>
-                                    <span>Piso 3: Oficinas Privadas (5-10 personas)</span>
-                                    <button onclick="openModal('l3'); event.stopPropagation();" class="ml-2 underline text-blue-600 hover:text-blue-800 font-extrabold text-[11px]">Ver Fotos</button>
-                                </div>
-                            </div>
-
-                            <!-- HOTSPOT 2: Middle Level (L1/L2 Commerce) -->
-                            <div class="absolute top-[52%] right-[38%] z-20 flex items-center">
-                                <button id="hs-btn-l1l2" onclick="toggleHotspot('l1l2')" class="w-10 h-10 rounded-full bg-white text-gray-900 shadow-xl font-bold flex items-center justify-center hover:bg-blue-600 hover:text-white transition duration-300 border-2 border-blue-900 group">
-                                    <span id="hs-icon-l1l2" class="text-lg font-extrabold">+</span>
-                                    <span class="absolute w-10 h-10 rounded-full bg-white/50 hotspot-pulse -z-10"></span>
-                                </button>
-                                <div id="hs-pill-l1l2" class="hidden ml-3 bg-white/95 backdrop-blur-md text-gray-900 px-4 py-2.5 rounded-full shadow-2xl border border-gray-200 text-xs font-bold flex items-center space-x-2">
-                                    <span class="w-2 h-2 rounded-full bg-blue-600"></span>
-                                    <span>Niveles 1-2: Ara, Cruz Verde, Cajeros & Baños</span>
+                                <div id="hs-pill-escaleras" class="hidden ml-3 bg-white/95 backdrop-blur-md text-gray-900 px-4 py-2.5 rounded-full shadow-2xl border border-gray-200 text-xs font-bold flex items-center space-x-2 whitespace-nowrap animate-fade-in">
+                                    <span class="w-2.5 h-2.5 rounded-full bg-blue-600 shrink-0"></span>
+                                    <span>Escaleras Eléctricas & Conectividad Vertical</span>
                                     <button onclick="openModal('l1l2'); event.stopPropagation();" class="ml-2 underline text-blue-600 hover:text-blue-800 font-extrabold text-[11px]">Ver Fotos</button>
                                 </div>
                             </div>
 
-                            <!-- HOTSPOT 3: Basement (Gym & Parking) -->
-                            <div class="absolute top-[82%] right-[42%] z-20 flex items-center">
-                                <button id="hs-btn-s" onclick="toggleHotspot('s')" class="w-10 h-10 rounded-full bg-white text-gray-900 shadow-xl font-bold flex items-center justify-center hover:bg-blue-600 hover:text-white transition duration-300 border-2 border-blue-900 group">
-                                    <span id="hs-icon-s" class="text-lg font-extrabold">+</span>
-                                    <span class="absolute w-10 h-10 rounded-full bg-white/50 hotspot-pulse -z-10"></span>
+                            <!-- HOTSPOT 2: PISO 3 OFICINAS PRIVADAS (Parte Superior) -->
+                            <div class="absolute top-[18%] right-[45%] z-20 flex items-center">
+                                <button id="hs-btn-oficinas" onclick="toggleCutawayHotspot('oficinas')" class="w-10 h-10 rounded-full bg-blue-600 text-white shadow-2xl font-bold flex items-center justify-center hover:bg-blue-500 transition duration-300 border-2 border-white group">
+                                    <span id="hs-icon-oficinas" class="text-lg font-extrabold">+</span>
+                                    <span class="absolute w-10 h-10 rounded-full bg-blue-400/50 hotspot-pulse -z-10"></span>
                                 </button>
-                                <div id="hs-pill-s" class="hidden ml-3 bg-white/95 backdrop-blur-md text-gray-900 px-4 py-2.5 rounded-full shadow-2xl border border-gray-200 text-xs font-bold flex items-center space-x-2">
-                                    <span class="w-2 h-2 rounded-full bg-blue-600"></span>
-                                    <span>Sótano: Gimnasio & Parqueadero Cubierto</span>
+                                <div id="hs-pill-oficinas" class="hidden ml-3 bg-white/95 backdrop-blur-md text-gray-900 px-4 py-2.5 rounded-full shadow-2xl border border-gray-200 text-xs font-bold flex items-center space-x-2 whitespace-nowrap">
+                                    <span class="w-2.5 h-2.5 rounded-full bg-blue-600 shrink-0"></span>
+                                    <span>Piso 3: Oficinas Privadas (5 a 10 personas)</span>
+                                    <button onclick="openModal('l3'); event.stopPropagation();" class="ml-2 underline text-blue-600 hover:text-blue-800 font-extrabold text-[11px]">Ver Fotos</button>
+                                </div>
+                            </div>
+
+                            <!-- HOTSPOT 3: BAÑOS PÚBLICOS (Derecha Nivel 2) -->
+                            <div class="absolute top-[28%] right-[15%] z-20 flex items-center">
+                                <button id="hs-btn-banos" onclick="toggleCutawayHotspot('banos')" class="w-10 h-10 rounded-full bg-blue-600 text-white shadow-2xl font-bold flex items-center justify-center hover:bg-blue-500 transition duration-300 border-2 border-white group">
+                                    <span id="hs-icon-banos" class="text-lg font-extrabold">+</span>
+                                    <span class="absolute w-10 h-10 rounded-full bg-blue-400/50 hotspot-pulse -z-10"></span>
+                                </button>
+                                <div id="hs-pill-banos" class="hidden ml-3 bg-white/95 backdrop-blur-md text-gray-900 px-4 py-2.5 rounded-full shadow-2xl border border-gray-200 text-xs font-bold flex items-center space-x-2 whitespace-nowrap">
+                                    <span class="w-2.5 h-2.5 rounded-full bg-blue-600 shrink-0"></span>
+                                    <span>Baterías Sanitarias & Baños Públicos</span>
+                                    <button onclick="openModal('l1l2'); event.stopPropagation();" class="ml-2 underline text-blue-600 hover:text-blue-800 font-extrabold text-[11px]">Ver Fotos</button>
+                                </div>
+                            </div>
+
+                            <!-- HOTSPOT 4: GIMNASIO (Sótano Derecha) -->
+                            <div class="absolute top-[78%] right-[25%] z-20 flex items-center">
+                                <button id="hs-btn-gym" onclick="toggleCutawayHotspot('gym')" class="w-10 h-10 rounded-full bg-blue-600 text-white shadow-2xl font-bold flex items-center justify-center hover:bg-blue-500 transition duration-300 border-2 border-white group">
+                                    <span id="hs-icon-gym" class="text-lg font-extrabold">+</span>
+                                    <span class="absolute w-10 h-10 rounded-full bg-blue-400/50 hotspot-pulse -z-10"></span>
+                                </button>
+                                <div id="hs-pill-gym" class="hidden ml-3 bg-white/95 backdrop-blur-md text-gray-900 px-4 py-2.5 rounded-full shadow-2xl border border-gray-200 text-xs font-bold flex items-center space-x-2 whitespace-nowrap">
+                                    <span class="w-2.5 h-2.5 rounded-full bg-blue-600 shrink-0"></span>
+                                    <span>Sótano: Gimnasio Equipado (Technogym)</span>
+                                    <button onclick="openModal('s'); event.stopPropagation();" class="ml-2 underline text-blue-600 hover:text-blue-800 font-extrabold text-[11px]">Ver Fotos</button>
+                                </div>
+                            </div>
+
+                            <!-- HOTSPOT 5: PARQUEADERO (Sótano Izquierda) -->
+                            <div class="absolute top-[82%] left-[30%] z-20 flex items-center">
+                                <button id="hs-btn-parking" onclick="toggleCutawayHotspot('parking')" class="w-10 h-10 rounded-full bg-blue-600 text-white shadow-2xl font-bold flex items-center justify-center hover:bg-blue-500 transition duration-300 border-2 border-white group">
+                                    <span id="hs-icon-parking" class="text-lg font-extrabold">+</span>
+                                    <span class="absolute w-10 h-10 rounded-full bg-blue-400/50 hotspot-pulse -z-10"></span>
+                                </button>
+                                <div id="hs-pill-parking" class="hidden ml-3 bg-white/95 backdrop-blur-md text-gray-900 px-4 py-2.5 rounded-full shadow-2xl border border-gray-200 text-xs font-bold flex items-center space-x-2 whitespace-nowrap">
+                                    <span class="w-2.5 h-2.5 rounded-full bg-blue-600 shrink-0"></span>
+                                    <span>Sótano: Parqueadero Subterráneo Cubierto</span>
                                     <button onclick="openModal('s'); event.stopPropagation();" class="ml-2 underline text-blue-600 hover:text-blue-800 font-extrabold text-[11px]">Ver Fotos</button>
                                 </div>
                             </div>
@@ -249,7 +275,7 @@
                                 <div class="inline-block px-3 py-1 bg-blue-600 text-xs font-bold uppercase rounded tracking-wider mb-2">
                                     Corte Interactivo Estilo WeWork
                                 </div>
-                                <h4 class="text-lg font-bold">Haz clic en los botones (+) para ver detalles de cada nivel</h4>
+                                <h4 class="text-lg font-bold">Haz clic en cada (+) para ver exactamente el elemento señalado</h4>
                             </div>
                         </div>
                     </div>
@@ -518,29 +544,36 @@
             }
         };
 
-        function toggleHotspot(levelKey) {
-            ['l3', 'l1l2', 's'].forEach(key => {
-                if (key !== levelKey) {
-                    document.getElementById(`hs-pill-${key}`).classList.add('hidden');
-                    document.getElementById(`hs-btn-${key}`).classList.remove('bg-blue-600', 'text-white');
-                    document.getElementById(`hs-btn-${key}`).classList.add('bg-white', 'text-gray-900');
-                    document.getElementById(`hs-icon-${key}`).innerText = '+';
+        // Precise Section Cutaway Hotspots Toggle Logic
+        function toggleCutawayHotspot(itemKey) {
+            const allHotspots = ['escaleras', 'oficinas', 'banos', 'gym', 'parking'];
+            allHotspots.forEach(key => {
+                if (key !== itemKey) {
+                    const pill = document.getElementById(`hs-pill-${key}`);
+                    const btn = document.getElementById(`hs-btn-${key}`);
+                    const icon = document.getElementById(`hs-icon-${key}`);
+                    if (pill) pill.classList.add('hidden');
+                    if (btn) {
+                        btn.classList.remove('bg-blue-600', 'text-white');
+                        btn.classList.add('bg-blue-600', 'text-white');
+                    }
+                    if (icon) icon.innerText = '+';
                 }
             });
 
-            const pill = document.getElementById(`hs-pill-${levelKey}`);
-            const btn = document.getElementById(`hs-btn-${levelKey}`);
-            const icon = document.getElementById(`hs-icon-${levelKey}`);
+            const pill = document.getElementById(`hs-pill-${itemKey}`);
+            const btn = document.getElementById(`hs-btn-${itemKey}`);
+            const icon = document.getElementById(`hs-icon-${itemKey}`);
 
             if (pill.classList.contains('hidden')) {
                 pill.classList.remove('hidden');
-                btn.classList.remove('bg-white', 'text-gray-900');
-                btn.classList.add('bg-blue-600', 'text-white');
+                btn.classList.remove('bg-blue-600');
+                btn.classList.add('bg-blue-800');
                 icon.innerText = '−';
             } else {
                 pill.classList.add('hidden');
-                btn.classList.remove('bg-blue-600', 'text-white');
-                btn.classList.add('bg-white', 'text-gray-900');
+                btn.classList.remove('bg-blue-800');
+                btn.classList.add('bg-blue-600');
                 icon.innerText = '+';
             }
         }
@@ -629,7 +662,7 @@
             } else {
                 pill.classList.add('hidden');
                 pill.classList.remove('flex');
-                btnElem.classList.remove('bg-white', 'text-gray-900');
+                btnElem.classList.remove('bg-blue-600', 'text-white');
                 btnElem.classList.add('bg-white', 'text-gray-900');
                 icon.innerText = '+';
             }
@@ -651,6 +684,11 @@
 
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape') closeModal();
+        });
+
+        // Initialize Escaleras hotspot open by default to demonstrate exact match
+        window.addEventListener('DOMContentLoaded', () => {
+            toggleCutawayHotspot('escaleras');
         });
     </script>
 
