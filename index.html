@@ -46,94 +46,52 @@
         </div>
     </header>
 
-    <!-- Hero Section with Blue Gradient Overlay & Sans-Serif Typography -->
-    <section class="relative bg-gradient-to-r from-slate-950 via-slate-900/95 to-blue-950/85 text-white py-16 lg:py-24 overflow-hidden">
-        <!-- Render Image with Blue Overlay -->
-        <div class="absolute inset-0 opacity-35 bg-cover bg-center" style="background-image: url('hero_rivers_mall.jpg');"></div>
-        <div class="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/85 to-blue-950/40"></div>
+    <!-- Hero Section: Real Render Background + Blue Overlay + White Floating Descriptive Box (No Form) -->
+    <section class="relative bg-gradient-to-r from-slate-950 via-slate-900/90 to-blue-950/80 text-white py-16 lg:py-24 overflow-hidden">
+        <!-- Render Image with Blue Gradient Overlay -->
+        <div class="absolute inset-0 opacity-40 bg-cover bg-center" style="background-image: url('hero_rivers_mall.jpg');"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-900/80 to-blue-950/50"></div>
         
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div class="max-w-2xl">
                 
-                <!-- Hero Left Content (Descriptive + Sans-serif) -->
-                <div class="lg:col-span-7">
+                <!-- White Floating Card (Overlapping Clean Design without Form) -->
+                <div class="bg-white text-gray-900 p-8 sm:p-12 rounded-3xl shadow-2xl border border-gray-100">
                     
-                    <div class="inline-flex items-center space-x-2 bg-blue-500/20 border border-blue-400/30 px-3 py-1 rounded-full text-blue-300 text-xs font-bold uppercase tracking-wider mb-6 backdrop-blur-sm">
-                        <i class="fa-solid fa-location-dot"></i>
-                        <span>Cúcuta • Coord. 7.8808, -72.4888</span>
-                    </div>
+                    <span class="inline-block px-3.5 py-1 bg-blue-50 text-blue-900 text-xs font-bold uppercase tracking-wider rounded-full mb-4">
+                        Rivers Mall • Cúcuta (Piso 3)
+                    </span>
 
-                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-none mb-6">
-                        Oficinas privadas a la medida de tu empresa en <span class="text-blue-400">Rivers Mall</span>
+                    <h1 class="text-4xl sm:text-5xl font-extrabold text-gray-900 tracking-tight leading-tight mb-6">
+                        Oficinas privadas a la medida de tu empresa
                     </h1>
 
                     <!-- Descriptive Checkmark List -->
-                    <ul class="space-y-3.5 text-base sm:text-lg text-gray-200 mb-8 font-medium">
+                    <ul class="space-y-4 text-sm sm:text-base text-gray-700 mb-8 font-medium">
                         <li class="flex items-start">
-                            <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 flex items-center justify-center mr-3 mt-0.5 shrink-0 text-sm border border-blue-400/30">
-                                <i class="fa-solid fa-check"></i>
-                            </span>
+                            <i class="fa-solid fa-check text-blue-600 text-lg mr-3 mt-1 shrink-0"></i>
                             <span>Oficinas completamente amuebladas y listas para mudarse para equipos de 1 a más de 100 personas.</span>
                         </li>
                         <li class="flex items-start">
-                            <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 flex items-center justify-center mr-3 mt-0.5 shrink-0 text-sm border border-blue-400/30">
-                                <i class="fa-solid fa-check"></i>
-                            </span>
-                            <span>Espacio de trabajo seguro, privado e independiente con acceso 24/7 en el Piso 3 del centro comercial.</span>
+                            <i class="fa-solid fa-check text-blue-600 text-lg mr-3 mt-1 shrink-0"></i>
+                            <span>Espacio de trabajo seguro y cerrado con acceso 24/7 en el 3er piso del centro comercial.</span>
                         </li>
                         <li class="flex items-start">
-                            <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 flex items-center justify-center mr-3 mt-0.5 shrink-0 text-sm border border-blue-400/30">
-                                <i class="fa-solid fa-check"></i>
-                            </span>
-                            <span>Conexión directa con Ara, Cruz Verde, Gimnasio en Sótano, batería de baños y amplios parqueaderos.</span>
+                            <i class="fa-solid fa-check text-blue-600 text-lg mr-3 mt-1 shrink-0"></i>
+                            <span>Equipo de la comunidad, mantenimiento de las oficinas, Ara, Cruz Verde, Gimnasio en Sótano y otras amenidades.</span>
                         </li>
                     </ul>
 
-                    <div class="flex flex-col sm:flex-row gap-4">
-                        <a href="#contacto" class="inline-flex justify-center items-center px-8 py-4 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-xl transition text-center shadow-lg text-base">
+                    <!-- Action Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-4 items-center">
+                        <a href="#contacto" class="w-full sm:w-auto px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold text-base rounded-xl transition shadow-lg text-center">
                             Comienza aquí
-                            <i class="fa-solid fa-arrow-right ml-2 text-sm"></i>
                         </a>
-                        <a href="#distribucion" class="inline-flex justify-center items-center px-6 py-4 bg-white/10 text-white font-semibold rounded-xl hover:bg-white/20 backdrop-blur-sm transition text-center border border-white/10 text-sm">
-                            Ver Corte Arquitectónico
+                        <a href="#distribucion" class="w-full sm:w-auto px-6 py-4 bg-gray-100 hover:bg-gray-200 text-gray-800 font-semibold text-sm rounded-xl transition text-center">
+                            Explorar Distribución
                         </a>
                     </div>
-                </div>
 
-                <!-- Hero Form -->
-                <div class="lg:col-span-5">
-                    <div id="contacto" class="bg-white text-gray-900 p-6 sm:p-8 rounded-2xl shadow-2xl border border-gray-100">
-                        <span class="text-xs font-bold text-blue-900 tracking-wider uppercase block mb-1">Comercialización Directa</span>
-                        <h3 class="text-2xl font-bold mb-2">Reserva tu oficina en Rivers Mall</h3>
-                        <p class="text-sm text-gray-600 mb-6">Recibe el dossier técnico, disponibilidad del 3er piso y opciones de financiación.</p>
-                        
-                        <form onsubmit="event.preventDefault(); alert('¡Gracias por tu interés en Rivers Mall Cúcuta! Nuestro equipo comercial se comunicará contigo.');" class="space-y-4">
-                            <div>
-                                <label class="block text-xs font-semibold uppercase tracking-wider text-gray-700 mb-1">Nombre o Empresa</label>
-                                <input type="text" required placeholder="Ej. Constructora / Marca / Nombre" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-900 focus:outline-none text-sm">
-                            </div>
-                            <div>
-                                <label class="block text-xs font-semibold uppercase tracking-wider text-gray-700 mb-1">Correo Electrónico</label>
-                                <input type="email" required placeholder="contacto@empresa.com" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-900 focus:outline-none text-sm">
-                            </div>
-                            <div>
-                                <label class="block text-xs font-semibold uppercase tracking-wider text-gray-700 mb-1">Área de Interés (m²)</label>
-                                <select class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-900 focus:outline-none text-sm">
-                                    <option>Oficina Modulable (35 m² - 70 m²)</option>
-                                    <option>Oficina Mediana (70 m² - 150 m²)</option>
-                                    <option>Planta / Suite Corporativa (150 m² - 500+ m²)</option>
-                                    <option>Piso 3 Completo</option>
-                                </select>
-                            </div>
-                            <div>
-                                <label class="block text-xs font-semibold uppercase tracking-wider text-gray-700 mb-1">Teléfono / WhatsApp</label>
-                                <input type="tel" required placeholder="+57 300 000 0000" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-900 focus:outline-none text-sm">
-                            </div>
-                            <button type="submit" class="w-full py-4 bg-blue-900 text-white font-bold rounded-lg hover:bg-blue-800 transition text-sm shadow-md">
-                                Contactar Asesor Comercial
-                            </button>
-                        </form>
-                    </div>
                 </div>
 
             </div>
@@ -357,6 +315,62 @@
             </div>
         </div>
     </div>
+
+    <!-- Contact & Lead Form Section -->
+    <section id="contacto" class="py-20 bg-white border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-6 space-y-6">
+                    <span class="text-xs font-bold text-blue-900 uppercase tracking-widest block">Comercialización Directa</span>
+                    <h2 class="text-4xl sm:text-5xl font-extrabold text-gray-900">Reserva la oficina ideal en Rivers Mall Cúcuta</h2>
+                    <p class="text-gray-600 leading-relaxed text-sm sm:text-base">
+                        Completa tus datos para recibir el <strong>dossier comercial completo</strong>, disponibilidades actualizadas del Piso 3, esquemas de pago y agendar una visita guiada.
+                    </p>
+                    <div class="space-y-4 pt-2">
+                        <div class="flex items-center space-x-3 text-sm text-gray-700">
+                            <span class="w-8 h-8 rounded-full bg-blue-100 text-blue-900 flex items-center justify-center font-bold text-xs"><i class="fa-solid fa-phone"></i></span>
+                            <span>Atención comercial directa y personalizada</span>
+                        </div>
+                        <div class="flex items-center space-x-3 text-sm text-gray-700">
+                            <span class="w-8 h-8 rounded-full bg-blue-100 text-blue-900 flex items-center justify-center font-bold text-xs"><i class="fa-solid fa-ruler-combined"></i></span>
+                            <span>Formatos modulables desde 35 m² hasta plantas completas</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-6">
+                    <div class="bg-gray-50 p-8 sm:p-10 rounded-3xl border border-gray-200 shadow-xl">
+                        <form onsubmit="event.preventDefault(); alert('¡Gracias por tu interés en Rivers Mall Cúcuta! Un asesor comercial se pondrá en contacto pronto.');" class="space-y-4">
+                            <div>
+                                <label class="block text-xs font-bold uppercase tracking-wider text-gray-700 mb-1">Nombre Completo o Empresa</label>
+                                <input type="text" required placeholder="Ej. Constructora / Empresa / Nombre" class="w-full px-4 py-3.5 rounded-xl border border-gray-300 focus:ring-2 focus:ring-blue-600 focus:outline-none text-sm bg-white">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold uppercase tracking-wider text-gray-700 mb-1">Correo Electrónico</label>
+                                <input type="email" required placeholder="contacto@empresa.com" class="w-full px-4 py-3.5 rounded-xl border border-gray-300 focus:ring-2 focus:ring-blue-600 focus:outline-none text-sm bg-white">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold uppercase tracking-wider text-gray-700 mb-1">Área de Interés (m²)</label>
+                                <select class="w-full px-4 py-3.5 rounded-xl border border-gray-300 focus:ring-2 focus:ring-blue-600 focus:outline-none text-sm bg-white">
+                                    <option>Oficina Modulable (35 m² - 70 m²)</option>
+                                    <option>Oficina Mediana (70 m² - 150 m²)</option>
+                                    <option>Planta / Suite Corporativa (150 m² - 500+ m²)</option>
+                                    <option>Piso 3 Completo</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold uppercase tracking-wider text-gray-700 mb-1">Teléfono / WhatsApp</label>
+                                <input type="tel" required placeholder="+57 300 000 0000" class="w-full px-4 py-3.5 rounded-xl border border-gray-300 focus:ring-2 focus:ring-blue-600 focus:outline-none text-sm bg-white">
+                            </div>
+                            <button type="submit" class="w-full py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl transition text-base shadow-lg">
+                                Solicitar Asesoría Comercial
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Location & Interactive Map Section -->
     <section id="ubicacion" class="py-16 bg-slate-900 text-white border-b border-gray-800">
@@ -588,8 +602,7 @@
             const dotsContainer = document.getElementById('carouselDots');
             dotsContainer.innerHTML = '';
             slides.forEach((_, idx) => {
-                const dot = document.createElement('button');
-                dot.className = `w-3 h-3 rounded-full transition-all ${idx === currentIndex ? 'bg-blue-600 w-6' : 'bg-gray-300'}`;
+                const dot = document.className = `w-3 h-3 rounded-full transition-all ${idx === currentIndex ? 'bg-blue-600 w-6' : 'bg-gray-300'}`;
                 dot.onclick = () => { currentIndex = idx; updateSlide(); };
                 dotsContainer.appendChild(dot);
             });
@@ -616,7 +629,7 @@
             } else {
                 pill.classList.add('hidden');
                 pill.classList.remove('flex');
-                btnElem.classList.remove('bg-blue-600', 'text-white');
+                btnElem.classList.remove('bg-white', 'text-gray-900');
                 btnElem.classList.add('bg-white', 'text-gray-900');
                 icon.innerText = '+';
             }
