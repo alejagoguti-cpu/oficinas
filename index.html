@@ -188,41 +188,66 @@
                             Acceso directo a marcas como Ara, Cruz Verde, escaleras eléctricas, locales de moda, zona bancaria de cajeros y amplios baños.
                         </p>
 
-                        <!-- POT Cúcuta Anexo 3.5 Sanitary Services Callout -->
-                        <div class="mt-4 p-4 bg-slate-50 rounded-xl border border-gray-200 text-left">
-                            <div class="flex items-center space-x-2 text-blue-900 font-bold text-xs mb-1.5 uppercase tracking-wider">
-                                <i class="fa-solid fa-restroom text-blue-600 text-sm"></i>
-                                <span>Servicios Sanitarios según Anexo 3.5 POT Cúcuta</span>
-                            </div>
-                            <p class="text-[11.5px] text-gray-700 leading-relaxed">
-                                Los servicios sanitarios de la agrupación comercial se dimensionan según el número de locales, conforme al <strong>Anexo 3.5 del POT de Cúcuta</strong>.
-                            </p>
-                            <div class="mt-2.5 p-3 bg-white rounded-lg border border-gray-200 text-[11px] text-gray-800 shadow-sm space-y-1.5">
-                                <div class="font-bold text-blue-900 flex items-center justify-between border-b border-gray-100 pb-1">
-                                    <span>Cálculo Preliminar (17 Locales):</span>
-                                    <span class="text-xs font-mono bg-blue-50 text-blue-800 px-2 py-0.5 rounded border border-blue-200">Uso Público</span>
+                        <!-- POT Cúcuta & NTC 1500:2023 Sanitary Services Callout -->
+                        <div class="mt-4 p-4 bg-slate-50 rounded-xl border border-gray-200 text-left space-y-3">
+                            <div>
+                                <div class="flex items-center space-x-2 text-blue-900 font-bold text-xs mb-1 uppercase tracking-wider">
+                                    <i class="fa-solid fa-restroom text-blue-600 text-sm"></i>
+                                    <span>Servicios Sanitarios (POT & NTC 1500:2023)</span>
                                 </div>
-                                <div class="grid grid-cols-2 gap-1.5 pt-0.5 text-[10.5px]">
-                                    <div class="flex items-center space-x-1.5">
-                                        <i class="fa-solid fa-person-dress text-pink-600"></i>
-                                        <span><strong>2</strong> Inodoros Mujeres</span>
+                                <p class="text-[11.5px] text-gray-700 leading-relaxed">
+                                    Dimensionamiento según número de locales (Anexo 3.5 del POT) y aforo total según la <strong>NTC 1500:2023 (Tabla 5.3.1 - Clasificación A-3)</strong> para centros comerciales y gimnasios (1 WC por cada 65 mujeres y 1 WC por cada 125 hombres).
+                                </p>
+                            </div>
+
+                            <!-- Calculation Flow breakdown based on NTC 1500:2023 -->
+                            <div class="p-3 bg-white rounded-lg border border-blue-100 shadow-sm text-[11px] text-slate-800 space-y-2">
+                                <div class="font-bold text-blue-900 flex items-center justify-between border-b border-gray-100 pb-1.5">
+                                    <span>Cálculo por Aforo (4.000 m² NTC 1500:2023):</span>
+                                    <span class="text-[10px] font-mono bg-blue-100 text-blue-900 px-2 py-0.5 rounded font-extrabold">Clasificación A-3</span>
+                                </div>
+
+                                <div class="grid grid-cols-3 gap-2 text-center text-[10.5px] font-mono py-1 bg-slate-50 rounded border border-gray-100">
+                                    <div class="border-r border-gray-200">
+                                        <span class="text-gray-500 block text-[9.5px]">Área Computable</span>
+                                        <strong class="text-gray-900">4.000 m²</strong>
                                     </div>
-                                    <div class="flex items-center space-x-1.5">
-                                        <i class="fa-solid fa-person text-blue-600"></i>
-                                        <span><strong>1</strong> Inodoro Hombres</span>
+                                    <div class="border-r border-gray-200">
+                                        <span class="text-gray-500 block text-[9.5px]">Aforo Total</span>
+                                        <strong class="text-blue-900">1.333 ocupantes</strong>
                                     </div>
-                                    <div class="flex items-center space-x-1.5">
-                                        <i class="fa-solid fa-droplet text-cyan-600"></i>
-                                        <span><strong>1</strong> Orinal</span>
+                                    <div>
+                                        <span class="text-gray-500 block text-[9.5px]">Distribución 50/50</span>
+                                        <strong class="text-gray-900">667 ♀ / 667 ♂</strong>
                                     </div>
-                                    <div class="flex items-center space-x-1.5">
-                                        <i class="fa-solid fa-soap text-teal-600"></i>
-                                        <span><strong>1</strong> Lavamanos</span>
+                                </div>
+
+                                <div class="grid grid-cols-2 gap-2 pt-1 font-bold">
+                                    <div class="p-2 bg-pink-50/70 border border-pink-200 rounded-lg flex items-center justify-between">
+                                        <span class="flex items-center space-x-1.5 text-pink-900 text-[10.5px]">
+                                            <i class="fa-solid fa-person-dress text-pink-600"></i>
+                                            <span>Mujeres (1 / 65)</span>
+                                        </span>
+                                        <span class="text-xs text-pink-900 bg-white px-2 py-0.5 rounded border border-pink-200 font-mono">11 WC</span>
+                                    </div>
+                                    <div class="p-2 bg-blue-50/70 border border-blue-200 rounded-lg flex items-center justify-between">
+                                        <span class="flex items-center space-x-1.5 text-blue-900 text-[10.5px]">
+                                            <i class="fa-solid fa-person text-blue-600"></i>
+                                            <span>Hombres (1 / 125)</span>
+                                        </span>
+                                        <span class="text-xs text-blue-900 bg-white px-2 py-0.5 rounded border border-blue-200 font-mono">6 WC</span>
                                     </div>
                                 </div>
                             </div>
-                            <p class="mt-2 text-[10.5px] text-gray-500 italic leading-snug">
-                                * Los locales que no cuenten con sanitario individual requieren adicionalmente servicios sanitarios para empleados.
+
+                            <!-- POT Anexo 3.5 summary -->
+                            <div class="p-2.5 bg-gray-100/70 rounded-lg border border-gray-200 text-[10.5px] text-gray-700 flex justify-between items-center">
+                                <span><strong>Anexo 3.5 POT (17 Locales):</strong> 2 WC ♀, 1 WC ♂, 1 Orinal, 1 Lavamanos</span>
+                                <span class="text-[9.5px] text-gray-500 italic">Mínimo público</span>
+                            </div>
+
+                            <p class="text-[10.5px] text-gray-500 italic leading-snug">
+                                * Los locales sin sanitario individual requieren adicionalmente servicios sanitarios para empleados.
                             </p>
                         </div>
                     </div>
