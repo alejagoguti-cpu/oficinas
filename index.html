@@ -27,6 +27,7 @@
                 <a href="#proyecto" class="hover:text-blue-900 transition">El Proyecto</a>
                 <a href="#piso3" class="hover:text-blue-900 transition">Piso 3</a>
                 <a href="#soluciones" class="hover:text-blue-900 transition">Tipos de Oficina</a>
+                <a href="#ubicacion" class="hover:text-blue-900 transition">Ubicación & Mapa</a>
                 <a href="#ventajas" class="hover:text-blue-900 transition">Ventajas C.C.</a>
             </nav>
             <div class="flex items-center space-x-4">
@@ -45,8 +46,8 @@
                 <!-- Hero Left Content -->
                 <div class="lg:col-span-7">
                     <div class="inline-flex items-center space-x-2 bg-blue-500/20 border border-blue-400/30 px-3 py-1 rounded-full text-blue-300 text-xs font-bold uppercase tracking-wider mb-6">
-                        <i class="fas fa-building"></i>
-                        <span>Proyecto Comercial & Corporativo en Cúcuta</span>
+                        <i class="fas fa-location-dot"></i>
+                        <span>Cúcuta • Coord. 7.8808, -72.4888</span>
                     </div>
                     <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-none mb-6">
                         El nuevo hub corporativo de Cúcuta en <span class="text-blue-400">Rivers Mall</span>
@@ -63,7 +64,7 @@
                         </div>
                         <div>
                             <span class="block text-3xl font-extrabold text-blue-400">Cúcuta</span>
-                            <span class="text-xs text-gray-400 font-medium">Ubicación Estratégica</span>
+                            <span class="text-xs text-gray-400 font-medium">Zona de Alta Valorización</span>
                         </div>
                         <div>
                             <span class="block text-3xl font-extrabold text-blue-400">100%</span>
@@ -76,8 +77,8 @@
                             Solicitar Planos y Precios
                             <i class="fas fa-arrow-right ml-2 text-sm"></i>
                         </a>
-                        <a href="#piso3" class="inline-flex justify-center items-center px-6 py-3.5 bg-white/10 text-white font-semibold rounded-lg hover:bg-white/20 backdrop-blur-sm transition text-center">
-                            Ver Planta del 3er Piso
+                        <a href="#ubicacion" class="inline-flex justify-center items-center px-6 py-3.5 bg-white/10 text-white font-semibold rounded-lg hover:bg-white/20 backdrop-blur-sm transition text-center">
+                            Ver Ubicación en Mapa
                         </a>
                     </div>
                 </div>
@@ -158,6 +159,50 @@
                         <span class="text-xs uppercase font-bold tracking-wider text-blue-400">Render del Proyecto</span>
                         <h4 class="text-lg font-bold">Distribución Corporativa - Piso 3 Rivers Mall</h4>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location & Interactive Map Section -->
+    <section id="ubicacion" class="py-16 bg-slate-900 text-white border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-xs font-bold text-blue-400 uppercase tracking-widest block mb-2">Localización Exacta</span>
+                <h2 class="text-3xl font-extrabold text-white">Ubicación Estratégica en Cúcuta</h2>
+                <p class="mt-4 text-gray-300">Coordenadas del proyecto: <strong class="text-white font-mono bg-blue-950 px-2 py-1 rounded border border-blue-800">7.8808, -72.4888</strong>. Situado en un punto focal de desarrollo y alta conectividad vial.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                <!-- Map iFrame -->
+                <div class="lg:col-span-8 rounded-2xl overflow-hidden shadow-2xl border border-gray-700 h-[450px]">
+                    <iframe 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        loading="lazy" 
+                        allowfullscreen 
+                        src="https://maps.google.com/maps?q=7.880799337061506,-72.48875378186216&hl=es&z=17&output=embed">
+                    </iframe>
+                </div>
+
+                <!-- Location Highlights -->
+                <div class="lg:col-span-4 space-y-6">
+                    <div class="bg-slate-800/80 p-6 rounded-xl border border-gray-700">
+                        <i class="fas fa-route text-2xl text-blue-400 mb-3"></i>
+                        <h4 class="font-bold text-lg text-white mb-2">Excelente Conectividad</h4>
+                        <p class="text-sm text-gray-300 leading-relaxed">Fácil acceso desde las principales avenidas y vías arteriales de Cúcuta, facilitando la llegada de clientes y colaboradores.</p>
+                    </div>
+
+                    <div class="bg-slate-800/80 p-6 rounded-xl border border-gray-700">
+                        <i class="fas fa-compass text-2xl text-blue-400 mb-3"></i>
+                        <h4 class="font-bold text-lg text-white mb-2">Entorno Dinámico</h4>
+                        <p class="text-sm text-gray-300 leading-relaxed">Ubicado dentro del complejo del Centro Comercial Rivers Mall, rodeado de servicios, banca y comercio de primer nivel.</p>
+                    </div>
+
+                    <a href="https://www.google.com/maps/search/?api=1&query=7.880799337061506,-72.48875378186216" target="_blank" class="block w-full py-3.5 bg-blue-600 hover:bg-blue-500 text-center font-bold text-white rounded-xl transition text-sm shadow-md">
+                        <i class="fas fa-map-location-dot mr-2"></i> Abrir en Google Maps
+                    </a>
                 </div>
             </div>
         </div>
@@ -272,7 +317,7 @@
             <div class="mb-6 md:mb-0 text-center md:text-left">
                 <div class="font-extrabold text-2xl tracking-wider text-blue-400 mb-1">RIVERS MALL</div>
                 <p class="text-gray-400 text-sm">Proyecto Comercial & Corporativo - Piso 3 Oficinas Privadas.</p>
-                <p class="text-gray-500 text-xs mt-1"><i class="fas fa-location-dot mr-1"></i> Cúcuta, Norte de Santander, Colombia</p>
+                <p class="text-gray-500 text-xs mt-1"><i class="fas fa-location-dot mr-1"></i> Coordenadas: 7.8808, -72.4888 • Cúcuta, Colombia</p>
             </div>
             <div class="text-sm text-gray-500 text-center md:text-right">
                 &copy; 2026 Rivers Mall Cúcuta. Todos los derechos reservados.<br>
