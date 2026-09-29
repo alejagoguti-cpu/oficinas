@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Oficinas Corporativas en Rivers Mall Cúcuta | Piso 3</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
         body { font-family: 'Plus Jakarta Sans', sans-serif; }
@@ -45,7 +45,7 @@
                 <!-- Hero Left Content -->
                 <div class="lg:col-span-7">
                     <div class="inline-flex items-center space-x-2 bg-blue-500/20 border border-blue-400/30 px-3 py-1 rounded-full text-blue-300 text-xs font-bold uppercase tracking-wider mb-6">
-                        <i class="fas fa-location-dot"></i>
+                        <i class="fa-solid fa-location-dot"></i>
                         <span>Cúcuta • Coord. 7.8808, -72.4888</span>
                     </div>
                     <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-none mb-6">
@@ -74,7 +74,7 @@
                     <div class="flex flex-col sm:flex-row gap-4">
                         <a href="#contacto" class="inline-flex justify-center items-center px-6 py-3.5 bg-blue-600 text-white font-bold rounded-lg hover:bg-blue-500 transition text-center shadow-lg">
                             Solicitar Planos y Precios
-                            <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                            <i class="fa-solid fa-arrow-right ml-2 text-sm"></i>
                         </a>
                         <a href="#distribucion" class="inline-flex justify-center items-center px-6 py-3.5 bg-white/10 text-white font-semibold rounded-lg hover:bg-white/20 backdrop-blur-sm transition text-center">
                             Ver Corte Arquitectónico
@@ -121,7 +121,7 @@
         </div>
     </section>
 
-    <!-- Vertical Layout + Cutaway Section (Height Matched Flexbox Container) -->
+    <!-- Vertical Layout + Cutaway Section -->
     <section id="distribucion" class="py-16 bg-white border-b border-gray-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
@@ -136,13 +136,19 @@
                     
                     <!-- Floor 3: Offices -->
                     <div class="flex-1 bg-gradient-to-r from-blue-900 to-slate-900 text-white rounded-2xl p-6 shadow-xl border border-blue-800 flex flex-col justify-center">
-                        <div class="flex items-center space-x-4 mb-2">
-                            <div class="bg-blue-500 text-white font-extrabold text-xl w-12 h-12 rounded-xl flex items-center justify-center shadow-lg shrink-0">
-                                L3
+                        <div class="flex items-center justify-between mb-2">
+                            <div class="flex items-center space-x-4">
+                                <div class="bg-blue-500 text-white font-extrabold text-xl w-12 h-12 rounded-xl flex items-center justify-center shadow-lg shrink-0">
+                                    L3
+                                </div>
+                                <div>
+                                    <span class="text-xs text-blue-300 font-bold uppercase tracking-wider">Tercer Nivel • Zona Exclusiva</span>
+                                    <h3 class="text-xl font-bold text-white">Oficinas Corporativas Privadas</h3>
+                                </div>
                             </div>
-                            <div>
-                                <span class="text-xs text-blue-300 font-bold uppercase tracking-wider">Tercer Nivel • Zona Exclusiva</span>
-                                <h3 class="text-xl font-bold text-white">Oficinas Corporativas Privadas</h3>
+                            <div class="flex space-x-2 text-blue-400 text-xl">
+                                <i class="fa-solid fa-briefcase" title="Oficinas Privadas"></i>
+                                <i class="fa-solid fa-building" title="Corporativo"></i>
                             </div>
                         </div>
                         <p class="text-gray-300 text-xs leading-relaxed">
@@ -152,13 +158,20 @@
 
                     <!-- Middle Floors: Bathrooms, ATMs & Commerce -->
                     <div class="flex-1 bg-gray-50 rounded-2xl p-6 shadow-sm border border-gray-200 hover:border-blue-300 transition flex flex-col justify-center">
-                        <div class="flex items-center space-x-4 mb-2">
-                            <div class="bg-slate-800 text-white font-extrabold text-lg w-12 h-12 rounded-xl flex items-center justify-center shrink-0">
-                                L1-L2
+                        <div class="flex items-center justify-between mb-2">
+                            <div class="flex items-center space-x-4">
+                                <div class="bg-slate-800 text-white font-extrabold text-lg w-12 h-12 rounded-xl flex items-center justify-center shrink-0">
+                                    L1-L2
+                                </div>
+                                <div>
+                                    <span class="text-xs text-gray-500 font-bold uppercase tracking-wider">Niveles Intermedios • Comercio & Servicios</span>
+                                    <h3 class="text-lg font-bold text-gray-900">Plaza Comercial, Baños & Cajeros</h3>
+                                </div>
                             </div>
-                            <div>
-                                <span class="text-xs text-gray-500 font-bold uppercase tracking-wider">Niveles Intermedios • Comercio & Servicios</span>
-                                <h3 class="text-lg font-bold text-gray-900">Plaza Comercial, Baños Públicos & Cajeros</h3>
+                            <div class="flex space-x-3 text-blue-900 text-xl">
+                                <i class="fa-solid fa-restroom" title="Baños Públicos"></i>
+                                <i class="fa-solid fa-credit-card" title="Cajeros Automáticos"></i>
+                                <i class="fa-solid fa-store" title="Comercio"></i>
                             </div>
                         </div>
                         <p class="text-gray-600 text-xs leading-relaxed">
@@ -168,13 +181,19 @@
 
                     <!-- Basement: Gym & Parking -->
                     <div class="flex-1 bg-slate-100 rounded-2xl p-6 shadow-sm border border-gray-300 hover:border-blue-300 transition flex flex-col justify-center">
-                        <div class="flex items-center space-x-4 mb-2">
-                            <div class="bg-blue-900 text-white font-extrabold text-lg w-12 h-12 rounded-xl flex items-center justify-center shrink-0">
-                                S
+                        <div class="flex items-center justify-between mb-2">
+                            <div class="flex items-center space-x-4">
+                                <div class="bg-blue-900 text-white font-extrabold text-lg w-12 h-12 rounded-xl flex items-center justify-center shrink-0">
+                                    S
+                                </div>
+                                <div>
+                                    <span class="text-xs text-blue-900 font-bold uppercase tracking-wider">Sótano • Salud & Estacionamiento</span>
+                                    <h3 class="text-lg font-bold text-gray-900">Gimnasio Equipado & Parqueaderos</h3>
+                                </div>
                             </div>
-                            <div>
-                                <span class="text-xs text-blue-900 font-bold uppercase tracking-wider">Sótano • Salud & Estacionamiento</span>
-                                <h3 class="text-lg font-bold text-gray-900">Gimnasio Equipado & Parqueaderos</h3>
+                            <div class="flex space-x-3 text-blue-900 text-xl">
+                                <i class="fa-solid fa-dumbbell" title="Gimnasio"></i>
+                                <i class="fa-solid fa-square-parking" title="Parqueadero"></i>
                             </div>
                         </div>
                         <p class="text-gray-600 text-xs leading-relaxed">
@@ -184,10 +203,10 @@
 
                 </div>
 
-                <!-- Right Column: Architectural Cutaway Image constrained to container height -->
+                <!-- Right Column: Architectural Cutaway Image -->
                 <div class="lg:col-span-6 flex">
                     <div class="relative w-full h-full rounded-2xl overflow-hidden shadow-2xl border border-gray-300 group flex flex-col">
-                        <div class="relative w-full flex-1 min-h-[500px] overflow-hidden bg-slate-900">
+                        <div class="relative w-full flex-1 min-h-[480px] overflow-hidden bg-slate-900">
                             <img src="corte_arquitectonico.jpg" alt="Corte Arquitectónico Rivers Mall" class="w-full h-full object-cover object-center transform group-hover:scale-105 transition duration-500">
                             <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-slate-950/90 via-slate-900/60 to-transparent p-6 text-white">
                                 <div class="inline-block px-3 py-1 bg-blue-600 text-xs font-bold uppercase rounded tracking-wider mb-2">
@@ -228,81 +247,20 @@
                 <!-- Location Highlights -->
                 <div class="lg:col-span-4 space-y-6">
                     <div class="bg-slate-800/80 p-6 rounded-xl border border-gray-700">
-                        <i class="fas fa-route text-2xl text-blue-400 mb-3"></i>
+                        <i class="fa-solid fa-route text-2xl text-blue-400 mb-3"></i>
                         <h4 class="font-bold text-lg text-white mb-2">Excelente Conectividad</h4>
                         <p class="text-sm text-gray-300 leading-relaxed">Fácil acceso desde las principales avenidas y vías arteriales de Cúcuta, facilitando la llegada de clientes y colaboradores.</p>
                     </div>
 
                     <div class="bg-slate-800/80 p-6 rounded-xl border border-gray-700">
-                        <i class="fas fa-compass text-2xl text-blue-400 mb-3"></i>
+                        <i class="fa-solid fa-compass text-2xl text-blue-400 mb-3"></i>
                         <h4 class="font-bold text-lg text-white mb-2">Entorno Dinámico</h4>
                         <p class="text-sm text-gray-300 leading-relaxed">Ubicado dentro del complejo del Centro Comercial Rivers Mall, rodeado de servicios, banca y comercio de primer nivel.</p>
                     </div>
 
                     <a href="https://www.google.com/maps/search/?api=1&query=7.880799337061506,-72.48875378186216" target="_blank" class="block w-full py-3.5 bg-blue-600 hover:bg-blue-500 text-center font-bold text-white rounded-xl transition text-sm shadow-md">
-                        <i class="fas fa-map-location-dot mr-2"></i> Abrir en Google Maps
+                        <i class="fa-solid fa-map-location-dot mr-2"></i> Abrir en Google Maps
                     </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Office Modalities Section -->
-    <section id="soluciones" class="py-16 bg-gray-50 border-b border-gray-200">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-12">
-                <span class="text-xs font-bold text-blue-900 uppercase tracking-widest block mb-2">Flexibilidad Espacial</span>
-                <h2 class="text-3xl font-extrabold text-gray-900">Módulos de Oficina Adaptables</h2>
-                <p class="mt-4 text-gray-600">Espacios desde áreas modulares para profesionales independientes hasta plantas completas para multinacionales.</p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Modality 1 -->
-                <div class="bg-white rounded-xl overflow-hidden shadow-sm border border-gray-200 hover:shadow-md transition">
-                    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80" alt="Oficina Modular" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <span class="text-xs font-bold text-blue-900 uppercase tracking-wider">35 m² - 70 m²</span>
-                        <h3 class="text-xl font-bold text-gray-900 mt-1 mb-3">Oficinas Modulares</h3>
-                        <p class="text-gray-600 text-sm mb-4">Perfectas para firmas de abogados, consultorios, agencias y startups que requieren ubicación estratégica.</p>
-                        <ul class="text-xs text-gray-500 space-y-2 mb-6">
-                            <li><i class="fas fa-check text-blue-900 mr-2"></i> Puntos hidrosanitarios pre-instalados</li>
-                            <li><i class="fas fa-check text-blue-900 mr-2"></i> Vista exterior / Iluminación natural</li>
-                            <li><i class="fas fa-check text-blue-900 mr-2"></i> Parqueadero asignado</li>
-                        </ul>
-                        <a href="#contacto" class="block text-center py-2.5 bg-blue-50 font-bold text-blue-900 rounded-lg hover:bg-blue-100 text-sm">Cotizar Módulo</a>
-                    </div>
-                </div>
-
-                <!-- Modality 2 -->
-                <div class="bg-white rounded-xl overflow-hidden shadow-sm border border-gray-200 hover:shadow-md transition">
-                    <img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=800&q=80" alt="Suite Corporativa" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <span class="text-xs font-bold text-blue-900 uppercase tracking-wider">70 m² - 150 m²</span>
-                        <h3 class="text-xl font-bold text-gray-900 mt-1 mb-3">Suites Empresariales</h3>
-                        <p class="text-gray-600 text-sm mb-4">Espacios amplios diseñados para empresas consolidadas que necesitan múltiples puestos de trabajo y salas privadas.</p>
-                        <ul class="text-xs text-gray-500 space-y-2 mb-6">
-                            <li><i class="fas fa-check text-blue-900 mr-2"></i> Espacio para recepción privada</li>
-                            <li><i class="fas fa-check text-blue-900 mr-2"></i> Zona para sala de juntas interna</li>
-                            <li><i class="fas fa-check text-blue-900 mr-2"></i> Cableado estructurado optimizado</li>
-                        </ul>
-                        <a href="#contacto" class="block text-center py-2.5 bg-blue-50 font-bold text-blue-900 rounded-lg hover:bg-blue-100 text-sm">Cotizar Suite</a>
-                    </div>
-                </div>
-
-                <!-- Modality 3 -->
-                <div class="bg-white rounded-xl overflow-hidden shadow-sm border border-gray-200 hover:shadow-md transition">
-                    <img src="https://images.unsplash.com/photo-1577495508048-b635879837f1?auto=format&fit=crop&w=800&q=80" alt="Planta Completa" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <span class="text-xs font-bold text-blue-900 uppercase tracking-wider">200 m² a 500+ m²</span>
-                        <h3 class="text-xl font-bold text-gray-900 mt-1 mb-3">Planta / Ala Completa</h3>
-                        <p class="text-gray-600 text-sm mb-4">Solución a la medida para grandes corporaciones, entidades financieras o centros operativos.</p>
-                        <ul class="text-xs text-gray-500 space-y-2 mb-6">
-                            <li><i class="fas fa-check text-blue-900 mr-2"></i> Acceso y hall exclusivo de elevadores</li>
-                            <li><i class="fas fa-check text-blue-900 mr-2"></i> Opción de personalizar acabados</li>
-                            <li><i class="fas fa-check text-blue-900 mr-2"></i> Máximo paquete de parqueaderos</li>
-                        </ul>
-                        <a href="#contacto" class="block text-center py-2.5 bg-blue-50 font-bold text-blue-900 rounded-lg hover:bg-blue-100 text-sm">Cotizar Planta</a>
-                    </div>
                 </div>
             </div>
         </div>
@@ -314,7 +272,7 @@
             <div class="mb-6 md:mb-0 text-center md:text-left">
                 <div class="font-extrabold text-2xl tracking-wider text-blue-400 mb-1">RIVERS MALL</div>
                 <p class="text-gray-400 text-sm">Proyecto Comercial & Corporativo - Piso 3 Oficinas Privadas.</p>
-                <p class="text-gray-500 text-xs mt-1"><i class="fas fa-location-dot mr-1"></i> Coordenadas: 7.8808, -72.4888 • Cúcuta, Colombia</p>
+                <p class="text-gray-500 text-xs mt-1"><i class="fa-solid fa-location-dot mr-1"></i> Coordenadas: 7.8808, -72.4888 • Cúcuta, Colombia</p>
             </div>
             <div class="text-sm text-gray-500 text-center md:text-right">
                 &copy; 2026 Rivers Mall Cúcuta. Todos los derechos reservados.<br>
