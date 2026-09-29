@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oficinas Privadas Flexibles | Soluciones de Espacio de Trabajo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 antialiased">
+
+    <!-- Header Navigation -->
+    <header class="bg-white border-b border-gray-200 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="bg-black text-white font-extrabold px-3 py-1 text-xl tracking-wider rounded">WORKSPACE</div>
+                <span class="text-xs text-gray-500 font-medium tracking-wider uppercase hidden sm:inline-block">Soluciones de Oficina</span>
+            </div>
+            <nav class="hidden md:flex space-x-8 text-sm font-semibold text-gray-700">
+                <a href="#soluciones" class="hover:text-black transition">Soluciones</a>
+                <a href="#beneficios" class="hover:text-black transition">Beneficios</a>
+                <a href="#amenidades" class="hover:text-black transition">Amenidades</a>
+                <a href="#ubicaciones" class="hover:text-black transition">Ubicaciones</a>
+            </nav>
+            <div class="flex items-center space-x-4">
+                <a href="#contacto" class="hidden sm:inline-block text-sm font-semibold text-gray-700 hover:text-black">Iniciar Sesión</a>
+                <a href="#contacto" class="bg-black text-white text-sm font-semibold px-5 py-2.5 rounded-lg hover:bg-gray-800 transition shadow-sm">Agendar Visita</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative bg-white overflow-hidden py-12 lg:py-20 border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <!-- Hero Left Content -->
+                <div class="lg:col-span-7">
+                    <span class="inline-block px-3 py-1 bg-gray-100 text-gray-800 text-xs font-bold tracking-wide uppercase rounded-full mb-4">
+                        Espacios Flexibles de Trabajo
+                    </span>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 tracking-tight leading-none mb-6">
+                        Oficinas privadas listas para mudarse y crecer
+                    </h1>
+                    <p class="text-lg sm:text-xl text-gray-600 mb-8 max-w-2xl leading-relaxed">
+                        Soluciones llave en mano para equipos de 1 a más de 500 personas. Términos flexibles, diseño de primer nivel y todos los servicios incluidos en un solo pago mensual.
+                    </p>
+                    
+                    <!-- Stats highlights -->
+                    <div class="grid grid-cols-3 gap-4 mb-8 border-t border-b border-gray-100 py-4">
+                        <div>
+                            <span class="block text-2xl font-bold text-black">+50</span>
+                            <span class="text-xs text-gray-500 font-medium">Ubicaciones</span>
+                        </div>
+                        <div>
+                            <span class="block text-2xl font-bold text-black">100%</span>
+                            <span class="text-xs text-gray-500 font-medium">Equipado</span>
+                        </div>
+                        <div>
+                            <span class="block text-2xl font-bold text-black">24/7</span>
+                            <span class="text-xs text-gray-500 font-medium">Acceso Seguro</span>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#contacto" class="inline-flex justify-center items-center px-6 py-3.5 bg-black text-white font-semibold rounded-lg hover:bg-gray-800 transition text-center">
+                            Solicitar Cotización
+                            <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                        </a>
+                        <a href="#soluciones" class="inline-flex justify-center items-center px-6 py-3.5 bg-gray-100 text-gray-800 font-semibold rounded-lg hover:bg-gray-200 transition text-center">
+                            Ver Tipos de Espacio
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Hero Form / Right Side -->
+                <div class="lg:col-span-5">
+                    <div id="contacto" class="bg-white p-6 sm:p-8 rounded-2xl shadow-xl border border-gray-100">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Encuentra tu oficina ideal</h3>
+                        <p class="text-sm text-gray-600 mb-6">Completa tus datos y un especialista te contactará en minutos.</p>
+                        
+                        <form onsubmit="event.preventDefault(); alert('¡Gracias por tu interés! Nos pondremos en contacto pronto.');" class="space-y-4">
+                            <div>
+                                <label class="block text-xs font-semibold uppercase tracking-wider text-gray-700 mb-1">Nombre Completo</label>
+                                <input type="text" required placeholder="Ej. Ana García" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-black focus:outline-none text-sm">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold uppercase tracking-wider text-gray-700 mb-1">Correo Corporativo</label>
+                                <input type="email" required placeholder="ana@empresa.com" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-black focus:outline-none text-sm">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold uppercase tracking-wider text-gray-700 mb-1">Tamaño del Equipo</label>
+                                <select class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-black focus:outline-none text-sm">
+                                    <option>1 - 4 personas</option>
+                                    <option>5 - 15 personas</option>
+                                    <option>16 - 50 personas</option>
+                                    <option>50+ personas</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold uppercase tracking-wider text-gray-700 mb-1">Teléfono</label>
+                                <input type="tel" required placeholder="+57 300 000 0000" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-black focus:outline-none text-sm">
+                            </div>
+                            <button type="submit" class="w-full py-3.5 bg-black text-white font-bold rounded-lg hover:bg-gray-800 transition text-sm">
+                                Agendar Tour Gratis
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solutions Section -->
+    <section id="soluciones" class="py-16 bg-gray-50 border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="text-3xl font-extrabold text-gray-900">Soluciones de Oficina Privada</h2>
+                <p class="mt-4 text-gray-600">Diseñadas para adaptarse a cualquier etapa de tu empresa con flexibilidad total.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Option 1 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-sm border border-gray-200 hover:shadow-md transition">
+                    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80" alt="Oficina Pequeña" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="text-xs font-bold text-gray-500 uppercase tracking-wider">1 a 10 Personas</span>
+                        <h3 class="text-xl font-bold text-gray-900 mt-1 mb-3">Oficina Ejecutiva</h3>
+                        <p class="text-gray-600 text-sm mb-4">Espacio privado amueblado listo para ingresar, ideal para startups o equipos de trabajo enfocados.</p>
+                        <ul class="text-xs text-gray-500 space-y-2 mb-6">
+                            <li><i class="fas fa-check text-green-500 mr-2"></i> Mobiliario ergonómico incluido</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i> Créditos para salas de juntas</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i> Acceso 24/7</li>
+                        </ul>
+                        <a href="#contacto" class="block text-center py-2.5 bg-gray-100 font-semibold text-gray-800 rounded-lg hover:bg-gray-200 text-sm">Consultar disponibilidad</a>
+                    </div>
+                </div>
+
+                <!-- Option 2 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-sm border border-gray-200 hover:shadow-md transition">
+                    <img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=800&q=80" alt="Oficina Mediana" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="text-xs font-bold text-gray-500 uppercase tracking-wider">11 a 50 Personas</span>
+                        <h3 class="text-xl font-bold text-gray-900 mt-1 mb-3">Oficina de Crecimiento</h3>
+                        <p class="text-gray-600 text-sm mb-4">Múltiples estaciones de trabajo con opción de oficinas directivas y sala de reuniones privada interna.</p>
+                        <ul class="text-xs text-gray-500 space-y-2 mb-6">
+                            <li><i class="fas fa-check text-green-500 mr-2"></i> Personalización de marca</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i> Red IT dedicada opcional</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i> Limpieza diaria incluida</li>
+                        </ul>
+                        <a href="#contacto" class="block text-center py-2.5 bg-gray-100 font-semibold text-gray-800 rounded-lg hover:bg-gray-200 text-sm">Consultar disponibilidad</a>
+                    </div>
+                </div>
+
+                <!-- Option 3 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-sm border border-gray-200 hover:shadow-md transition">
+                    <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=800&q=80" alt="Piso Empresarial" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="text-xs font-bold text-gray-500 uppercase tracking-wider">50+ Personas</span>
+                        <h3 class="text-xl font-bold text-gray-900 mt-1 mb-3">Piso Completo / Suite</h3>
+                        <p class="text-gray-600 text-sm mb-4">Espacio corporativo totalmente a la medida con entrada privada, cocina propia y distribución personalizada.</p>
+                        <ul class="text-xs text-gray-500 space-y-2 mb-6">
+                            <li><i class="fas fa-check text-green-500 mr-2"></i> Arquitectura y layout a medida</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i> Control de acceso independiente</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i> Gerente de cuenta exclusivo</li>
+                        </ul>
+                        <a href="#contacto" class="block text-center py-2.5 bg-gray-100 font-semibold text-gray-800 rounded-lg hover:bg-gray-200 text-sm">Consultar disponibilidad</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Amenities Grid -->
+    <section id="amenidades" class="py-16 bg-white border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="text-3xl font-extrabold text-gray-900">Todo Incluido en Tu Membresía</h2>
+                <p class="mt-4 text-gray-600">Olvídate de facturar servicios por separado. Nos encargamos de la gestión completa.</p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="p-6 rounded-lg bg-gray-50">
+                    <i class="fas fa-wifi text-3xl text-gray-800 mb-4"></i>
+                    <h4 class="font-bold text-gray-900 mb-1">Internet de Alta Velocidad</h4>
+                    <p class="text-xs text-gray-500">Conexión simétrica redundante y Wi-Fi seguro.</p>
+                </div>
+                <div class="p-6 rounded-lg bg-gray-50">
+                    <i class="fas fa-coffee text-3xl text-gray-800 mb-4"></i>
+                    <h4 class="font-bold text-gray-900 mb-1">Café & Té Ilimitado</h4>
+                    <p class="text-xs text-gray-500">Bar de café especial, aguas e infusiones gratis.</p>
+                </div>
+                <div class="p-6 rounded-lg bg-gray-50">
+                    <i class="fas fa-users-viewfinder text-3xl text-gray-800 mb-4"></i>
+                    <h4 class="font-bold text-gray-900 mb-1">Salas de Juntas</h4>
+                    <p class="text-xs text-gray-500">Equipadas con pantallas A/V para videoconferencias.</p>
+                </div>
+                <div class="p-6 rounded-lg bg-gray-50">
+                    <i class="fas fa-broom text-3xl text-gray-800 mb-4"></i>
+                    <h4 class="font-bold text-gray-900 mb-1">Mantenimiento y Limpieza</h4>
+                    <p class="text-xs text-gray-500">Limpieza continua y desinfección de áreas de trabajo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Footer -->
+    <footer class="bg-black text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-6 md:mb-0">
+                <div class="font-extrabold text-2xl tracking-wider mb-2">WORKSPACE</div>
+                <p class="text-gray-400 text-sm">Red de espacios de trabajo flexibles en Latinoamérica.</p>
+            </div>
+            <div class="text-sm text-gray-400">
+                &copy; 2026 Workspace Inc. Todos los derechos reservados.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
