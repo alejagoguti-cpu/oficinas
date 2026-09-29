@@ -25,7 +25,7 @@
             </div>
             <nav class="hidden md:flex space-x-8 text-sm font-semibold text-gray-700">
                 <a href="#proyecto" class="hover:text-blue-900 transition">El Proyecto</a>
-                <a href="#distribucion" class="hover:text-blue-900 transition">Niveles & Arquitectura</a>
+                <a href="#distribucion" class="hover:text-blue-900 transition">Corte Arquitectónico</a>
                 <a href="#soluciones" class="hover:text-blue-900 transition">Tipos de Oficina</a>
                 <a href="#ubicacion" class="hover:text-blue-900 transition">Ubicación & Mapa</a>
             </nav>
@@ -77,7 +77,7 @@
                             <i class="fas fa-arrow-right ml-2 text-sm"></i>
                         </a>
                         <a href="#distribucion" class="inline-flex justify-center items-center px-6 py-3.5 bg-white/10 text-white font-semibold rounded-lg hover:bg-white/20 backdrop-blur-sm transition text-center">
-                            Ver Distribución por Pisos
+                            Ver Corte Arquitectónico
                         </a>
                     </div>
                 </div>
@@ -121,92 +121,82 @@
         </div>
     </section>
 
-    <!-- Vertical Layout / Floor Breakdown Section -->
+    <!-- Vertical Layout + Cutaway Section -->
     <section id="distribucion" class="py-16 bg-white border-b border-gray-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
                 <span class="text-xs font-bold text-blue-900 uppercase tracking-widest block mb-2">Arquitectura & Distribución Vertical</span>
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900">Estructura del Edificio Rivers Mall</h2>
-                <p class="mt-4 text-gray-600">Un diseño multinivel optimizado para el flujo de colaboradores, clientes y visitantes.</p>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900">Estructura & Corte Arquitectónico</h2>
+                <p class="mt-4 text-gray-600">Visualiza el flujo multinivel y la disposición de cada elemento en la edificación.</p>
             </div>
 
-            <!-- Vertical Timeline / Stack Cards -->
-            <div class="max-w-4xl mx-auto space-y-6">
-                
-                <!-- Floor 3: Offices -->
-                <div class="relative bg-gradient-to-r from-blue-900 to-slate-900 text-white rounded-2xl p-6 sm:p-8 shadow-xl border border-blue-800">
-                    <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
-                        <div class="flex items-center space-x-4">
-                            <div class="bg-blue-500 text-white font-extrabold text-2xl w-14 h-14 rounded-xl flex items-center justify-center shadow-lg">
-                                3
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <!-- Left Column: Floor Stack Explanations -->
+                <div class="lg:col-span-6 space-y-6">
+                    
+                    <!-- Floor 3: Offices -->
+                    <div class="relative bg-gradient-to-r from-blue-900 to-slate-900 text-white rounded-2xl p-6 shadow-xl border border-blue-800">
+                        <div class="flex items-center space-x-4 mb-3">
+                            <div class="bg-blue-500 text-white font-extrabold text-xl w-12 h-12 rounded-xl flex items-center justify-center shadow-lg">
+                                L3
                             </div>
                             <div>
                                 <span class="text-xs text-blue-300 font-bold uppercase tracking-wider">Tercer Nivel • Zona Exclusiva</span>
-                                <h3 class="text-2xl font-bold text-white">Oficinas Corporativas Privadas</h3>
+                                <h3 class="text-xl font-bold text-white">Oficinas Corporativas Privadas</h3>
                             </div>
                         </div>
-                        <span class="px-3 py-1 bg-blue-500/30 text-blue-200 border border-blue-400/30 rounded-full text-xs font-bold">Privacidad & Alta Gama</span>
+                        <p class="text-gray-300 text-xs leading-relaxed">
+                            Espacios de oficinas corporativas con salas de juntas, recepción ejecutiva y fachadas acristaladas con máxima iluminación natural.
+                        </p>
                     </div>
-                    <p class="mt-4 text-gray-300 text-sm leading-relaxed">
-                        En la cúspide del centro comercial se encuentran las suites y módulos de oficinas. Con vistas panorámicas, luz natural, hall de elevadores independiente y control de acceso exclusivo.
-                    </p>
-                </div>
 
-                <!-- Vertical Connector Line -->
-                <div class="flex justify-center my-2">
-                    <div class="w-1 h-8 bg-blue-300 rounded-full"></div>
-                </div>
-
-                <!-- Middle Floors: Bathrooms, ATMs & Commerce -->
-                <div class="relative bg-gray-50 rounded-2xl p-6 sm:p-8 shadow-sm border border-gray-200 hover:border-blue-300 transition">
-                    <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
-                        <div class="flex items-center space-x-4">
-                            <div class="bg-slate-800 text-white font-extrabold text-xl w-14 h-14 rounded-xl flex items-center justify-center">
-                                1-2
+                    <!-- Middle Floors: Bathrooms, ATMs & Commerce -->
+                    <div class="relative bg-gray-50 rounded-2xl p-6 shadow-sm border border-gray-200 hover:border-blue-300 transition">
+                        <div class="flex items-center space-x-4 mb-3">
+                            <div class="bg-slate-800 text-white font-extrabold text-lg w-12 h-12 rounded-xl flex items-center justify-center">
+                                L1-L2
                             </div>
                             <div>
-                                <span class="text-xs text-gray-500 font-bold uppercase tracking-wider">Niveles Intermedios • Servicios & Comercio</span>
-                                <h3 class="text-xl font-bold text-gray-900">Plaza Comercial, Baños Públicos & Zona de Cajeros</h3>
+                                <span class="text-xs text-gray-500 font-bold uppercase tracking-wider">Niveles Intermedios • Comercio & Servicios</span>
+                                <h3 class="text-lg font-bold text-gray-900">Plaza Comercial, Baños Públicos & Cajeros</h3>
                             </div>
                         </div>
-                        <div class="flex space-x-2 text-gray-600 text-lg">
-                            <i class="fas fa-money-bill-transfer" title="Cajeros"></i>
-                            <i class="fas fa-restroom" title="Baños"></i>
-                            <i class="fas fa-store" title="Comercio"></i>
-                        </div>
+                        <p class="text-gray-600 text-xs leading-relaxed">
+                            Acceso directo a escaleras eléctricas, locales de marcas, zona bancaria de cajeros y amplios servicios de baterías sanitarias.
+                        </p>
                     </div>
-                    <p class="mt-4 text-gray-600 text-sm leading-relaxed">
-                        Al descender de la oficina encuentras la zona de servicios principales: baterías de baños amplias, cajeros automáticos de las principales entidades bancarias, locales comerciales y zonas de circulación.
-                    </p>
-                </div>
 
-                <!-- Vertical Connector Line -->
-                <div class="flex justify-center my-2">
-                    <div class="w-1 h-8 bg-blue-300 rounded-full"></div>
-                </div>
-
-                <!-- Basement: Gym & Parking -->
-                <div class="relative bg-slate-100 rounded-2xl p-6 sm:p-8 shadow-sm border border-gray-300 hover:border-blue-300 transition">
-                    <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
-                        <div class="flex items-center space-x-4">
-                            <div class="bg-blue-900 text-white font-extrabold text-lg w-14 h-14 rounded-xl flex items-center justify-center">
+                    <!-- Basement: Gym & Parking -->
+                    <div class="relative bg-slate-100 rounded-2xl p-6 shadow-sm border border-gray-300 hover:border-blue-300 transition">
+                        <div class="flex items-center space-x-4 mb-3">
+                            <div class="bg-blue-900 text-white font-extrabold text-lg w-12 h-12 rounded-xl flex items-center justify-center">
                                 S
                             </div>
                             <div>
-                                <span class="text-xs text-blue-900 font-bold uppercase tracking-wider">Sótano • Bienestar & Salud</span>
-                                <h3 class="text-xl font-bold text-gray-900">Gimnasio Equipado & Parqueaderos Cubiertos</h3>
+                                <span class="text-xs text-blue-900 font-bold uppercase tracking-wider">Sótano • Salud & Estacionamiento</span>
+                                <h3 class="text-lg font-bold text-gray-900">Gimnasio Equipado & Parqueaderos</h3>
                             </div>
                         </div>
-                        <div class="flex space-x-2 text-blue-900 text-lg">
-                            <i class="fas fa-dumbbell" title="Gimnasio"></i>
-                            <i class="fas fa-square-parking" title="Parqueaderos"></i>
-                        </div>
+                        <p class="text-gray-600 text-xs leading-relaxed">
+                            Gimnasio de alto rendimiento para entrenamiento de ejecutivos y visitantes, conectado directamente con la rampa de parqueaderos subterráneos.
+                        </p>
                     </div>
-                    <p class="mt-4 text-gray-600 text-sm leading-relaxed">
-                        En el sótano se ubica el Gimnasio principal de alta tecnología, ideal para el bienestar de los ejecutivos antes o después de la jornada laboral, conectado directamente a los parqueaderos subterráneos.
-                    </p>
+
                 </div>
 
+                <!-- Right Column: Architectural Cutaway Image -->
+                <div class="lg:col-span-6">
+                    <div class="relative rounded-2xl overflow-hidden shadow-2xl border border-gray-300 group">
+                        <img src="corte_arquitectonico.jpg" alt="Corte Arquitectónico Rivers Mall" class="w-full h-auto object-cover transform group-hover:scale-105 transition duration-500">
+                        <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-slate-950/90 via-slate-900/60 to-transparent p-6 text-white">
+                            <div class="inline-block px-3 py-1 bg-blue-600 text-xs font-bold uppercase rounded tracking-wider mb-2">
+                                Vista Isométrica en Corte
+                            </div>
+                            <h4 class="text-lg font-bold">Diagrama Transversal Rivers Mall</h4>
+                            <p class="text-xs text-gray-300">Corte 3D interactivo mostrando el sótano (gimnasio/parqueadero), plaza comercial (cajeros/baños) y piso 3 (oficinas).</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
