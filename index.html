@@ -716,7 +716,12 @@
             const slides = iterationData[currentLevel].slides;
             const slide = slides[currentIndex];
 
-            document.getElementById('carouselImage').src = slide.img;
+            const carouselImg = document.getElementById('carouselImage');
+            carouselImg.onload = () => {
+                const portrait = carouselImg.naturalHeight > carouselImg.naturalWidth;
+                carouselImg.style.height = portrait ? 'clamp(320px, 62vh, 640px)' : '';
+            };
+            carouselImg.src = slide.img;
             document.getElementById('carouselCaption').innerText = slide.caption;
             document.getElementById('carouselCounter').innerText = `Iteración ${currentIndex + 1} de ${slides.length}`;
 
