@@ -5,6 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Oficinas Corporativas en Rivers Mall Cúcuta | Piso 3</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // Paleta gris premium (grafito cálido): reemplaza los azules y pizarras por defecto
+        tailwind.config = {
+            theme: { extend: { colors: {
+                blue: { 50:'#f6f6f5',100:'#ebebe9',200:'#d6d6d3',300:'#c9c9c4',400:'#b0b0aa',500:'#75756f',600:'#4a4a46',700:'#3a3a37',800:'#2b2b29',900:'#1e1e1d',950:'#141413' },
+                slate: { 50:'#f7f7f6',100:'#efefed',200:'#dcdcd9',300:'#c2c2be',400:'#9b9b96',500:'#74746f',600:'#52524e',700:'#3a3a37',800:'#272725',900:'#1a1a19',950:'#0f0f0e' }
+            } } }
+        };
+    </script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
@@ -376,14 +385,14 @@
                     <div id="sat-map" class="w-full h-full"></div>
                     
                     <div class="absolute top-4 right-4 z-10 bg-slate-950/90 backdrop-blur-md px-4 py-2.5 rounded-xl border border-slate-700 text-xs font-bold text-white shadow-xl flex items-center space-x-2">
-                        <span class="w-4 h-1 border-b-2 border-dashed border-purple-400 inline-block"></span>
+                        <span class="w-4 h-1 border-b-2 border-dashed border-yellow-600 inline-block"></span>
                         <span>Perímetro del Terreno Rivers Mall</span>
                     </div>
                 </div>
 
                 <div class="lg:col-span-4 space-y-6">
                     <div class="bg-slate-800/80 p-6 rounded-xl border border-gray-700">
-                        <i class="fa-solid fa-draw-polygon text-2xl text-purple-400 mb-3"></i>
+                        <i class="fa-solid fa-draw-polygon text-2xl text-yellow-600 mb-3"></i>
                         <h4 class="font-bold text-lg text-white mb-2">Delimitación del Lote</h4>
                         <p class="text-sm text-gray-300 leading-relaxed">Área total del predio trazada con la poligonal discontinua en morado, colindando con la Avenida Pinar y zonas residenciales de Cúcuta.</p>
                     </div>
@@ -552,10 +561,10 @@
             ];
 
             const polygon = L.polygon(polygonCoords, {
-                color: '#a855f7',
+                color: '#d4af37',
                 weight: 3.5,
                 dashArray: '8, 8',
-                fillColor: '#c084fc',
+                fillColor: '#d4af37',
                 fillOpacity: 0.25
             }).addTo(map);
 
