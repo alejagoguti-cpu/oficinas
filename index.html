@@ -112,7 +112,7 @@
             <div class="text-center max-w-3xl mx-auto mb-16">
                 <span class="text-xs font-bold text-blue-900 uppercase tracking-widest block mb-2">Arquitectura & Distribución Vertical</span>
                 <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900">Diseño Preliminar</h2>
-                <p class="mt-4 text-gray-600">Haz clic sobre los botones (+) ubicados exactamente en cada elemento (baños, gimnasio, oficinas y parqueaderos) para desplegar su información específica.</p>
+                <p class="mt-4 text-gray-600">Explora la distribución por niveles y abre cada tarjeta para ver fotos y planos de oficinas, baños, gimnasio y parqueaderos.</p>
             </div>
 
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
@@ -263,58 +263,6 @@
                             <img id="axoImage" src="axo_boceto.jpg" alt="Axonometría del proyecto Rivers Mall" class="w-full h-full object-contain">
                             
 
-                            <!-- HOTSPOT 2: PISO 3 OFICINAS PRIVADAS -->
-                            <div class="absolute top-[55%] left-[24%] -translate-x-5 -translate-y-5 z-20 flex items-center">
-                                <button id="hs-btn-oficinas" onclick="toggleCutawayHotspot('oficinas')" class="w-10 h-10 rounded-full bg-blue-600 text-white shadow-2xl font-bold flex items-center justify-center hover:bg-blue-500 transition duration-300 border-2 border-white group">
-                                    <span id="hs-icon-oficinas" class="text-lg font-extrabold">+</span>
-                                    <span class="absolute w-10 h-10 rounded-full bg-blue-400/50 hotspot-pulse -z-10"></span>
-                                </button>
-                                <div id="hs-pill-oficinas" class="hidden ml-3 bg-white/95 backdrop-blur-md text-gray-900 px-4 py-2.5 rounded-full shadow-2xl border border-gray-200 text-xs font-bold flex items-center space-x-2 whitespace-nowrap">
-                                    <span class="w-2.5 h-2.5 rounded-full bg-blue-600 shrink-0"></span>
-                                    <span>Piso 3: Oficinas Privadas (5 a 10 personas)</span>
-                                    <button onclick="openModal('l3'); event.stopPropagation();" class="ml-2 underline text-blue-600 hover:text-blue-800 font-extrabold text-[11px]">Ver Fotos</button>
-                                </div>
-                            </div>
-
-                            <!-- HOTSPOT 3: BAÑOS PÚBLICOS -->
-                            <div class="absolute top-[71%] left-[20%] -translate-x-5 -translate-y-5 z-20 flex items-center">
-                                <button id="hs-btn-banos" onclick="toggleCutawayHotspot('banos')" class="w-10 h-10 rounded-full bg-blue-600 text-white shadow-2xl font-bold flex items-center justify-center hover:bg-blue-500 transition duration-300 border-2 border-white group">
-                                    <span id="hs-icon-banos" class="text-lg font-extrabold">+</span>
-                                    <span class="absolute w-10 h-10 rounded-full bg-blue-400/50 hotspot-pulse -z-10"></span>
-                                </button>
-                                <div id="hs-pill-banos" class="hidden ml-3 bg-white/95 backdrop-blur-md text-gray-900 px-4 py-2.5 rounded-full shadow-2xl border border-gray-200 text-xs font-bold flex items-center space-x-2 whitespace-nowrap">
-                                    <span class="w-2.5 h-2.5 rounded-full bg-blue-600 shrink-0"></span>
-                                    <span>Baterías Sanitarias & Baños Públicos</span>
-                                    <button onclick="openModal('l1l2'); event.stopPropagation();" class="ml-2 underline text-blue-600 hover:text-blue-800 font-extrabold text-[11px]">Ver Fotos</button>
-                                </div>
-                            </div>
-
-                            <!-- HOTSPOT 4: GIMNASIO -->
-                            <div class="absolute top-[88%] left-[62%] -translate-x-5 -translate-y-5 z-20 flex items-center">
-                                <button id="hs-btn-gym" onclick="toggleCutawayHotspot('gym')" class="w-10 h-10 rounded-full bg-blue-600 text-white shadow-2xl font-bold flex items-center justify-center hover:bg-blue-500 transition duration-300 border-2 border-white group">
-                                    <span id="hs-icon-gym" class="text-lg font-extrabold">+</span>
-                                    <span class="absolute w-10 h-10 rounded-full bg-blue-400/50 hotspot-pulse -z-10"></span>
-                                </button>
-                                <div id="hs-pill-gym" class="hidden ml-3 bg-white/95 backdrop-blur-md text-gray-900 px-4 py-2.5 rounded-full shadow-2xl border border-gray-200 text-xs font-bold flex items-center space-x-2 whitespace-nowrap">
-                                    <span class="w-2.5 h-2.5 rounded-full bg-blue-600 shrink-0"></span>
-                                    <span>Sótano: Gimnasio Equipado (Technogym)</span>
-                                    <button onclick="openModal('s'); event.stopPropagation();" class="ml-2 underline text-blue-600 hover:text-blue-800 font-extrabold text-[11px]">Ver Fotos</button>
-                                </div>
-                            </div>
-
-                            <!-- HOTSPOT 5: PARQUEADERO -->
-                            <div class="absolute top-[79%] left-[42%] -translate-x-5 -translate-y-5 z-20 flex items-center">
-                                <button id="hs-btn-parking" onclick="toggleCutawayHotspot('parking')" class="w-10 h-10 rounded-full bg-blue-600 text-white shadow-2xl font-bold flex items-center justify-center hover:bg-blue-500 transition duration-300 border-2 border-white group">
-                                    <span id="hs-icon-parking" class="text-lg font-extrabold">+</span>
-                                    <span class="absolute w-10 h-10 rounded-full bg-blue-400/50 hotspot-pulse -z-10"></span>
-                                </button>
-                                <div id="hs-pill-parking" class="hidden ml-3 bg-white/95 backdrop-blur-md text-gray-900 px-4 py-2.5 rounded-full shadow-2xl border border-gray-200 text-xs font-bold flex items-center space-x-2 whitespace-nowrap">
-                                    <span class="w-2.5 h-2.5 rounded-full bg-blue-600 shrink-0"></span>
-                                    <span>Sótano: Parqueadero Subterráneo Cubierto</span>
-                                    <button onclick="openModal('p'); event.stopPropagation();" class="ml-2 underline text-blue-600 hover:text-blue-800 font-extrabold text-[11px]">Ver Fotos</button>
-                                </div>
-                            </div>
-
                             </div>
                             </div>
                             <button onclick="axoStep(-1)" aria-label="Anterior" class="absolute left-3 top-[40%] -translate-y-1/2 w-10 h-10 rounded-full bg-slate-900/80 hover:bg-blue-600 text-white flex items-center justify-center transition shadow-lg z-30">
@@ -329,7 +277,7 @@
                                 <div class="inline-block px-3 py-1 bg-blue-600 text-xs font-bold uppercase rounded tracking-wider mb-2">
                                     Diseño Preliminar Estilo WeWork
                                 </div>
-                                <h4 id="axoCaption" class="text-lg font-bold">Haz clic en cada (+) para ver exactamente el elemento señalado</h4>
+                                <h4 id="axoCaption" class="text-lg font-bold">Axonometría del proyecto: contexto y accesos</h4>
                             </div>
                         </div>
                     </div>
@@ -422,7 +370,7 @@
             </div>
 
             <div class="px-6 py-4 bg-white border-t border-gray-200 flex justify-between items-center">
-                <span class="text-xs text-gray-500 font-medium"><i class="fa-solid fa-circle-info text-blue-600 mr-1"></i> Haz clic en los botones <strong>(+)</strong> de la imagen para ver los detalles del mobiliario y elementos.</span>
+                <span></span>
                 <button onclick="closeModal()" class="px-5 py-2.5 bg-blue-900 text-white font-bold rounded-lg hover:bg-blue-800 transition text-sm">
                     Cerrar Galería
                 </button>
@@ -609,11 +557,7 @@
                 slides: [
                     {
                         img: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1200&q=80',
-                        caption: 'Iteración 1: Gimnasio Equipado de Alto Rendimiento para Ejecutivos',
-                        hotspots: [
-                            { top: '55%', left: '40%', label: 'Máquinas de cardio Technogym' },
-                            { top: '65%', left: '70%', label: 'Zona de pesas libres & multifuncional' }
-                        ]
+                        caption: 'Iteración 1: Gimnasio Equipado de Alto Rendimiento para Ejecutivos'
                     },
                     {
                         img: 'parqueaderos/1.png',
@@ -642,7 +586,7 @@
         };
 
         const axoSlides = [
-            { src: 'axo_boceto.jpg', ratio: '708 / 844', hotspots: true, caption: 'Haz clic en cada (+) para ver exactamente el elemento señalado' },
+            { src: 'axo_boceto.jpg', ratio: '708 / 844', hotspots: false, caption: 'Axonometría del proyecto: contexto y accesos' },
             { src: 'axo_niveles.webp', ratio: '1 / 1', hotspots: false, caption: 'Niveles del proyecto: sótano, primer piso y conexión por escaleras' }
         ];
         let axoIndex = 0;
@@ -839,9 +783,6 @@
             if (e.key === 'Escape') closeModal();
         });
 
-        window.addEventListener('DOMContentLoaded', () => {
-            toggleCutawayHotspot('oficinas');
-        });
     </script>
 
 </body>
