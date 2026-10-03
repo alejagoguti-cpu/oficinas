@@ -302,9 +302,20 @@
                     <p class="mt-6 text-[11px] text-gray-400 italic">* Imagen de referencia de la propuesta de fachada.</p>
                 </div>
                 <div class="lg:col-span-7">
-                    <div class="rounded-2xl overflow-hidden shadow-2xl border border-gray-200 bg-slate-900">
-                        <img src="fachada/1.webp" alt="Fachada del Mall: paseo comercial cubierto con vitrinas y cielo raso en madera" class="w-full h-auto max-h-[720px] object-cover object-center">
+                    <div class="relative rounded-2xl overflow-hidden shadow-2xl border border-gray-200 bg-slate-900">
+                        <img id="fachadaImage" src="fachada/1.webp" alt="Fachada del Mall" class="w-full h-[70vh] min-h-[360px] max-h-[720px] object-contain bg-slate-900">
+                        <button onclick="fachadaStep(-1)" aria-label="Anterior" class="absolute left-3 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-slate-900/80 hover:bg-blue-600 text-white flex items-center justify-center transition shadow-lg border border-white/20">
+                            <i class="fa-solid fa-chevron-left"></i>
+                        </button>
+                        <button onclick="fachadaStep(1)" aria-label="Siguiente" class="absolute right-3 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-slate-900/80 hover:bg-blue-600 text-white flex items-center justify-center transition shadow-lg border border-white/20">
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </button>
+                        <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-slate-950/90 via-slate-950/50 to-transparent p-5 pt-12 text-white pointer-events-none">
+                            <span id="fachadaCounter" class="text-xs font-bold text-blue-300 uppercase tracking-wider block mb-1"></span>
+                            <h4 id="fachadaCaption" class="text-base font-bold"></h4>
+                        </div>
                     </div>
+                    <div id="fachadaDots" class="flex justify-center space-x-2 mt-4"></div>
                 </div>
             </div>
         </div>
@@ -649,6 +660,37 @@
         }
 
         axoRender();
+
+        const fachadaSlides = [
+            { src: 'fachada/1.webp', caption: 'Paseo comercial cubierto con cielo raso en madera y vitrinas amplias' },
+            { src: 'fachada/2.webp', caption: 'Circulación peatonal con pérgola de madera, jardineras y parqueo frontal' },
+            { src: 'fachada/3.webp', caption: 'Marquesina metálica con iluminación cálida y vitrinas acristaladas' },
+            { src: 'fachada/4.webp', caption: 'Pasaje peatonal con espejo de agua, palmas y cubiertas de vidrio' }
+        ];
+        let fachadaIndex = 0;
+
+        function fachadaRender() {
+            const v = fachadaSlides[fachadaIndex];
+            document.getElementById('fachadaImage').src = v.src;
+            document.getElementById('fachadaCaption').innerText = v.caption;
+            document.getElementById('fachadaCounter').innerText = `Imagen ${fachadaIndex + 1} de ${fachadaSlides.length}`;
+            const dots = document.getElementById('fachadaDots');
+            dots.innerHTML = '';
+            fachadaSlides.forEach((_, i) => {
+                const d = document.createElement('button');
+                d.setAttribute('aria-label', 'Ir a la imagen ' + (i + 1));
+                d.className = 'h-2.5 rounded-full transition-all ' + (i === fachadaIndex ? 'w-7 bg-blue-600' : 'w-2.5 bg-gray-300');
+                d.onclick = () => { fachadaIndex = i; fachadaRender(); };
+                dots.appendChild(d);
+            });
+        }
+
+        function fachadaStep(dir) {
+            fachadaIndex = (fachadaIndex + dir + fachadaSlides.length) % fachadaSlides.length;
+            fachadaRender();
+        }
+
+        fachadaRender();
 
         function toggleCutawayHotspot(itemKey) {
             const allHotspots = ['oficinas', 'banos', 'gym', 'parking'];
