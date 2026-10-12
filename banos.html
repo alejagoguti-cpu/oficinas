@@ -326,6 +326,11 @@
             
             setTimeout(() => {
                 img.src = slide.src;
+                if (slide.src.includes('plano')) {
+                    img.className = 'max-h-[75vh] w-auto max-w-full object-contain rounded-2xl bg-white p-4 sm:p-6 shadow-2xl transition duration-500';
+                } else {
+                    img.className = 'w-full max-h-[85vh] object-contain rounded-2xl shadow-2xl transition duration-500';
+                }
                 img.style.opacity = '1';
             }, 150);
 
