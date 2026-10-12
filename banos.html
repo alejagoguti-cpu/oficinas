@@ -127,40 +127,40 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                 <div class="lg:col-span-6 space-y-6">
-                    <span class="text-xs font-bold text-blue-900 uppercase tracking-widest block">Planimetría & Verificación de Cotas</span>
-                    <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 leading-tight">Dimensiones de Norma para Maniobra Completa</h2>
+                    <span class="text-xs font-bold text-blue-900 uppercase tracking-widest block">Planimetría General & Verificación de Cotas</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 leading-tight">Plano General del Núcleo de Baños, PMR & Cajeros</h2>
                     <p class="text-gray-600 leading-relaxed text-sm sm:text-base">
-                        El diseño garantiza un diámetro libre de giro de <strong>1.500 mm (1.50 metros)</strong> reglamentario por la normativa colombiana de accesibilidad universal, permitiendo la rotación libre en 360° de cualquier modelo de silla de ruedas.
+                        Distribución integral del núcleo de servicios con <strong>Baño de Hombres</strong> (norte), <strong>Baño Accesible PMR</strong> (centro), <strong>Baño de Mujeres</strong> (sur) y <strong>Batería de Cajeros Automáticos (ATM)</strong> con acceso directo al corredor principal y núcleo de circulación vertical.
                     </p>
 
                     <div class="space-y-4 pt-2">
                         <div class="p-4 bg-slate-50 rounded-2xl border border-gray-200 flex items-start gap-4">
                             <div class="w-12 h-12 rounded-xl bg-purple-100 text-purple-900 font-extrabold text-lg flex items-center justify-center shrink-0">
-                                1.5m
+                                PMR
                             </div>
                             <div>
-                                <h4 class="font-bold text-gray-900 text-sm">Radio de Giro Ø 1.500 mm</h4>
-                                <p class="text-xs text-gray-600 mt-0.5">Espacio circular libre de cualquier obstáculo fijo entre el lavamanos, la puerta y el sanitario.</p>
+                                <h4 class="font-bold text-gray-900 text-sm">Módulo Accesible Universal (Ø 1.500 mm)</h4>
+                                <p class="text-xs text-gray-600 mt-0.5">Área central de 2.38 m con radio libre de giro en 360°, lavamanos suspendido y barra de apoyo en acero inoxidable.</p>
                             </div>
                         </div>
 
                         <div class="p-4 bg-slate-50 rounded-2xl border border-gray-200 flex items-start gap-4">
                             <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-900 font-extrabold text-lg flex items-center justify-center shrink-0">
-                                2.38m
+                                4+5
                             </div>
                             <div>
-                                <h4 class="font-bold text-gray-900 text-sm">Longitud Total del Módulo: 2.378 mm</h4>
-                                <p class="text-xs text-gray-600 mt-0.5">Largo suficiente para ubicar lavamanos accesible, zona de maniobra y batería sanitaria con barra de apoyo.</p>
+                                <h4 class="font-bold text-gray-900 text-sm">Baterías Sanitarias Colectivas H & M</h4>
+                                <p class="text-xs text-gray-600 mt-0.5">Cabinas en acero AISI 304, orinales institucionales, mesones continuos con lavamanos sobreencimera y cota adaptada.</p>
                             </div>
                         </div>
 
                         <div class="p-4 bg-slate-50 rounded-2xl border border-gray-200 flex items-start gap-4">
                             <div class="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-900 font-extrabold text-lg flex items-center justify-center shrink-0">
-                                Inox
+                                ATM
                             </div>
                             <div>
-                                <h4 class="font-bold text-gray-900 text-sm">Barra de Apoyo en Acero 304</h4>
-                                <p class="text-xs text-gray-600 mt-0.5">Anclada sólidamente al muro estructural para soporte seguro de transferencia lateral.</p>
+                                <h4 class="font-bold text-gray-900 text-sm">Zona Bancaria & Cajeros Automáticos</h4>
+                                <p class="text-xs text-gray-600 mt-0.5">Pórtico en granito beige con lamas divisorias acústicas en WPC 3D Holztek y retroiluminación LED perimetral.</p>
                             </div>
                         </div>
                     </div>
@@ -224,7 +224,7 @@
 
                         <!-- Canvas Workspace with underlying Plano Image -->
                         <div class="relative w-full rounded-2xl overflow-hidden bg-white shadow-inner flex items-center justify-center select-none" id="canvasWrapper" style="cursor: crosshair;">
-                            <img id="planoBaseImage" src="bano_discapacitados_plano.png" alt="Plano Técnico" class="w-full max-h-[70vh] object-contain block pointer-events-none select-none">
+                            <img id="planoBaseImage" src="plano_general_completo.png" alt="Plano General Arquitectónico Núcleo Baños & Cajeros" class="w-full max-h-[75vh] object-contain block pointer-events-none select-none">
                             <canvas id="annotationCanvas" class="absolute inset-0 w-full h-full touch-none"></canvas>
                         </div>
                         <span class="text-xs text-gray-400 mt-3 text-center">
@@ -366,10 +366,10 @@
 
                 <!-- Material 5: Lavamanos Cascade Vessel Corona (Homecenter) -->
                 <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-gray-200 flex flex-col group">
-                    <div class="relative bg-slate-100 h-44 overflow-hidden">
-                        <img src="corona_lavamanos_vessel.jpg" alt="Lavamanos Cascade Vessel Blanco Corona" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    <div class="relative bg-slate-100 h-44 overflow-hidden flex items-center justify-center p-2">
+                        <img src="foto_real_lavamanos_cascade.jpg" alt="Foto Real de Producto - Lavamanos Cascade Vessel Blanco Corona" class="w-full h-full object-contain group-hover:scale-105 transition duration-500">
                         <span class="absolute top-2.5 left-2.5 bg-blue-700/95 backdrop-blur-sm text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full shadow">
-                            Sanitario Sobreponer
+                            Producto Sanitario Real
                         </span>
                         <a href="https://www.homecenter.com.co/homecenter-co/product/773945/lavamanos-vessel-cascade-corona-blanco-estrellado-texturizado-con-desague-push-pop/773945/" target="_blank" class="absolute top-2.5 right-2.5 bg-slate-950/80 hover:bg-blue-600 text-white w-7 h-7 rounded-full flex items-center justify-center transition shadow-md border border-white/20" title="Comprar en Homecenter">
                             <i class="fa-solid fa-cart-shopping text-[10px]"></i>
@@ -395,10 +395,10 @@
 
                 <!-- Material 6: Orinal Petite con Grifería Push Corona (Homecenter) -->
                 <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-gray-200 flex flex-col group">
-                    <div class="relative bg-slate-100 h-44 overflow-hidden">
-                        <img src="corona_orinal_institucional.jpg" alt="Orinal Petite con Grifería Push Expuesta Corona" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    <div class="relative bg-slate-100 h-44 overflow-hidden flex items-center justify-center p-2">
+                        <img src="foto_real_orinal_corona.jpg" alt="Foto Real de Producto - Orinal Petite con Grifería Push Expuesta Corona" class="w-full h-full object-contain group-hover:scale-105 transition duration-500">
                         <span class="absolute top-2.5 left-2.5 bg-indigo-700/95 backdrop-blur-sm text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full shadow">
-                            Institucional Alto Tráfico
+                            Producto Sanitario Real
                         </span>
                         <a href="https://www.homecenter.com.co/homecenter-co/product/3106914/Orinal-Petite-Con-Griferia-Push-Expuesta-Corona-Blanco/3106914" target="_blank" class="absolute top-2.5 right-2.5 bg-slate-950/80 hover:bg-indigo-600 text-white w-7 h-7 rounded-full flex items-center justify-center transition shadow-md border border-white/20" title="Comprar en Homecenter">
                             <i class="fa-solid fa-cart-shopping text-[10px]"></i>
@@ -505,8 +505,20 @@
     <script>
         const pmrSlides = [
             {
+                src: 'cajeros_render.jpg',
+                badge: 'Render 1 de 6 • Cajeros Automáticos (ATM)',
+                badgeColor: 'text-amber-400',
+                title: 'Batería de Cajeros Automáticos (ATM) & Privacidad Acústica',
+                subtitle: 'Módulo bancario con pórtico de enmarcado en granito beige, paneles divisorios alistonados 3D en WPC madera Holztek y retroiluminación LED cálida.',
+                features: [
+                    { icon: 'fa-money-bill-wave text-amber-500', title: '3 Terminales ATM Integradas', desc: 'Espacios individuales empotrados para cajeros electrónicos con nicho perimetral y altura accesible.' },
+                    { icon: 'fa-layer-group text-yellow-600', title: 'Lamas WPC Ranuradas 3D', desc: 'Paneles separadores verticales de privacidad acústica y seguridad visual entre usuarios (Holztek Madera Brown).' },
+                    { icon: 'fa-lightbulb text-yellow-400', title: 'Iluminación Rasante LED', desc: 'Tiras de luz LED empotradas en corona superior que bañan sutilmente el revestimiento de madera.' }
+                ]
+            },
+            {
                 src: 'bano_mujeres_render.jpg',
-                badge: 'Render 1 de 5 • Baño de Mujeres',
+                badge: 'Render 2 de 6 • Baño de Mujeres',
                 badgeColor: 'text-pink-400',
                 title: 'Batería Sanitaria Colectiva: Baño de Mujeres',
                 subtitle: 'Distribución con múltiples cabinas privadas en acero inoxidable satinado, revestimiento vertical en verde oliva, puerta de acceso en madera y mesón con 5 lavamanos escalonados.',
@@ -518,7 +530,7 @@
             },
             {
                 src: 'bano_hombres_render.jpg',
-                badge: 'Render 2 de 5 • Baño de Hombres (Terracota)',
+                badge: 'Render 3 de 6 • Baño de Hombres (Terracota)',
                 badgeColor: 'text-blue-400',
                 title: 'Batería Sanitaria de Hombres • Acabado Mosaico Terracota',
                 subtitle: 'Distribución con cubículos privados en acero satinado, orinales con panel divisor y batería de lavamanos escalonada para accesibilidad infantil/PMR.',
@@ -530,7 +542,7 @@
             },
             {
                 src: 'bano_hombres_madera_render.jpg',
-                badge: 'Render 3 de 5 • Baño de Hombres (Madera Listonada)',
+                badge: 'Render 4 de 6 • Baño de Hombres (Madera Listonada)',
                 badgeColor: 'text-amber-400',
                 title: 'Batería Sanitaria de Hombres • Acabado Madera Listonada',
                 subtitle: 'Variante arquitectónica cálida con pared de acento en palillería de madera natural vertical, focos empotrados en cielo raso y mesón en granito beige.',
@@ -542,7 +554,7 @@
             },
             {
                 src: 'bano_discapacitados_render.jpg',
-                badge: 'Render 4 de 5 • Baño Accesible PMR (Verde Oliva)',
+                badge: 'Render 5 de 6 • Baño Accesible PMR (Verde Oliva)',
                 badgeColor: 'text-emerald-400',
                 title: 'Módulo PMR con Madera Roble & Cerámica Verde Oliva',
                 subtitle: 'Acabados biofílicos con luminarias colgantes esféricas y pisos en porcelanato granito beige.',
@@ -554,7 +566,7 @@
             },
             {
                 src: 'bano_discapacitados_render_naranja.png',
-                badge: 'Render 5 de 5 • Baño Accesible PMR (Terracota)',
+                badge: 'Render 6 de 6 • Baño Accesible PMR (Terracota)',
                 badgeColor: 'text-amber-400',
                 title: 'Módulo PMR con Revestimiento Hexagonal Terracota',
                 subtitle: 'Mosaico vitrificado brillante tono caramelo/terracota con juntas blancas en muro de acento.',
