@@ -67,9 +67,9 @@
     <section id="renders" class="py-16 sm:py-24 bg-gray-50 border-b border-gray-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-xs font-bold text-purple-700 uppercase tracking-widest block mb-2">Visualización Arquitectónica 3D</span>
-                <h2 class="text-3xl sm:text-5xl font-extrabold text-gray-900 tracking-tight">Renders en Alta Resolución: Baño PMR</h2>
-                <p class="mt-4 text-gray-600 text-base">Modelos isométricos detallados que muestran el mobiliario ergonómico, espacio de maniobra reglamentario y dos alternativas de acabado en muros.</p>
+                <span class="text-xs font-bold text-blue-700 uppercase tracking-widest block mb-2">Visualización Arquitectónica 3D</span>
+                <h2 class="text-3xl sm:text-5xl font-extrabold text-gray-900 tracking-tight">Renders en Alta Resolución: Baños de Hombres & PMR</h2>
+                <p class="mt-4 text-gray-600 text-base">Modelos isométricos detallados que muestran la batería sanitaria colectiva de hombres (cubículos, orinales y mesón escalonado) y los módulos accesibles PMR.</p>
             </div>
 
             <!-- Interactive Big Carousel Container -->
@@ -325,8 +325,20 @@
     <script>
         const pmrSlides = [
             {
+                src: 'bano_hombres_render.jpg',
+                badge: 'Render 1 de 3 • Baño de Hombres',
+                badgeColor: 'text-blue-400',
+                title: 'Batería Sanitaria Colectiva: Baño de Hombres',
+                subtitle: 'Distribución con cubículos privados en acero satinado, orinales con panel divisor y batería de lavamanos escalonada para accesibilidad infantil/PMR.',
+                features: [
+                    { icon: 'fa-door-closed text-slate-400', title: 'Cubículos en Acero Inoxidable', desc: 'Cabinas individuales higiénicas con herrajes suspendidos elevados del piso para lavado rápido.' },
+                    { icon: 'fa-restroom text-blue-500', title: 'Orinales de Pared con Divisoria', desc: '2 orinales institucionales con descarga ecológica y panel separador de privacidad en acero.' },
+                    { icon: 'fa-sink text-emerald-500', title: 'Lavamanos Escalonado', desc: 'Mesón continuo en piedra natural con 4 lavamanos, incluyendo 1 posición a cota reducida para niños y PMR.' }
+                ]
+            },
+            {
                 src: 'bano_discapacitados_render.jpg',
-                badge: 'Render 1 de 2 • Propuesta Principal',
+                badge: 'Render 2 de 3 • Baño Accesible PMR (Verde Oliva)',
                 badgeColor: 'text-emerald-400',
                 title: 'Módulo PMR con Madera Roble & Cerámica Verde Oliva',
                 subtitle: 'Acabados biofílicos con luminarias colgantes esféricas y pisos en porcelanato granito beige.',
@@ -338,7 +350,7 @@
             },
             {
                 src: 'bano_discapacitados_render_naranja.png',
-                badge: 'Render 2 de 2 • Propuesta Terracota',
+                badge: 'Render 3 de 3 • Baño Accesible PMR (Terracota)',
                 badgeColor: 'text-amber-400',
                 title: 'Módulo PMR con Revestimiento Hexagonal Terracota',
                 subtitle: 'Mosaico vitrificado brillante tono caramelo/terracota con juntas blancas en muro de acento.',
