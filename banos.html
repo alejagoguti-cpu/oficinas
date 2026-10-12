@@ -167,12 +167,69 @@
                 </div>
 
                 <div class="lg:col-span-6">
-                    <div class="bg-slate-950 p-4 sm:p-6 rounded-3xl border border-gray-300 shadow-2xl flex flex-col items-center">
-                        <span class="text-xs font-mono text-gray-400 mb-3 block self-start uppercase tracking-wider">
-                            <i class="fa-solid fa-ruler-combined text-purple-400 mr-2"></i>Plano Acotado (Cotas en Milímetros)
+                    <div class="bg-slate-950 p-4 sm:p-6 rounded-3xl border border-gray-300 shadow-2xl flex flex-col">
+                        <div class="flex items-center justify-between mb-3 text-xs text-gray-300">
+                            <span class="font-mono uppercase tracking-wider flex items-center">
+                                <i class="fa-solid fa-pen-ruler text-purple-400 mr-2"></i>Pizarra de Acotaciones (Estilo Miro)
+                            </span>
+                            <span class="text-[11px] text-gray-400 italic">Dibuja, anota o agrega cotas sobre el plano</span>
+                        </div>
+
+                        <!-- Miro-style Floating Toolbar -->
+                        <div class="flex flex-wrap items-center justify-between gap-2 p-2.5 bg-slate-900 rounded-2xl border border-slate-700 shadow-lg mb-3">
+                            <!-- Tool selection buttons -->
+                            <div class="flex items-center space-x-1 sm:space-x-1.5">
+                                <button id="tool-micropunta" onclick="setDrawTool('micropunta')" class="px-2.5 py-1.5 rounded-lg text-xs font-bold transition flex items-center gap-1.5 bg-blue-600 text-white" title="Micropunta (Trazo fino 2px)">
+                                    <i class="fa-solid fa-pen-nib text-xs"></i>
+                                    <span class="hidden sm:inline">Micropunta</span>
+                                </button>
+                                <button id="tool-marcador" onclick="setDrawTool('marcador')" class="px-2.5 py-1.5 rounded-lg text-xs font-bold transition flex items-center gap-1.5 bg-slate-800 text-gray-300 hover:bg-slate-700" title="Marcador (Trazo medio 5px)">
+                                    <i class="fa-solid fa-marker text-xs"></i>
+                                    <span class="hidden sm:inline">Marcador</span>
+                                </button>
+                                <button id="tool-resaltador" onclick="setDrawTool('resaltador')" class="px-2.5 py-1.5 rounded-lg text-xs font-bold transition flex items-center gap-1.5 bg-slate-800 text-gray-300 hover:bg-slate-700" title="Resaltador semitransparente (16px)">
+                                    <i class="fa-solid fa-highlighter text-xs"></i>
+                                    <span class="hidden sm:inline">Resaltador</span>
+                                </button>
+                                <button id="tool-texto" onclick="setDrawTool('texto')" class="px-2.5 py-1.5 rounded-lg text-xs font-bold transition flex items-center gap-1.5 bg-slate-800 text-gray-300 hover:bg-slate-700" title="Agregar texto / cota">
+                                    <i class="fa-solid fa-font text-xs"></i>
+                                    <span class="hidden sm:inline">Texto</span>
+                                </button>
+                                <button id="tool-borrador" onclick="setDrawTool('borrador')" class="px-2.5 py-1.5 rounded-lg text-xs font-bold transition flex items-center gap-1.5 bg-slate-800 text-gray-300 hover:bg-slate-700" title="Borrador">
+                                    <i class="fa-solid fa-eraser text-xs"></i>
+                                    <span class="hidden sm:inline">Borrador</span>
+                                </button>
+                            </div>
+
+                            <!-- Color Palette & Actions -->
+                            <div class="flex items-center space-x-2">
+                                <div class="flex items-center space-x-1.5 bg-slate-800 p-1 rounded-lg border border-slate-700">
+                                    <button onclick="setDrawColor('#ef4444')" class="w-5 h-5 rounded-full bg-red-500 border border-white hover:scale-110 transition color-dot" title="Rojo"></button>
+                                    <button onclick="setDrawColor('#3b82f6')" class="w-5 h-5 rounded-full bg-blue-500 border border-white hover:scale-110 transition color-dot" title="Azul"></button>
+                                    <button onclick="setDrawColor('#10b981')" class="w-5 h-5 rounded-full bg-emerald-500 border border-white hover:scale-110 transition color-dot" title="Verde"></button>
+                                    <button onclick="setDrawColor('#f59e0b')" class="w-5 h-5 rounded-full bg-amber-500 border border-white hover:scale-110 transition color-dot" title="Amarillo / Naranja"></button>
+                                    <button onclick="setDrawColor('#111827')" class="w-5 h-5 rounded-full bg-gray-950 border border-white hover:scale-110 transition color-dot" title="Negro"></button>
+                                </div>
+                                <button onclick="undoDraw()" class="p-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-white text-xs" title="Deshacer trazo (Ctrl+Z)">
+                                    <i class="fa-solid fa-rotate-left"></i>
+                                </button>
+                                <button onclick="clearDrawCanvas()" class="p-2 rounded-lg bg-rose-900/80 hover:bg-rose-700 text-rose-200 text-xs" title="Borrar todo">
+                                    <i class="fa-solid fa-trash-can"></i>
+                                </button>
+                                <button onclick="downloadAnnotatedCanvas()" class="p-2 rounded-lg bg-blue-600 hover:bg-blue-500 text-white text-xs" title="Descargar plano acotado">
+                                    <i class="fa-solid fa-download"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Canvas Workspace with underlying Plano Image -->
+                        <div class="relative w-full rounded-2xl overflow-hidden bg-white shadow-inner flex items-center justify-center select-none" id="canvasWrapper" style="cursor: crosshair;">
+                            <img id="planoBaseImage" src="bano_discapacitados_plano.png" alt="Plano Técnico" class="w-full max-h-[70vh] object-contain block pointer-events-none select-none">
+                            <canvas id="annotationCanvas" class="absolute inset-0 w-full h-full touch-none"></canvas>
+                        </div>
+                        <span class="text-xs text-gray-400 mt-3 text-center">
+                            Haz clic y arrastra para dibujar o acotar. Selecciona <strong class="text-blue-300">Texto</strong> y haz clic en cualquier punto para escribir notas sobre el plano.
                         </span>
-                        <img src="bano_discapacitados_plano.png" alt="Plano Técnico Baño Discapacitado" class="w-full max-h-[70vh] object-contain rounded-xl bg-white p-2 shadow-inner">
-                        <span class="text-xs text-gray-400 mt-4 text-center">Cotas verificadas: 2.378 mm de longitud × 1.500 mm de claro de giro circular.</span>
                     </div>
                 </div>
             </div>
@@ -350,6 +407,227 @@
 
         // Initialize carousel on load
         pmrRender();
+
+        /* ========================================================
+           MIRO-STYLE INTERACTIVE CANVAS WHITEBOARD FOR ACOTACIONES
+        ======================================================== */
+        const canvas = document.getElementById('annotationCanvas');
+        const ctx = canvas.getContext('2d');
+        const baseImg = document.getElementById('planoBaseImage');
+        const wrapper = document.getElementById('canvasWrapper');
+
+        let currentTool = 'micropunta'; // 'micropunta', 'marcador', 'resaltador', 'borrador', 'texto'
+        let currentColor = '#ef4444';
+        let isDrawing = false;
+        let lastX = 0;
+        let lastY = 0;
+        let drawHistory = [];
+
+        function resizeCanvas() {
+            const rect = baseImg.getBoundingClientRect();
+            if (rect.width > 0 && rect.height > 0) {
+                // Save current canvas state
+                let tempCanvas = null;
+                if (canvas.width > 0 && canvas.height > 0) {
+                    tempCanvas = document.createElement('canvas');
+                    tempCanvas.width = canvas.width;
+                    tempCanvas.height = canvas.height;
+                    tempCanvas.getContext('2d').drawImage(canvas, 0, 0);
+                }
+
+                canvas.width = rect.width;
+                canvas.height = rect.height;
+
+                // Restore previous state scaled
+                if (tempCanvas) {
+                    ctx.drawImage(tempCanvas, 0, 0, canvas.width, canvas.height);
+                }
+            }
+        }
+
+        baseImg.addEventListener('load', resizeCanvas);
+        window.addEventListener('resize', resizeCanvas);
+        setTimeout(resizeCanvas, 300);
+
+        function saveState() {
+            if (drawHistory.length > 25) drawHistory.shift();
+            drawHistory.push(ctx.getImageData(0, 0, canvas.width, canvas.height));
+        }
+
+        function undoDraw() {
+            if (drawHistory.length > 0) {
+                const prev = drawHistory.pop();
+                ctx.putImageData(prev, 0, 0);
+            }
+        }
+
+        function clearDrawCanvas() {
+            if (confirm('¿Deseas borrar todas las acotaciones y dibujos del plano?')) {
+                saveState();
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+            }
+        }
+
+        function setDrawTool(tool) {
+            currentTool = tool;
+            ['micropunta', 'marcador', 'resaltador', 'texto', 'borrador'].forEach(t => {
+                const btn = document.getElementById('tool-' + t);
+                if (btn) {
+                    if (t === tool) {
+                        btn.className = 'px-2.5 py-1.5 rounded-lg text-xs font-bold transition flex items-center gap-1.5 bg-blue-600 text-white shadow';
+                    } else {
+                        btn.className = 'px-2.5 py-1.5 rounded-lg text-xs font-bold transition flex items-center gap-1.5 bg-slate-800 text-gray-300 hover:bg-slate-700';
+                    }
+                }
+            });
+
+            if (tool === 'borrador') {
+                wrapper.style.cursor = 'cell';
+            } else if (tool === 'texto') {
+                wrapper.style.cursor = 'text';
+            } else {
+                wrapper.style.cursor = 'crosshair';
+            }
+        }
+
+        function setDrawColor(col) {
+            currentColor = col;
+            if (currentTool === 'borrador') {
+                setDrawTool('micropunta');
+            }
+        }
+
+        function getCanvasPos(e) {
+            const rect = canvas.getBoundingClientRect();
+            const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+            const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+            return {
+                x: clientX - rect.left,
+                y: clientY - rect.top
+            };
+        }
+
+        // Pointer / Touch drawing handlers
+        function startDrawing(e) {
+            if (e.touches && e.touches.length > 1) return; // Permitir zoom multitouch
+            const pos = getCanvasPos(e);
+
+            if (currentTool === 'texto') {
+                const note = prompt('Escribe tu acotación o comentario para este punto:');
+                if (note && note.trim() !== '') {
+                    saveState();
+                    ctx.save();
+                    ctx.font = 'bold 14px "Plus Jakarta Sans", sans-serif';
+                    ctx.textBaseline = 'middle';
+
+                    // Miro-style yellow sticky note / pill background
+                    const textWidth = ctx.measureText(note).width;
+                    ctx.fillStyle = '#fef08a'; // Yellow sticky background
+                    ctx.strokeStyle = '#ca8a04';
+                    ctx.lineWidth = 1.5;
+                    ctx.beginPath();
+                    ctx.roundRect(pos.x - 6, pos.y - 14, textWidth + 16, 26, 6);
+                    ctx.fill();
+                    ctx.stroke();
+
+                    // Text
+                    ctx.fillStyle = '#1e293b';
+                    ctx.fillText(note, pos.x + 2, pos.y);
+                    ctx.restore();
+                }
+                return;
+            }
+
+            saveState();
+            isDrawing = true;
+            lastX = pos.x;
+            lastY = pos.y;
+            draw(e);
+        }
+
+        function draw(e) {
+            if (!isDrawing) return;
+            e.preventDefault();
+            const pos = getCanvasPos(e);
+
+            ctx.save();
+            ctx.lineCap = 'round';
+            ctx.lineJoin = 'round';
+
+            if (currentTool === 'borrador') {
+                ctx.globalCompositeOperation = 'destination-out';
+                ctx.lineWidth = 24;
+                ctx.beginPath();
+                ctx.moveTo(lastX, lastY);
+                ctx.lineTo(pos.x, pos.y);
+                ctx.stroke();
+            } else if (currentTool === 'micropunta') {
+                ctx.globalCompositeOperation = 'source-over';
+                ctx.strokeStyle = currentColor;
+                ctx.lineWidth = 2.5;
+                ctx.beginPath();
+                ctx.moveTo(lastX, lastY);
+                ctx.lineTo(pos.x, pos.y);
+                ctx.stroke();
+            } else if (currentTool === 'marcador') {
+                ctx.globalCompositeOperation = 'source-over';
+                ctx.strokeStyle = currentColor;
+                ctx.lineWidth = 6;
+                ctx.beginPath();
+                ctx.moveTo(lastX, lastY);
+                ctx.lineTo(pos.x, pos.y);
+                ctx.stroke();
+            } else if (currentTool === 'resaltador') {
+                ctx.globalCompositeOperation = 'source-over';
+                ctx.strokeStyle = currentColor;
+                ctx.lineWidth = 18;
+                ctx.globalAlpha = 0.35;
+                ctx.beginPath();
+                ctx.moveTo(lastX, lastY);
+                ctx.lineTo(pos.x, pos.y);
+                ctx.stroke();
+            }
+
+            ctx.restore();
+            lastX = pos.x;
+            lastY = pos.y;
+        }
+
+        function stopDrawing() {
+            isDrawing = false;
+        }
+
+        canvas.addEventListener('mousedown', startDrawing);
+        canvas.addEventListener('mousemove', draw);
+        window.addEventListener('mouseup', stopDrawing);
+
+        canvas.addEventListener('touchstart', startDrawing, { passive: false });
+        canvas.addEventListener('touchmove', draw, { passive: false });
+        window.addEventListener('touchend', stopDrawing);
+
+        // Download annotated plan
+        function downloadAnnotatedCanvas() {
+            const outCanvas = document.createElement('canvas');
+            outCanvas.width = canvas.width;
+            outCanvas.height = canvas.height;
+            const outCtx = outCanvas.getContext('2d');
+
+            // Draw base image and annotations
+            outCtx.drawImage(baseImg, 0, 0, canvas.width, canvas.height);
+            outCtx.drawImage(canvas, 0, 0);
+
+            const a = document.createElement('a');
+            a.download = 'plano_bano_pmr_acotado.png';
+            a.href = outCanvas.toDataURL('image/png');
+            a.click();
+        }
+
+        // Ctrl+Z shortcut
+        document.addEventListener('keydown', (e) => {
+            if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'z') {
+                undoDraw();
+            }
+        });
     </script>
 </body>
 </html>
