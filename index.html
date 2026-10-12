@@ -452,6 +452,74 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Moodboard de Materiales & Acabados -->
+            <div class="mt-12 bg-white rounded-2xl p-8 border border-gray-200 shadow-sm">
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6 pb-4 border-b border-gray-100">
+                    <div>
+                        <div class="inline-flex items-center space-x-2 bg-amber-50 text-amber-900 text-xs px-3 py-1 rounded-full font-bold mb-1">
+                            <i class="fa-solid fa-palette text-amber-600"></i>
+                            <span>Paleta de Diseño & Texturas</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900">Moodboard de Materiales & Acabados de Baños</h3>
+                        <p class="text-sm text-gray-600">Selección de revestimientos cerámicos y pisos de alta durabilidad para las áreas sanitarias y PMR.</p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Material 1: Mosaico Hexagonal Caramelo / Terracota -->
+                    <div class="bg-gray-50 rounded-xl overflow-hidden border border-gray-200 group hover:shadow-md transition">
+                        <div class="relative h-44 overflow-hidden bg-slate-100">
+                            <img src="material_mosaico_hexagonal.jpg" alt="Mosaico Hexagonal Terracota" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                            <span class="absolute top-2.5 left-2.5 bg-amber-600 text-white text-[10px] font-bold px-2 py-0.5 rounded shadow">Paredes & Acentos</span>
+                        </div>
+                        <div class="p-4">
+                            <h4 class="font-bold text-gray-900 text-sm mb-1">Mosaico Hexagonal Vitrificado</h4>
+                            <p class="text-xs text-gray-600 leading-snug mb-2">Tono caramelo brillante con junta blanca. Superficie impermeable y de fácil limpieza para zonas de lavamanos y cabinas.</p>
+                            <span class="text-[10px] font-mono text-gray-400 block uppercase">Acabado: Brillante vitrificado</span>
+                        </div>
+                    </div>
+
+                    <!-- Material 2: Terrazzo / Porcelanato Beige Granito -->
+                    <div class="bg-gray-50 rounded-xl overflow-hidden border border-gray-200 group hover:shadow-md transition">
+                        <div class="relative h-44 overflow-hidden bg-slate-100">
+                            <img src="material_terrazzo_beige.jpg" alt="Terrazzo Beige Antideslizante" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                            <span class="absolute top-2.5 left-2.5 bg-stone-700 text-white text-[10px] font-bold px-2 py-0.5 rounded shadow">Piso Antideslizante</span>
+                        </div>
+                        <div class="p-4">
+                            <h4 class="font-bold text-gray-900 text-sm mb-1">Terrazzo / Granito Beige</h4>
+                            <p class="text-xs text-gray-600 leading-snug mb-2">Porcelanato grano fino tono arena con clasificación antideslizante R10 / Grado C para total seguridad en zonas húmedas y PMR.</p>
+                            <span class="text-[10px] font-mono text-gray-400 block uppercase">Acabado: Mate Antideslizante</span>
+                        </div>
+                    </div>
+
+                    <!-- Material 3: Madera Natural & Panelería -->
+                    <div class="bg-gray-50 rounded-xl overflow-hidden border border-gray-200 group hover:shadow-md transition">
+                        <div class="relative h-44 overflow-hidden bg-slate-800">
+                            <img src="bano_discapacitados_render.jpg" alt="Panel de Madera y Muros" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                            <span class="absolute top-2.5 left-2.5 bg-blue-900 text-white text-[10px] font-bold px-2 py-0.5 rounded shadow">Revestimiento Muros</span>
+                        </div>
+                        <div class="p-4">
+                            <h4 class="font-bold text-gray-900 text-sm mb-1">Panel Roble & Cerámica Verde</h4>
+                            <p class="text-xs text-gray-600 leading-snug mb-2">Listones de roble hidrófugo combinados con cuadrícula verde oliva para una atmósfera cálida, orgánica y moderna.</p>
+                            <span class="text-[10px] font-mono text-gray-400 block uppercase">Acabado: Laminado hidrófugo</span>
+                        </div>
+                    </div>
+
+                    <!-- Material 4: Griferías & Accesorios PMR -->
+                    <div class="bg-gray-50 rounded-xl overflow-hidden border border-gray-200 group hover:shadow-md transition">
+                        <div class="relative h-44 overflow-hidden bg-slate-900 flex items-center justify-center p-4">
+                            <img src="bano_discapacitados_plano.png" alt="Accesorios y Barras Inoxidables" class="w-full h-full object-contain group-hover:scale-105 transition duration-500">
+                            <span class="absolute top-2.5 left-2.5 bg-purple-700 text-white text-[10px] font-bold px-2 py-0.5 rounded shadow">Accesorios Técnicos</span>
+                        </div>
+                        <div class="p-4">
+                            <h4 class="font-bold text-gray-900 text-sm mb-1">Acero Inoxidable & Porcelana</h4>
+                            <p class="text-xs text-gray-600 leading-snug mb-2">Barras de apoyo en acero inoxidable 304 satinado, grifería electrónica sensorizada y loza sanitaria blanca de alta eficiencia.</p>
+                            <span class="text-[10px] font-mono text-gray-400 block uppercase">Acabado: Inox Satinado 304</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -725,6 +793,20 @@
                         caption: 'Alternativa de Acabados: Revestimiento en Mosaico Terracota Cálido',
                         hotspots: [
                             { top: '45%', left: '35%', label: 'Mosaico cerámico vitrificado antiséptico' }
+                        ]
+                    },
+                    {
+                        img: 'material_mosaico_hexagonal.jpg',
+                        caption: 'Moodboard: Mosaico Cerámico Hexagonal Caramelo / Terracota Brillante',
+                        hotspots: [
+                            { top: '50%', left: '50%', label: 'Acabado vitrificado reflectivo e impermeable' }
+                        ]
+                    },
+                    {
+                        img: 'material_terrazzo_beige.jpg',
+                        caption: 'Moodboard: Porcelanato Grano Fino / Terrazzo Beige Antideslizante',
+                        hotspots: [
+                            { top: '50%', left: '50%', label: 'Tracción antideslizante R10 para zonas húmedas y PMR' }
                         ]
                     }
                 ]
