@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sala de Juntas Corporativa • Rivers Mall Cúcuta</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        slate: { 850: '#151f32', 950: '#070d18' }
+                    }
+                }
+            }
+        };
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap');
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 antialiased selection:bg-amber-500 selection:text-white">
+
+    <!-- Navbar Principal -->
+    <header class="bg-white/95 backdrop-blur-md border-b border-gray-200 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <a href="index.html" class="bg-slate-900 text-white font-black px-3.5 py-1.5 text-lg tracking-wider rounded-xl shadow-md hover:bg-amber-600 transition">
+                    RIVERS MALL
+                </a>
+                <div class="border-l border-gray-300 pl-3">
+                    <span class="text-xs text-amber-700 font-extrabold tracking-wider uppercase block">Sala de Juntas Ejecutiva</span>
+                    <span class="text-[11px] text-gray-500 font-medium">Piso 3 • Área Corporativa</span>
+                </div>
+            </div>
+            <nav class="flex items-center space-x-3 sm:space-x-6 text-xs sm:text-sm font-bold text-gray-700">
+                <a href="index.html" class="hover:text-amber-700 transition flex items-center gap-1.5">
+                    <i class="fa-solid fa-building text-xs"></i>
+                    <span class="hidden sm:inline">Página Principal</span>
+                </a>
+                <a href="banos.html" class="hover:text-amber-700 transition flex items-center gap-1.5">
+                    <i class="fa-solid fa-restroom text-xs"></i>
+                    <span class="hidden sm:inline">Baños & Moodboard</span>
+                </a>
+                <a href="#variantes" class="px-3.5 py-2 bg-amber-600 hover:bg-amber-700 text-white rounded-xl shadow-sm transition flex items-center gap-1.5">
+                    <i class="fa-solid fa-cubes-stacked text-xs"></i>
+                    <span>4 Variantes</span>
+                </a>
+                <a href="#moodboard" class="hidden md:flex px-3.5 py-2 bg-slate-900 hover:bg-slate-800 text-white rounded-xl shadow-sm transition items-center gap-1.5">
+                    <i class="fa-solid fa-swatchbook text-xs"></i>
+                    <span>Materiales Homecenter</span>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero / Presentación del Espacio -->
+    <section class="relative bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white py-14 sm:py-20 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="max-w-3xl">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/20 text-amber-300 text-xs font-bold uppercase tracking-wider mb-4 border border-amber-500/30">
+                    <i class="fa-solid fa-crown text-amber-400"></i> Diseño Arquitectónico & Interiorismo Corporativo
+                </div>
+                <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-tight mb-4">
+                    Sala de Juntas <span class="text-amber-400">Rivers Mall</span>
+                </h1>
+                <p class="text-gray-300 text-sm sm:text-base leading-relaxed mb-6 font-normal">
+                    Espacio de alta dirección concebido para reuniones de directorio, videoconferencias ejecutivas y toma de decisiones estratégicas. Capacidad para 10 directivos con cerramiento vidriado perimetral, pilares estructurales revestidos en mármol travertine y 4 propuestas de panel acústico retroiluminado.
+                </p>
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 pt-2">
+                    <div class="bg-slate-900/80 p-3.5 rounded-2xl border border-slate-700/60 backdrop-blur-sm">
+                        <span class="text-[11px] font-mono uppercase text-gray-400 block mb-0.5">Capacidad</span>
+                        <span class="text-xl font-black text-amber-400">10 Puestos</span>
+                    </div>
+                    <div class="bg-slate-900/80 p-3.5 rounded-2xl border border-slate-700/60 backdrop-blur-sm">
+                        <span class="text-[11px] font-mono uppercase text-gray-400 block mb-0.5">Mesa Directiva</span>
+                        <span class="text-xl font-black text-white">4.20 × 1.20 m</span>
+                    </div>
+                    <div class="bg-slate-900/80 p-3.5 rounded-2xl border border-slate-700/60 backdrop-blur-sm">
+                        <span class="text-[11px] font-mono uppercase text-gray-400 block mb-0.5">Conectividad</span>
+                        <span class="text-xl font-black text-blue-400">Smart TV 75"</span>
+                    </div>
+                    <div class="bg-slate-900/80 p-3.5 rounded-2xl border border-slate-700/60 backdrop-blur-sm">
+                        <span class="text-[11px] font-mono uppercase text-gray-400 block mb-0.5">Acústica</span>
+                        <span class="text-xl font-black text-emerald-400">WPC & Alfombra</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 1: VISOR INTERACTIVO DE LAS 4 VARIANTES DE DISEÑO -->
+    <section id="variantes" class="py-16 sm:py-24 bg-white border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-xs font-bold text-amber-700 uppercase tracking-widest block mb-2">Comparativa de Acabados & Iluminación</span>
+                <h2 class="text-3xl sm:text-4xl font-black text-gray-900 tracking-tight">4 Variantes de Diseño para el Muro Principal</h2>
+                <p class="mt-3 text-gray-600 text-sm sm:text-base">Selecciona cada propuesta para evaluar la composición del muro de acento, las estanterías de exhibición, el trabajo de celosías/listones y la temperatura de la retroiluminación LED.</p>
+            </div>
+
+            <!-- Selector de Pestañas de Variantes -->
+            <div class="flex flex-wrap justify-center gap-2 sm:gap-3 mb-10" id="tabsVariantes">
+                <button onclick="setVariante(0)" id="btnTab0" class="px-5 py-3 rounded-2xl font-bold text-xs sm:text-sm transition flex items-center gap-2 shadow-sm bg-slate-900 text-white border-2 border-slate-900">
+                    <i class="fa-solid fa-archway text-amber-400"></i>
+                    <span>Opción 1: Celosía Arábica & Madera</span>
+                </button>
+                <button onclick="setVariante(1)" id="btnTab1" class="px-5 py-3 rounded-2xl font-bold text-xs sm:text-sm transition flex items-center gap-2 shadow-sm bg-gray-100 hover:bg-gray-200 text-gray-800 border-2 border-transparent">
+                    <i class="fa-solid fa-bars text-amber-600"></i>
+                    <span>Opción 2: Panel Alistonado & Muro Piedra</span>
+                </button>
+                <button onclick="setVariante(2)" id="btnTab2" class="px-5 py-3 rounded-2xl font-bold text-xs sm:text-sm transition flex items-center gap-2 shadow-sm bg-gray-100 hover:bg-gray-200 text-gray-800 border-2 border-transparent">
+                    <i class="fa-solid fa-circle-half-stroke text-amber-600"></i>
+                    <span>Opción 3: Arcos Retroiluminados LED</span>
+                </button>
+                <button onclick="setVariante(3)" id="btnTab3" class="px-5 py-3 rounded-2xl font-bold text-xs sm:text-sm transition flex items-center gap-2 shadow-sm bg-gray-100 hover:bg-gray-200 text-gray-800 border-2 border-transparent">
+                    <i class="fa-solid fa-gem text-amber-600"></i>
+                    <span>Opción 4: Mármol Travertine & Ranuras</span>
+                </button>
+            </div>
+
+            <!-- Visualizador Principal con Render en Alta Definición e Información -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-slate-950 p-4 sm:p-8 rounded-3xl border border-slate-800 shadow-2xl">
+                <!-- Imagen Isométrica -->
+                <div class="lg:col-span-8 flex flex-col items-center justify-center">
+                    <div class="relative w-full overflow-hidden rounded-2xl bg-slate-900 flex items-center justify-center group">
+                        <img id="renderJuntasImg" src="juntas_variante_1_moucharaby.jpg" alt="Render Sala de Juntas" class="w-full max-h-[75vh] object-contain transition-opacity duration-300">
+                        <div class="absolute bottom-3 left-3 bg-slate-950/80 backdrop-blur-md px-3 py-1.5 rounded-xl border border-white/10 text-white text-xs flex items-center gap-2">
+                            <i class="fa-solid fa-cube text-amber-400"></i>
+                            <span id="renderBadge">Isométrico 3D • Variante 1 de 4</span>
+                        </div>
+                        <a id="renderFullLink" href="juntas_variante_1_moucharaby.jpg" target="_blank" class="absolute top-3 right-3 bg-slate-950/80 hover:bg-amber-600 text-white w-9 h-9 rounded-xl flex items-center justify-center transition shadow-lg border border-white/20" title="Ver render en tamaño completo">
+                            <i class="fa-solid fa-expand text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Detalles Técnicos y Arquitectónicos de la Variante -->
+                <div class="lg:col-span-4 text-white space-y-6">
+                    <div>
+                        <span id="varianteTag" class="text-xs font-mono uppercase tracking-wider text-amber-400 font-bold block mb-1">
+                            Opción 1 • Estilo Biofílico & Herencia Geométrica
+                        </span>
+                        <h3 id="varianteTitle" class="text-2xl sm:text-3xl font-extrabold text-white leading-tight">
+                            Celosías Moucharaby & Estanterías Roble
+                        </h3>
+                        <p id="varianteDesc" class="mt-3 text-gray-300 text-xs sm:text-sm leading-relaxed">
+                            Muro frontal con nichos en arco iluminados que enmarcan celosías caladas en patrón geométrico arábico/andalusí con retroiluminación cálida posterior. Incluye dos librerías simétricas iluminadas y puerta doble enchapada en nogal.
+                        </p>
+                    </div>
+
+                    <!-- Fichas de características específicas -->
+                    <div class="space-y-3 pt-2" id="variantePuntos">
+                        <div class="p-3.5 bg-slate-900 rounded-2xl border border-slate-800 flex items-start gap-3">
+                            <i class="fa-solid fa-vector-square text-amber-400 text-base mt-1"></i>
+                            <div>
+                                <h4 class="text-xs font-bold text-white">Celosía Calada Retroiluminada</h4>
+                                <p class="text-[11px] text-gray-400 mt-0.5">Paneles decorativos CNC de alta densidad que filtran la luz indirecta para una atmósfera serena y prestigiosa.</p>
+                            </div>
+                        </div>
+                        <div class="p-3.5 bg-slate-900 rounded-2xl border border-slate-800 flex items-start gap-3">
+                            <i class="fa-solid fa-book-open text-blue-400 text-base mt-1"></i>
+                            <div>
+                                <h4 class="text-xs font-bold text-white">Librerías Iluminadas Integradas</h4>
+                                <p class="text-[11px] text-gray-400 mt-0.5">Estanterías verticales en madera natural con tiras LED cálidas 3000K empotradas bajo cada repisa.</p>
+                            </div>
+                        </div>
+                        <div class="p-3.5 bg-slate-900 rounded-2xl border border-slate-800 flex items-start gap-3">
+                            <i class="fa-solid fa-tv text-emerald-400 text-base mt-1"></i>
+                            <div>
+                                <h4 class="text-xs font-bold text-white">Nicho Audiovisual Central</h4>
+                                <p class="text-[11px] text-gray-400 mt-0.5">Panel central en porcelanato marmoleado beige con Smart TV 75" para teleconferencias sin cables a la vista.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Botón de navegación rápida -->
+                    <div class="pt-2 flex items-center justify-between border-t border-slate-800">
+                        <button onclick="prevVariante()" class="px-4 py-2 bg-slate-900 hover:bg-slate-800 text-white rounded-xl text-xs font-bold transition flex items-center gap-1.5">
+                            <i class="fa-solid fa-arrow-left"></i> Anterior
+                        </button>
+                        <span id="indicadorVariante" class="text-xs font-mono text-gray-400">1 de 4</span>
+                        <button onclick="nextVariante()" class="px-4 py-2 bg-amber-600 hover:bg-amber-700 text-white rounded-xl text-xs font-bold transition flex items-center gap-1.5">
+                            Siguiente <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 2: MOODBOARD DE MATERIALES & ENLACES DE COMPRA HOMECENTER -->
+    <section id="moodboard" class="py-16 sm:py-24 bg-gray-50 border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-bold text-amber-700 uppercase tracking-widest block mb-2">Especificaciones Físicas & Compra Directa</span>
+                <h2 class="text-3xl sm:text-4xl font-black text-gray-900 tracking-tight">Moodboard de Materiales • Sala de Juntas</h2>
+                <p class="mt-3 text-gray-600 text-sm sm:text-base">Fotografías reales de los materiales y mobiliario seleccionados con enlace directo a Homecenter Colombia para cotización y compra inmediata.</p>
+            </div>
+
+            <!-- Grid de 4 Columnas para Materiales de la Sala -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+                <!-- Material 1: Panel Ranurado 3D WPC Holztek (Pared Acústica) -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-gray-200 flex flex-col group">
+                    <div class="relative bg-slate-100 h-44 overflow-hidden">
+                        <img src="panel_ranurado_wpc_madera_brown.jpg" alt="Panel Ranurado 3D WPC Madera Brown Holztek" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <span class="absolute top-2.5 left-2.5 bg-amber-900/95 backdrop-blur-sm text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full shadow">
+                            Muro Acústico TV
+                        </span>
+                        <a href="https://www.homecenter.com.co/homecenter-co/product/906822/panel-ranurado-3d-wpc-madera-brown-16x240x22cm-holztek/906822/" target="_blank" class="absolute top-2.5 right-2.5 bg-slate-950/80 hover:bg-amber-800 text-white w-7 h-7 rounded-full flex items-center justify-center transition shadow-md border border-white/20" title="Comprar en Homecenter">
+                            <i class="fa-solid fa-cart-shopping text-[10px]"></i>
+                        </a>
+                    </div>
+                    <div class="p-4 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="text-[10px] font-mono text-amber-900 font-bold uppercase tracking-wider mb-1">SKU Homecenter: 906822 • 16×240 cm</div>
+                            <h3 class="text-sm font-bold text-gray-900 group-hover:text-amber-900 transition leading-snug">Panel Ranurado 3D WPC Holztek</h3>
+                            <p class="text-xs text-gray-600 mt-1.5 leading-relaxed">
+                                Lamas alistonadas en WPC tono roble marrón para el muro de fondo del televisor y aislamiento acústico de la sala.
+                            </p>
+                        </div>
+                        <div class="mt-3 pt-3 border-t border-gray-100 flex items-center justify-between">
+                            <span class="text-[10px] font-semibold text-amber-900 bg-amber-50 px-2 py-0.5 rounded">Absorción Acústica</span>
+                            <a href="https://www.homecenter.com.co/homecenter-co/product/906822/panel-ranurado-3d-wpc-madera-brown-16x240x22cm-holztek/906822/" target="_blank" class="text-xs font-bold text-amber-800 hover:text-amber-950 flex items-center gap-1.5">
+                                <span>Comprar</span>
+                                <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Material 2: Porcelanato Corona Boss Beige 60x60 (Piso & Revestimiento Muro) -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-gray-200 flex flex-col group">
+                    <div class="relative bg-slate-100 h-44 overflow-hidden">
+                        <img src="material_terrazzo_beige.jpg" alt="Porcelanato Boss Beige Corona 60x60" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <span class="absolute top-2.5 left-2.5 bg-amber-800/95 backdrop-blur-sm text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full shadow">
+                            Piso Sala & Marco Pórtico
+                        </span>
+                        <a href="https://www.homecenter.com.co/homecenter-co/product/722868/Piso-Porcelanato-Rectificado-Nuevo-Boss-Beige-Caras-Diferenciadas-60X60-Caja-Por-1.8-M2/722868" target="_blank" class="absolute top-2.5 right-2.5 bg-slate-950/80 hover:bg-amber-700 text-white w-7 h-7 rounded-full flex items-center justify-center transition shadow-md border border-white/20" title="Comprar en Homecenter">
+                            <i class="fa-solid fa-cart-shopping text-[10px]"></i>
+                        </a>
+                    </div>
+                    <div class="p-4 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="text-[10px] font-mono text-amber-800 font-bold uppercase tracking-wider mb-1">SKU Homecenter: 722868 • 60×60 cm</div>
+                            <h3 class="text-sm font-bold text-gray-900 group-hover:text-amber-800 transition leading-snug">Porcelanato Boss Beige Corona</h3>
+                            <p class="text-xs text-gray-600 mt-1.5 leading-relaxed">
+                                Porcelanato rectificado pulido brillante tono crema/beige para piso continuo de alto brillo y enchapes de pilares perimetrales.
+                            </p>
+                        </div>
+                        <div class="mt-3 pt-3 border-t border-gray-100 flex items-center justify-between">
+                            <span class="text-[10px] font-semibold text-amber-800 bg-amber-50 px-2 py-0.5 rounded">PEI V • Alto Brillo</span>
+                            <a href="https://www.homecenter.com.co/homecenter-co/product/722868/Piso-Porcelanato-Rectificado-Nuevo-Boss-Beige-Caras-Diferenciadas-60X60-Caja-Por-1.8-M2/722868" target="_blank" class="text-xs font-bold text-amber-800 hover:text-amber-950 flex items-center gap-1.5">
+                                <span>Comprar</span>
+                                <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Material 3: Muro Arabia ARD PRO Beige Corona (Muros Laterales) -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-gray-200 flex flex-col group">
+                    <div class="relative bg-slate-100 h-44 overflow-hidden">
+                        <img src="corona_arabia_ard_pro_beige.jpg" alt="Piso Pared Arabia ARD PRO Beige Corona" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <span class="absolute top-2.5 left-2.5 bg-amber-600/95 backdrop-blur-sm text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full shadow">
+                            Muro Frontal Panel TV
+                        </span>
+                        <a href="https://www.homecenter.com.co/homecenter-co/product/3027950/Piso-Pared-Ceramico-Arabia-Alta-Resistencia-al-Deslizamiento-ARD-PRO-Beige-30X60-cm-Caja-1.8-m2-Corona/3027950" target="_blank" class="absolute top-2.5 right-2.5 bg-slate-950/80 hover:bg-amber-600 text-white w-7 h-7 rounded-full flex items-center justify-center transition shadow-md border border-white/20" title="Comprar en Homecenter">
+                            <i class="fa-solid fa-cart-shopping text-[10px]"></i>
+                        </a>
+                    </div>
+                    <div class="p-4 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="text-[10px] font-mono text-amber-700 font-bold uppercase tracking-wider mb-1">SKU Homecenter: 3027950 • 30×60 cm</div>
+                            <h3 class="text-sm font-bold text-gray-900 group-hover:text-amber-700 transition leading-snug">Piso Pared Arabia Beige Corona</h3>
+                            <p class="text-xs text-gray-600 mt-1.5 leading-relaxed">
+                                Acabado cerámico beige con vetas pétreas suaves para paños de pared enmarcados por las tiras de iluminación LED lineal.
+                            </p>
+                        </div>
+                        <div class="mt-3 pt-3 border-t border-gray-100 flex items-center justify-between">
+                            <span class="text-[10px] font-semibold text-gray-500 bg-gray-100 px-2 py-0.5 rounded">Caras Diferenciadas</span>
+                            <a href="https://www.homecenter.com.co/homecenter-co/product/3027950/Piso-Pared-Ceramico-Arabia-Alta-Resistencia-al-Deslizamiento-ARD-PRO-Beige-30X60-cm-Caja-1.8-m2-Corona/3027950" target="_blank" class="text-xs font-bold text-amber-700 hover:text-amber-900 flex items-center gap-1.5">
+                                <span>Comprar</span>
+                                <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Material 4: Tira LED Perimetral Cálida 3000K (Iluminación Arquitectónica) -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-gray-200 flex flex-col group">
+                    <div class="relative bg-slate-900 h-44 overflow-hidden flex items-center justify-center p-4">
+                        <i class="fa-solid fa-lightbulb text-amber-400 text-6xl group-hover:scale-110 transition duration-500"></i>
+                        <span class="absolute top-2.5 left-2.5 bg-yellow-500/95 backdrop-blur-sm text-slate-950 text-[10px] font-bold px-2.5 py-0.5 rounded-full shadow">
+                            Iluminación Rasante
+                        </span>
+                        <a href="https://www.homecenter.com.co/homecenter-co/category/cat10022/iluminacion-led/" target="_blank" class="absolute top-2.5 right-2.5 bg-slate-950/80 hover:bg-yellow-500 text-white hover:text-slate-950 w-7 h-7 rounded-full flex items-center justify-center transition shadow-md border border-white/20" title="Ver en Homecenter">
+                            <i class="fa-solid fa-cart-shopping text-[10px]"></i>
+                        </a>
+                    </div>
+                    <div class="p-4 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="text-[10px] font-mono text-amber-600 font-bold uppercase tracking-wider mb-1">Cinta LED COB • 3000K Luz Cálida</div>
+                            <h3 class="text-sm font-bold text-gray-900 group-hover:text-amber-600 transition leading-snug">Iluminación LED Rasante Oculta</h3>
+                            <p class="text-xs text-gray-600 mt-1.5 leading-relaxed">
+                                Tiras LED de tono cálido continuo sin puntos visibles para bañado perimetral de muros, zócalos flotantes y repisas de librerías.
+                            </p>
+                        </div>
+                        <div class="mt-3 pt-3 border-t border-gray-100 flex items-center justify-between">
+                            <span class="text-[10px] font-semibold text-amber-600 bg-amber-50 px-2 py-0.5 rounded">3000K • Dimerizable</span>
+                            <a href="https://www.homecenter.com.co/homecenter-co/category/cat10022/iluminacion-led/" target="_blank" class="text-xs font-bold text-amber-700 hover:text-amber-950 flex items-center gap-1.5">
+                                <span>Ver Luces</span>
+                                <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to action de navegación -->
+    <section class="py-16 bg-slate-900 text-white text-center">
+        <div class="max-w-4xl mx-auto px-4">
+            <h3 class="text-2xl sm:text-3xl font-black mb-3">Proyecto Rivers Mall Cúcuta • Corporativo Piso 3</h3>
+            <p class="text-gray-400 text-xs sm:text-sm mb-8">Navega libremente entre el master plan general, las oficinas ejecutivas, el núcleo de baños y la sala de juntas directiva.</p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="index.html" class="inline-flex items-center gap-2 px-6 py-3.5 bg-white text-slate-900 font-bold rounded-xl hover:bg-gray-100 transition shadow-lg text-sm">
+                    <i class="fa-solid fa-house"></i>
+                    <span>Ir al Inicio</span>
+                </a>
+                <a href="banos.html" class="inline-flex items-center gap-2 px-6 py-3.5 bg-amber-600 hover:bg-amber-700 text-white font-bold rounded-xl transition shadow-lg text-sm">
+                    <i class="fa-solid fa-restroom"></i>
+                    <span>Ver Baños & Pizarra Miro</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 text-white py-8 border-t border-slate-800 text-center text-xs text-gray-500">
+        &copy; 2026 Rivers Mall Cúcuta. Sala de Juntas Corporativa • Piso 3.
+    </footer>
+
+    <!-- Script de control interactivo de las 4 variantes -->
+    <script>
+        const variantes = [
+            {
+                src: 'juntas_variante_1_moucharaby.jpg',
+                badge: 'Isométrico 3D • Variante 1 de 4 (Celosías Moucharaby)',
+                tag: 'Opción 1 • Estilo Biofílico & Herencia Geométrica',
+                title: 'Celosías Moucharaby & Estanterías Roble',
+                desc: 'Muro frontal con nichos en arco iluminados que enmarcan celosías caladas en patrón geométrico arábico/andalusí con retroiluminación cálida posterior. Incluye dos librerías simétricas iluminadas y puerta doble enchapada en nogal.',
+                puntos: [
+                    { icon: 'fa-vector-square text-amber-400', title: 'Celosía Calada Retroiluminada', desc: 'Paneles decorativos CNC de alta densidad que filtran la luz indirecta para una atmósfera serena y prestigiosa.' },
+                    { icon: 'fa-book-open text-blue-400', title: 'Librerías Iluminadas Integradas', desc: 'Estanterías verticales en madera natural con tiras LED cálidas 3000K empotradas bajo cada repisa.' },
+                    { icon: 'fa-tv text-emerald-400', title: 'Nicho Audiovisual Central', desc: 'Panel central en porcelanato marmoleado beige con Smart TV 75" para teleconferencias sin cables a la vista.' }
+                ]
+            },
+            {
+                src: 'juntas_variante_2_lineal.jpg',
+                badge: 'Isométrico 3D • Variante 2 de 4 (Panel Alistonado Vertical)',
+                tag: 'Opción 2 • Minimalismo Corporativo Moderno',
+                title: 'Lamas Verticales WPC & Líneas LED Rasantes',
+                desc: 'Composición limpia con revestimiento alistonado en madera WPC enmarcando el panel central de televisión. Columnas de luz vertical pura que potencian la altura libre del cielo raso y librerías compactas en roble.',
+                puntos: [
+                    { icon: 'fa-bars text-amber-400', title: 'Lamas Alistonadas Verticales', desc: 'Alineación de listones en relieve 3D que proporcionan absorción de reverberación de voz durante conferencias.' },
+                    { icon: 'fa-arrows-up-down text-blue-400', title: 'Líneas Verticales de Luz', desc: 'Perfiles de luz continua empotrados de piso a techo que expanden visualmente la escala de la sala.' },
+                    { icon: 'fa-door-closed text-emerald-400', title: 'Puerta Pivotante Empotrada', desc: 'Acceso doble enmarcado en el mismo tono de madera para mimetizar las aberturas y priorizar la privacidad.' }
+                ]
+            },
+            {
+                src: 'juntas_variante_3_arcos.jpg',
+                badge: 'Isométrico 3D • Variante 3 de 4 (Arcos Escultóricos & Relieve)',
+                tag: 'Opción 3 • Sofisticación Neoclásica Contemporánea',
+                title: 'Arcos Escultóricos LED & Textura Floral Tallada',
+                desc: 'Dos arcos luminosos que enmarcan la zona audiovisual sobre paneles de palillería fina, complementados por un mural lateral en bajorrelieve geométrico/floral con retroiluminación rasante perimetral.',
+                puntos: [
+                    { icon: 'fa-circle-half-stroke text-amber-400', title: 'Arcos Escultóricos Luminosos', desc: 'Siluetas curvas con retroiluminación perimetral continua de gran impacto visual y elegancia ejecutiva.' },
+                    { icon: 'fa-shapes text-blue-400', title: 'Mural Tallado en Relieve', desc: 'Panel de gran formato en yeso reforzado o polímero con filigrana tridimensional iluminada lateralmente.' },
+                    { icon: 'fa-chair text-emerald-400', title: 'Equipamiento Ergonómico', desc: '10 sillerías giratorias tapizadas en tono gris/azul acero con base cromada y mesa pasacables integrada.' }
+                ]
+            },
+            {
+                src: 'juntas_variante_4_marmol.jpg',
+                badge: 'Isométrico 3D • Variante 4 de 4 (Mármol Travertine & Ranuras Horizontales)',
+                tag: 'Opción 4 • Lujo Atemporal & Texturas Pétreas',
+                title: 'Placa Central Travertine & Enmarcado Ranurado',
+                desc: 'El muro de televisión se convierte en el protagonista mediante una losa monolítica de porcelanato efecto mármol travertino con vetas diagonales, abrazada por ranuras superiores e inferiores de madera alistonada con luz rasante.',
+                puntos: [
+                    { icon: 'fa-gem text-amber-400', title: 'Placa Central Marmoleada', desc: 'Porcelanato pulido gran formato con veteado diagonal que refleja la luz y eleva el estatus del espacio directivo.' },
+                    { icon: 'fa-border-top-left text-blue-400', title: 'Remates Alistonados con Luz Oculta', desc: 'Franjas de lamas de madera en los remates superior e inferior que proyectan luz rasante sobre el mármol.' },
+                    { icon: 'fa-cubes text-emerald-400', title: 'Pilares Travertine & Vidrio Templado', desc: 'Integración fluida con las columnas portantes del centro comercial y cerramiento perimetral acristalado.' }
+                ]
+            }
+        ];
+
+        let curIndex = 0;
+
+        function setVariante(idx) {
+            curIndex = idx;
+            const data = variantes[idx];
+            const img = document.getElementById('renderJuntasImg');
+            
+            // Animación suave de transición
+            img.style.opacity = '0';
+            setTimeout(() => {
+                img.src = data.src;
+                document.getElementById('renderFullLink').href = data.src;
+                document.getElementById('renderBadge').textContent = data.badge;
+                document.getElementById('varianteTag').textContent = data.tag;
+                document.getElementById('varianteTitle').textContent = data.title;
+                document.getElementById('varianteDesc').textContent = data.desc;
+                document.getElementById('indicadorVariante').textContent = `${idx + 1} de 4`;
+
+                // Actualizar puntos de características
+                const puntosContainer = document.getElementById('variantePuntos');
+                puntosContainer.innerHTML = data.puntos.map(p => `
+                    <div class="p-3.5 bg-slate-900 rounded-2xl border border-slate-800 flex items-start gap-3">
+                        <i class="fa-solid ${p.icon} text-base mt-1"></i>
+                        <div>
+                            <h4 class="text-xs font-bold text-white">${p.title}</h4>
+                            <p class="text-[11px] text-gray-400 mt-0.5">${p.desc}</p>
+                        </div>
+                    </div>
+                `).join('');
+
+                // Actualizar botones de tabs
+                for (let i = 0; i < 4; i++) {
+                    const btn = document.getElementById(`btnTab${i}`);
+                    if (i === idx) {
+                        btn.className = 'px-5 py-3 rounded-2xl font-bold text-xs sm:text-sm transition flex items-center gap-2 shadow-sm bg-slate-900 text-white border-2 border-slate-900';
+                    } else {
+                        btn.className = 'px-5 py-3 rounded-2xl font-bold text-xs sm:text-sm transition flex items-center gap-2 shadow-sm bg-gray-100 hover:bg-gray-200 text-gray-800 border-2 border-transparent';
+                    }
+                }
+
+                img.style.opacity = '1';
+            }, 150);
+        }
+
+        function nextVariante() {
+            setVariante((curIndex + 1) % variantes.length);
+        }
+
+        function prevVariante() {
+            setVariante((curIndex - 1 + variantes.length) % variantes.length);
+        }
+    </script>
+</body>
+</html>
