@@ -67,9 +67,9 @@
     <section id="renders" class="py-16 sm:py-24 bg-gray-50 border-b border-gray-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-xs font-bold text-blue-700 uppercase tracking-widest block mb-2">Visualización Arquitectónica 3D</span>
-                <h2 class="text-3xl sm:text-5xl font-extrabold text-gray-900 tracking-tight">Renders en Alta Resolución: Baños de Hombres & PMR</h2>
-                <p class="mt-4 text-gray-600 text-base">Modelos isométricos detallados que muestran la batería sanitaria colectiva de hombres (cubículos, orinales y mesón escalonado) y los módulos accesibles PMR.</p>
+                <span class="text-xs font-bold text-pink-700 uppercase tracking-widest block mb-2">Visualización Arquitectónica 3D</span>
+                <h2 class="text-3xl sm:text-5xl font-extrabold text-gray-900 tracking-tight">Renders en Alta Resolución: Mujeres, Hombres & PMR</h2>
+                <p class="mt-4 text-gray-600 text-base">Modelos isométricos detallados que muestran la batería de mujeres (muro verde y cabinas múltiples), batería de hombres y módulos accesibles PMR.</p>
             </div>
 
             <!-- Interactive Big Carousel Container -->
@@ -325,8 +325,20 @@
     <script>
         const pmrSlides = [
             {
+                src: 'bano_mujeres_render.jpg',
+                badge: 'Render 1 de 5 • Baño de Mujeres',
+                badgeColor: 'text-pink-400',
+                title: 'Batería Sanitaria Colectiva: Baño de Mujeres',
+                subtitle: 'Distribución con múltiples cabinas privadas en acero inoxidable satinado, revestimiento vertical en verde oliva, puerta de acceso en madera y mesón con 5 lavamanos escalonados.',
+                features: [
+                    { icon: 'fa-door-closed text-pink-400', title: 'Batería de Cubículos Múltiples', desc: 'Cabinas individuales higiénicas con tabiquería modular en acero inoxidable y cierre seguro.' },
+                    { icon: 'fa-sink text-emerald-500', title: '5 Lavamanos en Mármol/Granito', desc: 'Mesón corrido con 5 griferías y lavamanos sobreencimera, con módulo inferior accesible.' },
+                    { icon: 'fa-leaf text-green-500', title: 'Muro Acento Verde Oliva & Madera', desc: 'Cerámica vertical esmaltada con iluminación rasante de acento y puerta en roble natural.' }
+                ]
+            },
+            {
                 src: 'bano_hombres_render.jpg',
-                badge: 'Render 1 de 4 • Baño de Hombres (Mosaico Terracota)',
+                badge: 'Render 2 de 5 • Baño de Hombres (Terracota)',
                 badgeColor: 'text-blue-400',
                 title: 'Batería Sanitaria de Hombres • Acabado Mosaico Terracota',
                 subtitle: 'Distribución con cubículos privados en acero satinado, orinales con panel divisor y batería de lavamanos escalonada para accesibilidad infantil/PMR.',
@@ -338,7 +350,7 @@
             },
             {
                 src: 'bano_hombres_madera_render.jpg',
-                badge: 'Render 2 de 4 • Baño de Hombres (Panel Listonado Madera)',
+                badge: 'Render 3 de 5 • Baño de Hombres (Madera Listonada)',
                 badgeColor: 'text-amber-400',
                 title: 'Batería Sanitaria de Hombres • Acabado Madera Listonada',
                 subtitle: 'Variante arquitectónica cálida con pared de acento en palillería de madera natural vertical, focos empotrados en cielo raso y mesón en granito beige.',
@@ -350,7 +362,7 @@
             },
             {
                 src: 'bano_discapacitados_render.jpg',
-                badge: 'Render 3 de 4 • Baño Accesible PMR (Verde Oliva)',
+                badge: 'Render 4 de 5 • Baño Accesible PMR (Verde Oliva)',
                 badgeColor: 'text-emerald-400',
                 title: 'Módulo PMR con Madera Roble & Cerámica Verde Oliva',
                 subtitle: 'Acabados biofílicos con luminarias colgantes esféricas y pisos en porcelanato granito beige.',
@@ -362,7 +374,7 @@
             },
             {
                 src: 'bano_discapacitados_render_naranja.png',
-                badge: 'Render 4 de 4 • Baño Accesible PMR (Terracota)',
+                badge: 'Render 5 de 5 • Baño Accesible PMR (Terracota)',
                 badgeColor: 'text-amber-400',
                 title: 'Módulo PMR con Revestimiento Hexagonal Terracota',
                 subtitle: 'Mosaico vitrificado brillante tono caramelo/terracota con juntas blancas en muro de acento.',
