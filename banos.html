@@ -269,7 +269,7 @@
         const pmrSlides = [
             {
                 src: 'bano_discapacitados_render.jpg',
-                badge: 'Propuesta 1 de 4 • Isometría 3D Principal',
+                badge: 'Propuesta 1 de 3 • Isometría 3D Principal',
                 badgeColor: 'text-emerald-400',
                 title: 'Módulo PMR con Madera Roble & Cerámica Verde Oliva',
                 subtitle: 'Acabados biofílicos con luminarias colgantes esféricas y pisos en porcelanato granito beige.',
@@ -281,7 +281,7 @@
             },
             {
                 src: 'bano_discapacitados_render_naranja.png',
-                badge: 'Propuesta 2 de 4 • Variante de Material',
+                badge: 'Propuesta 2 de 3 • Variante de Material',
                 badgeColor: 'text-amber-400',
                 title: 'Módulo PMR con Revestimiento Hexagonal Terracota',
                 subtitle: 'Mosaico vitrificado brillante tono caramelo/terracota con juntas blancas en muro de acento.',
@@ -292,20 +292,8 @@
                 ]
             },
             {
-                src: 'bano_discapacitados_plano.png',
-                badge: 'Propuesta 3 de 4 • Planimetría Reglamentaria',
-                badgeColor: 'text-blue-400',
-                title: 'Plano Técnico Acotado: Maniobra de Silla de Ruedas',
-                subtitle: 'Verificación del radio de giro libre de Ø 1.500 mm y longitud total de 2.378 mm bajo norma colombiana.',
-                features: [
-                    { icon: 'fa-circle-notch text-blue-600', title: 'Giro Libre 360°', desc: 'Área circular de Ø 1.500 mm libre de cualquier obstáculo para rotación completa de la silla.' },
-                    { icon: 'fa-ruler text-purple-600', title: 'Cota de 2.378 mm', desc: 'Longitud del recinto suficiente para incorporar lavamanos, inodoro y caneca sin entorpecer el paso.' },
-                    { icon: 'fa-shield text-emerald-600', title: 'Normativa NTC', desc: 'Cumplimiento de estándares de accesibilidad universal física sin barreras arquitectónicas.' }
-                ]
-            },
-            {
                 src: 'material_mosaico_hexagonal.jpg',
-                badge: 'Propuesta 4 de 4 • Muestra Textura Real',
+                badge: 'Propuesta 3 de 3 • Textura de Material Real',
                 badgeColor: 'text-amber-300',
                 title: 'Textura Real: Mosaico Hexagonal Caramelo',
                 subtitle: 'Muestrario de material a escala real para verificación de brillo, juntas y tonalidad.',
@@ -326,11 +314,7 @@
             
             setTimeout(() => {
                 img.src = slide.src;
-                if (slide.src.includes('plano')) {
-                    img.className = 'max-h-[75vh] w-auto max-w-full object-contain rounded-2xl bg-white p-4 sm:p-6 shadow-2xl transition duration-500';
-                } else {
-                    img.className = 'w-full max-h-[85vh] object-contain rounded-2xl shadow-2xl transition duration-500';
-                }
+                img.className = 'w-full max-h-[85vh] object-contain rounded-2xl shadow-2xl transition duration-500';
                 img.style.opacity = '1';
             }, 150);
 
