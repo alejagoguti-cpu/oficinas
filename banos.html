@@ -72,63 +72,51 @@
                 <p class="mt-4 text-gray-600 text-base">Modelos isométricos detallados que muestran el mobiliario ergonómico, espacio de maniobra reglamentario y dos alternativas de acabado en muros.</p>
             </div>
 
-            <!-- Gran Render 1: Acabado Verde Oliva y Madera Natural -->
-            <div class="bg-white rounded-3xl overflow-hidden shadow-xl border border-gray-200 mb-16">
-                <div class="p-6 sm:p-8 bg-slate-900 text-white flex flex-col md:flex-row md:items-center justify-between gap-4">
+            <!-- Interactive Big Carousel Container -->
+            <div class="bg-white rounded-3xl overflow-hidden shadow-2xl border border-gray-200">
+                <!-- Carousel Header -->
+                <div class="p-6 sm:p-8 bg-slate-900 text-white flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-800">
                     <div>
-                        <span class="text-xs font-bold text-emerald-400 uppercase tracking-widest block mb-1">Propuesta Principal • Isometría 3D</span>
-                        <h3 class="text-2xl sm:text-3xl font-bold">Módulo PMR con Madera Roble & Cerámica Verde Oliva</h3>
-                        <p class="text-xs sm:text-sm text-gray-400 mt-1">Acabados biofílicos con luminarias colgantes esféricas y pisos en porcelanato granito beige.</p>
+                        <span id="pmrBadge" class="text-xs font-bold text-emerald-400 uppercase tracking-widest block mb-1">Propuesta 1 de 4 • Isometría 3D</span>
+                        <h3 id="pmrTitle" class="text-2xl sm:text-3xl font-bold">Módulo PMR con Madera Roble & Cerámica Verde Oliva</h3>
+                        <p id="pmrSubtitle" class="text-xs sm:text-sm text-gray-400 mt-1">Acabados biofílicos con luminarias colgantes esféricas y pisos en porcelanato granito beige.</p>
                     </div>
-                    <div class="shrink-0 flex items-center gap-2">
-                        <span class="bg-purple-600/30 text-purple-300 border border-purple-400/40 text-xs px-3 py-1.5 rounded-lg font-bold">
-                            <i class="fa-solid fa-wheelchair mr-1"></i> Norma PMR 100%
-                        </span>
-                    </div>
-                </div>
-                <div class="relative bg-slate-950 flex items-center justify-center p-4 sm:p-8">
-                    <img src="bano_discapacitados_render.jpg" alt="Render Baño Discapacitado Isométrico Grande" class="w-full max-h-[85vh] object-contain rounded-2xl shadow-2xl hover:scale-[1.01] transition duration-500">
-                </div>
-                <div class="p-6 sm:p-8 bg-white border-t border-gray-100">
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm text-gray-700">
-                        <div class="p-4 bg-gray-50 rounded-xl border border-gray-200">
-                            <h4 class="font-bold text-gray-900 mb-1 flex items-center gap-2">
-                                <i class="fa-solid fa-arrows-left-right text-purple-600"></i> Espacio de Transferencia
-                            </h4>
-                            <p class="text-xs text-gray-600">Espacio lateral amplio para posicionamiento de la silla de ruedas y traslado directo al inodoro con barra de apoyo.</p>
-                        </div>
-                        <div class="p-4 bg-gray-50 rounded-xl border border-gray-200">
-                            <h4 class="font-bold text-gray-900 mb-1 flex items-center gap-2">
-                                <i class="fa-solid fa-sink text-blue-600"></i> Lavamanos Suspendido
-                            </h4>
-                            <p class="text-xs text-gray-600">Mesón suspendido sin faldón inferior para permitir la entrada de las piernas del usuario en silla de ruedas.</p>
-                        </div>
-                        <div class="p-4 bg-gray-50 rounded-xl border border-gray-200">
-                            <h4 class="font-bold text-gray-900 mb-1 flex items-center gap-2">
-                                <i class="fa-solid fa-lightbulb text-amber-500"></i> Iluminación Cálida y Sensor
-                            </h4>
-                            <p class="text-xs text-gray-600">Luminarias colgantes de diseño difuso y reflectores empotrados para confort visual sin sombras duras.</p>
-                        </div>
+                    <div class="flex items-center space-x-3 shrink-0">
+                        <button onclick="pmrStep(-1)" aria-label="Anterior" class="w-12 h-12 rounded-xl bg-slate-800 hover:bg-blue-600 text-white flex items-center justify-center transition shadow-md border border-slate-700">
+                            <i class="fa-solid fa-arrow-left text-base"></i>
+                        </button>
+                        <span id="pmrCounter" class="text-xs font-mono font-bold bg-slate-800 text-blue-300 px-3 py-2 rounded-xl border border-slate-700">1 / 4</span>
+                        <button onclick="pmrStep(1)" aria-label="Siguiente" class="w-12 h-12 rounded-xl bg-slate-800 hover:bg-blue-600 text-white flex items-center justify-center transition shadow-md border border-slate-700">
+                            <i class="fa-solid fa-arrow-right text-base"></i>
+                        </button>
                     </div>
                 </div>
-            </div>
 
-            <!-- Gran Render 2: Alternativa Mosaico Hexagonal Terracota -->
-            <div class="bg-white rounded-3xl overflow-hidden shadow-xl border border-gray-200 mb-16">
-                <div class="p-6 sm:p-8 bg-slate-900 text-white flex flex-col md:flex-row md:items-center justify-between gap-4">
-                    <div>
-                        <span class="text-xs font-bold text-amber-400 uppercase tracking-widest block mb-1">Propuesta Alternativa • Isometría 3D</span>
-                        <h3 class="text-2xl sm:text-3xl font-bold">Módulo PMR con Revestimiento Hexagonal Terracota</h3>
-                        <p class="text-xs sm:text-sm text-gray-400 mt-1">Mosaico vitrificado brillante tono caramelo/terracota con juntas blancas en muro de acento.</p>
-                    </div>
-                    <div class="shrink-0">
-                        <span class="bg-amber-600/30 text-amber-300 border border-amber-400/40 text-xs px-3 py-1.5 rounded-lg font-bold">
-                            <i class="fa-solid fa-palette mr-1"></i> Variante de Material
-                        </span>
-                    </div>
+                <!-- Big Image Viewer with floating arrow buttons -->
+                <div class="relative bg-slate-950 flex items-center justify-center p-4 sm:p-8 min-h-[500px] lg:min-h-[700px] group">
+                    <img id="pmrImg" src="bano_discapacitados_render.jpg" alt="Render Baño Discapacitado Isométrico Grande" class="w-full max-h-[85vh] object-contain rounded-2xl shadow-2xl transition duration-500">
+                    
+                    <!-- Floating Left Arrow -->
+                    <button onclick="pmrStep(-1)" aria-label="Anterior" class="absolute left-4 sm:left-8 top-1/2 -translate-y-1/2 w-14 h-14 rounded-full bg-slate-900/80 hover:bg-blue-600 text-white flex items-center justify-center transition shadow-2xl border border-white/20 backdrop-blur-md">
+                        <i class="fa-solid fa-chevron-left text-xl"></i>
+                    </button>
+
+                    <!-- Floating Right Arrow -->
+                    <button onclick="pmrStep(1)" aria-label="Siguiente" class="absolute right-4 sm:right-8 top-1/2 -translate-y-1/2 w-14 h-14 rounded-full bg-slate-900/80 hover:bg-blue-600 text-white flex items-center justify-center transition shadow-2xl border border-white/20 backdrop-blur-md">
+                        <i class="fa-solid fa-chevron-right text-xl"></i>
+                    </button>
                 </div>
-                <div class="relative bg-slate-950 flex items-center justify-center p-4 sm:p-8">
-                    <img src="bano_discapacitados_render_naranja.png" alt="Render Baño Discapacitado Terracota Grande" class="w-full max-h-[85vh] object-contain rounded-2xl shadow-2xl hover:scale-[1.01] transition duration-500">
+
+                <!-- Dots Navigation -->
+                <div id="pmrDots" class="flex justify-center items-center space-x-2.5 py-4 bg-slate-900/90 border-t border-slate-800">
+                    <!-- Dots dynamically created -->
+                </div>
+
+                <!-- Slide Detail Description Box -->
+                <div class="p-6 sm:p-8 bg-white border-t border-gray-100">
+                    <div id="pmrDescription" class="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm text-gray-700">
+                        <!-- Content dynamic -->
+                    </div>
                 </div>
             </div>
         </div>
@@ -276,5 +264,115 @@
         &copy; 2026 Rivers Mall Cúcuta. Apartado de Baños, Accesibilidad PMR & Moodboard.
     </footer>
 
+    <!-- Carousel Script -->
+    <script>
+        const pmrSlides = [
+            {
+                src: 'bano_discapacitados_render.jpg',
+                badge: 'Propuesta 1 de 4 • Isometría 3D Principal',
+                badgeColor: 'text-emerald-400',
+                title: 'Módulo PMR con Madera Roble & Cerámica Verde Oliva',
+                subtitle: 'Acabados biofílicos con luminarias colgantes esféricas y pisos en porcelanato granito beige.',
+                features: [
+                    { icon: 'fa-arrows-left-right text-purple-600', title: 'Espacio de Transferencia', desc: 'Espacio lateral amplio para posicionamiento de la silla de ruedas y traslado directo al inodoro con barra de apoyo.' },
+                    { icon: 'fa-sink text-blue-600', title: 'Lavamanos Suspendido', desc: 'Mesón suspendido sin faldón inferior para permitir la entrada de las piernas del usuario en silla de ruedas.' },
+                    { icon: 'fa-lightbulb text-amber-500', title: 'Iluminación Cálida y Sensor', desc: 'Luminarias colgantes de diseño difuso y reflectores empotrados para confort visual sin sombras duras.' }
+                ]
+            },
+            {
+                src: 'bano_discapacitados_render_naranja.png',
+                badge: 'Propuesta 2 de 4 • Variante de Material',
+                badgeColor: 'text-amber-400',
+                title: 'Módulo PMR con Revestimiento Hexagonal Terracota',
+                subtitle: 'Mosaico vitrificado brillante tono caramelo/terracota con juntas blancas en muro de acento.',
+                features: [
+                    { icon: 'fa-palette text-amber-600', title: 'Mosaico Vitrificado', desc: 'Textura geométrica reflectiva de alta resistencia al agua y salpicaduras con acabado vítreo.' },
+                    { icon: 'fa-droplet text-blue-500', title: 'Alta Asepsia', desc: 'Superficie esmaltada no porosa que previene la acumulación de humedad y bacterias.' },
+                    { icon: 'fa-temperature-arrow-up text-orange-600', title: 'Cálido y Acogedor', desc: 'La paleta terracota combinada con granito beige aporta una atmósfera contemporánea y cálida.' }
+                ]
+            },
+            {
+                src: 'bano_discapacitados_plano.png',
+                badge: 'Propuesta 3 de 4 • Planimetría Reglamentaria',
+                badgeColor: 'text-blue-400',
+                title: 'Plano Técnico Acotado: Maniobra de Silla de Ruedas',
+                subtitle: 'Verificación del radio de giro libre de Ø 1.500 mm y longitud total de 2.378 mm bajo norma colombiana.',
+                features: [
+                    { icon: 'fa-circle-notch text-blue-600', title: 'Giro Libre 360°', desc: 'Área circular de Ø 1.500 mm libre de cualquier obstáculo para rotación completa de la silla.' },
+                    { icon: 'fa-ruler text-purple-600', title: 'Cota de 2.378 mm', desc: 'Longitud del recinto suficiente para incorporar lavamanos, inodoro y caneca sin entorpecer el paso.' },
+                    { icon: 'fa-shield text-emerald-600', title: 'Normativa NTC', desc: 'Cumplimiento de estándares de accesibilidad universal física sin barreras arquitectónicas.' }
+                ]
+            },
+            {
+                src: 'material_mosaico_hexagonal.jpg',
+                badge: 'Propuesta 4 de 4 • Muestra Textura Real',
+                badgeColor: 'text-amber-300',
+                title: 'Textura Real: Mosaico Hexagonal Caramelo',
+                subtitle: 'Muestrario de material a escala real para verificación de brillo, juntas y tonalidad.',
+                features: [
+                    { icon: 'fa-gem text-amber-500', title: 'Brillo Esmaltado', desc: 'Reflexión de luz uniforme que amplifica la sensación espacial de los módulos sanitarios.' },
+                    { icon: 'fa-border-all text-gray-600', title: 'Junta Blanca Epóxica', desc: 'Sellado antimoho impermeable que garantiza durabilidad en ambientes húmedos.' },
+                    { icon: 'fa-hand text-stone-600', title: 'Textura Suave', desc: 'Fácil mantenimiento y limpieza con agentes desinfectantes de uso comercial continuo.' }
+                ]
+            }
+        ];
+
+        let pmrIndex = 0;
+
+        function pmrRender() {
+            const slide = pmrSlides[pmrIndex];
+            const img = document.getElementById('pmrImg');
+            img.style.opacity = '0';
+            
+            setTimeout(() => {
+                img.src = slide.src;
+                img.style.opacity = '1';
+            }, 150);
+
+            const badge = document.getElementById('pmrBadge');
+            badge.className = 'text-xs font-bold uppercase tracking-widest block mb-1 ' + slide.badgeColor;
+            badge.innerText = slide.badge;
+
+            document.getElementById('pmrTitle').innerText = slide.title;
+            document.getElementById('pmrSubtitle').innerText = slide.subtitle;
+            document.getElementById('pmrCounter').innerText = `${pmrIndex + 1} / ${pmrSlides.length}`;
+
+            // Render Description features
+            const descContainer = document.getElementById('pmrDescription');
+            descContainer.innerHTML = slide.features.map(f => `
+                <div class="p-4 bg-gray-50 rounded-xl border border-gray-200">
+                    <h4 class="font-bold text-gray-900 mb-1 flex items-center gap-2">
+                        <i class="fa-solid ${f.icon}"></i> ${f.title}
+                    </h4>
+                    <p class="text-xs text-gray-600">${f.desc}</p>
+                </div>
+            `).join('');
+
+            // Render Dots
+            const dotsContainer = document.getElementById('pmrDots');
+            dotsContainer.innerHTML = pmrSlides.map((_, i) => `
+                <button onclick="pmrGoTo(${i})" aria-label="Ir a slide ${i + 1}" class="h-2.5 rounded-full transition-all duration-300 ${i === pmrIndex ? 'w-8 bg-blue-500' : 'w-2.5 bg-slate-700 hover:bg-slate-500'}"></button>
+            `).join('');
+        }
+
+        function pmrStep(dir) {
+            pmrIndex = (pmrIndex + dir + pmrSlides.length) % pmrSlides.length;
+            pmrRender();
+        }
+
+        function pmrGoTo(idx) {
+            pmrIndex = idx;
+            pmrRender();
+        }
+
+        // Keyboard arrows support
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') pmrStep(-1);
+            if (e.key === 'ArrowRight') pmrStep(1);
+        });
+
+        // Initialize carousel on load
+        pmrRender();
+    </script>
 </body>
 </html>
