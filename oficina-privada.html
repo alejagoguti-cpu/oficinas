@@ -50,8 +50,8 @@
                     <span class="hidden sm:inline">Baños & PMR</span>
                 </a>
                 <a href="#diseno" class="px-3.5 py-2 bg-rose-600 hover:bg-rose-700 text-white rounded-xl shadow-sm transition flex items-center gap-1.5">
-                    <i class="fa-solid fa-cube text-xs"></i>
-                    <span>Diseño Isométrico</span>
+                    <i class="fa-solid fa-camera text-xs"></i>
+                    <span>Referente & Render</span>
                 </a>
                 <a href="#moodboard" class="hidden md:flex px-3.5 py-2 bg-slate-900 hover:bg-slate-800 text-white rounded-xl shadow-sm transition items-center gap-1.5">
                     <i class="fa-solid fa-cart-shopping text-xs"></i>
@@ -61,86 +61,93 @@
         </div>
     </header>
 
-    <!-- SECCIÓN 1: DISEÑO ARQUITECTÓNICO & RENDER ISOMÉTRICO (SIN HERO BANNER) -->
+    <!-- SECCIÓN 1: DISEÑO ARQUITECTÓNICO & VISOR INTERACTIVO REFERENTE / RENDER (SIN HERO BANNER) -->
     <section id="diseno" class="py-10 sm:py-16 bg-white border-b border-gray-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-10">
+            <div class="text-center max-w-3xl mx-auto mb-8">
                 <span class="text-xs font-bold text-rose-700 uppercase tracking-widest block mb-2">Despacho de Dirección Personal</span>
                 <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-gray-900 tracking-tight">Diseño Interior • Oficina Ejecutiva</h1>
-                <p class="mt-3 text-gray-600 text-sm sm:text-base">Espacio privado contemporáneo con carpintería arquitectónica en roble nogal, iluminación rasante continua, cerramiento vidriado panorámico y escritorio directivo alistonado.</p>
+                <p class="mt-3 text-gray-600 text-sm sm:text-base">Explora el referente conceptual biofílico y el diseño isométrico 3D propuesto con carpintería en roble nogal, cielo raso en madera e iluminación rasante continua.</p>
             </div>
 
-            <!-- Visualizador Principal: Render 3D en Gran Formato y Ficha Técnica -->
+            <!-- Selector de Pestañas: Referente (De Primeras) / Render 3D Isométrico -->
+            <div class="flex flex-wrap justify-center gap-2 sm:gap-3 mb-8" id="tabsOficina">
+                <button onclick="setOficinaTab(0)" id="btnTabOficina0" class="px-5 py-3 rounded-2xl font-bold text-xs sm:text-sm transition flex items-center gap-2 shadow-sm bg-slate-900 text-white border-2 border-slate-900">
+                    <i class="fa-solid fa-camera text-rose-400"></i>
+                    <span>Referente de Diseño Interior (Inspiración)</span>
+                </button>
+                <button onclick="setOficinaTab(1)" id="btnTabOficina1" class="px-5 py-3 rounded-2xl font-bold text-xs sm:text-sm transition flex items-center gap-2 shadow-sm bg-gray-100 hover:bg-gray-200 text-gray-800 border-2 border-transparent">
+                    <i class="fa-solid fa-cube text-rose-600"></i>
+                    <span>Render 3D Isométrico (Despacho Propuesto)</span>
+                </button>
+            </div>
+
+            <!-- Visualizador Principal en Gran Formato -->
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-slate-950 p-4 sm:p-8 rounded-3xl border border-slate-800 shadow-2xl">
-                <!-- Imagen Isométrica en Alta Resolución -->
+                <!-- Imagen en Alta Resolución -->
                 <div class="lg:col-span-8 flex flex-col items-center justify-center">
                     <div class="relative w-full overflow-hidden rounded-2xl bg-slate-900 flex items-center justify-center group">
-                        <img id="oficinaImg" src="oficina_esposa_render.jpg" alt="Render Isométrico Oficina Ejecutiva" class="w-full max-h-[78vh] object-contain transition duration-500">
+                        <img id="oficinaImg" src="referente_oficina_interior.jpg" alt="Referente Arquitectónico Oficina Interior" class="w-full max-h-[78vh] object-contain transition duration-500">
                         <div class="absolute bottom-3 left-3 bg-slate-950/80 backdrop-blur-md px-3.5 py-1.5 rounded-xl border border-white/10 text-white text-xs flex items-center gap-2">
-                            <i class="fa-solid fa-cube text-rose-400"></i>
-                            <span>Isométrico 3D • Despacho de Dirección</span>
+                            <i id="oficinaBadgeIcon" class="fa-solid fa-camera text-rose-400"></i>
+                            <span id="oficinaBadge">Referente Conceptual • Cielo Raso en Madera & Terraza</span>
                         </div>
-                        <a href="oficina_esposa_render.jpg" target="_blank" class="absolute top-3 right-3 bg-slate-950/80 hover:bg-rose-600 text-white w-9 h-9 rounded-xl flex items-center justify-center transition shadow-lg border border-white/20" title="Ver render en tamaño completo">
+                        <a id="oficinaFullLink" href="referente_oficina_interior.jpg" target="_blank" class="absolute top-3 right-3 bg-slate-950/80 hover:bg-rose-600 text-white w-9 h-9 rounded-xl flex items-center justify-center transition shadow-lg border border-white/20" title="Ver imagen en tamaño completo">
                             <i class="fa-solid fa-expand text-xs"></i>
                         </a>
                     </div>
                 </div>
 
-                <!-- Detalles Arquitectónicos y Distribución -->
+                <!-- Detalles Arquitectónicos y Ficha de Características -->
                 <div class="lg:col-span-4 text-white space-y-5">
                     <div>
-                        <span class="text-xs font-mono uppercase tracking-wider text-rose-400 font-bold block mb-1">
-                            Atmósfera Corporativa Cálida & Biofílica
+                        <span id="oficinaTag" class="text-xs font-mono uppercase tracking-wider text-rose-400 font-bold block mb-1">
+                            Referente 1 • Estilo Biofílico, Madera & Ventanales
                         </span>
-                        <h2 class="text-2xl sm:text-3xl font-extrabold text-white leading-tight">
-                            Despacho Privado de Dirección
+                        <h2 id="oficinaTitle" class="text-2xl sm:text-3xl font-extrabold text-white leading-tight">
+                            Referente Arquitectónico: Terraza, Deck & Cielo Raso en Madera
                         </h2>
-                        <p class="mt-2.5 text-gray-300 text-xs sm:text-sm leading-relaxed">
-                            Diseñado con un enfoque de elegancia sobria, privacidad acústica y confort ergonómico para largas jornadas de trabajo directivo y atención a visitas selectas.
+                        <p id="oficinaDesc" class="mt-2.5 text-gray-300 text-xs sm:text-sm leading-relaxed">
+                            Referente de diseño que inspira la atmósfera cálida y biofílica de las oficinas: espacio de transición con cielo raso alistonado continuo en madera natural, pavimento en deck elevado, carpintería vidriada plegable de piso a techo y zonas de asiento integradas con vegetación.
                         </p>
                     </div>
 
-                    <!-- Fichas de Especificaciones Clave -->
-                    <div class="space-y-3 pt-1">
-                        <div class="p-3.5 bg-slate-900 rounded-2xl border border-slate-800 flex items-start gap-3">
-                            <i class="fa-solid fa-table text-rose-400 text-base mt-1"></i>
-                            <div>
-                                <h4 class="text-xs font-bold text-white">Escritorio Directivo con Frontal Alistonado</h4>
-                                <p class="text-[11px] text-gray-400 mt-0.5">Mueble de trabajo con tapa en cuarzo/mármol blanco y faldón en lamas verticales de madera roble a juego con el muro.</p>
-                            </div>
-                        </div>
-
+                    <!-- Fichas de Características Específicas Dinámicas -->
+                    <div class="space-y-3 pt-1" id="oficinaPuntos">
                         <div class="p-3.5 bg-slate-900 rounded-2xl border border-slate-800 flex items-start gap-3">
                             <i class="fa-solid fa-layer-group text-amber-400 text-base mt-1"></i>
                             <div>
-                                <h4 class="text-xs font-bold text-white">Doble Librería Iluminada & Muro WPC</h4>
-                                <p class="text-[11px] text-gray-400 mt-0.5">Dos estanterías simétricas en madera nogal con iluminación LED cálida en cada nivel, conectadas por un panel alistonado 3D con luz rasante vertical.</p>
+                                <h4 class="text-xs font-bold text-white">Cielo Raso Alistonado en Madera</h4>
+                                <p class="text-[11px] text-gray-400 mt-0.5">Listonería lineal corrida que aporta calidez visual, acondicionamiento acústico y continuidad hacia los acabados interiores.</p>
                             </div>
                         </div>
 
                         <div class="p-3.5 bg-slate-900 rounded-2xl border border-slate-800 flex items-start gap-3">
-                            <i class="fa-solid fa-tv text-blue-400 text-base mt-1"></i>
+                            <i class="fa-solid fa-border-all text-blue-400 text-base mt-1"></i>
                             <div>
-                                <h4 class="text-xs font-bold text-white">Pantalla Ejecutiva con Luz Indirecta</h4>
-                                <p class="text-[11px] text-gray-400 mt-0.5">Televisor Smart TV empotrado sobre muro liso con retroiluminación perimetral LED cálida 3000K para presentaciones y llamadas privadas.</p>
+                                <h4 class="text-xs font-bold text-white">Grandes Ventanales Plegables Vidriados</h4>
+                                <p class="text-[11px] text-gray-400 mt-0.5">Sistema de carpintería metálica en negro mate con paños de vidrio de piso a techo para máxima iluminación natural.</p>
                             </div>
                         </div>
 
                         <div class="p-3.5 bg-slate-900 rounded-2xl border border-slate-800 flex items-start gap-3">
-                            <i class="fa-solid fa-door-closed text-emerald-400 text-base mt-1"></i>
+                            <i class="fa-solid fa-seedling text-emerald-400 text-base mt-1"></i>
                             <div>
-                                <h4 class="text-xs font-bold text-white">Puerta Corredera Pivotante Dorada / Miel</h4>
-                                <p class="text-[11px] text-gray-400 mt-0.5">Acceso principal con cerramiento de gran formato en acabado satinado cálido para total privacidad.</p>
+                                <h4 class="text-xs font-bold text-white">Pavimento en Deck & Biofilia Integrada</h4>
+                                <p class="text-[11px] text-gray-400 mt-0.5">Bancos corridos de madera, jardineras perimetrales y mobiliario lounge para descanso y bienestar ejecutivo.</p>
                             </div>
                         </div>
+                    </div>
 
-                        <div class="p-3.5 bg-slate-900 rounded-2xl border border-slate-800 flex items-start gap-3">
-                            <i class="fa-solid fa-seedling text-green-400 text-base mt-1"></i>
-                            <div>
-                                <h4 class="text-xs font-bold text-white">Toques Biofílicos & Vidrio Laminado</h4>
-                                <p class="text-[11px] text-gray-400 mt-0.5">Vegetación interior en maceta cerámica de gran formato y cerramiento perimetral en vidrio de seguridad transparente.</p>
-                            </div>
-                        </div>
+                    <!-- Botón de navegación rápida entre Referente y Render -->
+                    <div class="pt-2 flex items-center justify-between border-t border-slate-800">
+                        <button onclick="prevOficinaTab()" class="px-4 py-2 bg-slate-900 hover:bg-slate-800 text-white rounded-xl text-xs font-bold transition flex items-center gap-1.5">
+                            <i class="fa-solid fa-arrow-left"></i> Anterior
+                        </button>
+                        <span id="indicadorOficina" class="text-xs font-mono text-gray-400">1 de 2</span>
+                        <button onclick="nextOficinaTab()" class="px-4 py-2 bg-rose-600 hover:bg-rose-700 text-white rounded-xl text-xs font-bold transition flex items-center gap-1.5">
+                            Siguiente <i class="fa-solid fa-arrow-right"></i>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -306,5 +313,88 @@
         &copy; 2026 Rivers Mall Cúcuta. Oficina Ejecutiva Privada • Piso 3.
     </footer>
 
+    <!-- Script de control interactivo de Referente (de primeras) vs Render Isométrico -->
+    <script>
+        const oficinaTabs = [
+            {
+                src: 'referente_oficina_interior.jpg',
+                badge: 'Referente Conceptual • Cielo Raso en Madera & Terraza',
+                badgeIcon: 'fa-camera text-rose-400',
+                tag: 'Referente 1 • Estilo Biofílico, Madera & Ventanales',
+                title: 'Referente Arquitectónico: Terraza, Deck & Cielo Raso en Madera',
+                desc: 'Referente de diseño que inspira la atmósfera cálida y biofílica de las oficinas: espacio de transición con cielo raso alistonado continuo en madera natural, pavimento en deck elevado, carpintería vidriada plegable de piso a techo y zonas de asiento integradas con vegetación.',
+                puntos: [
+                    { icon: 'fa-layer-group text-amber-400', title: 'Cielo Raso Alistonado en Madera', desc: 'Listonería lineal corrida que aporta calidez visual, acondicionamiento acústico y continuidad hacia los acabados interiores.' },
+                    { icon: 'fa-border-all text-blue-400', title: 'Grandes Ventanales Plegables Vidriados', desc: 'Sistema de carpintería metálica en negro mate con paños de vidrio de piso a techo para máxima iluminación natural.' },
+                    { icon: 'fa-seedling text-emerald-400', title: 'Pavimento en Deck & Biofilia Integrada', desc: 'Bancos corridos de madera, jardineras perimetrales y mobiliario lounge para descanso y bienestar ejecutivo.' }
+                ]
+            },
+            {
+                src: 'oficina_esposa_render.jpg',
+                badge: 'Isométrico 3D • Despacho Ejecutivo',
+                badgeIcon: 'fa-cube text-rose-400',
+                tag: 'Diseño Propuesto • Oficina Privada de Dirección',
+                title: 'Despacho Privado de Dirección',
+                desc: 'Diseñado con un enfoque de elegancia sobria, privacidad acústica y confort ergonómico para largas jornadas de trabajo directivo y atención a visitas selectas.',
+                puntos: [
+                    { icon: 'fa-table text-rose-400', title: 'Escritorio Directivo con Frontal Alistonado', desc: 'Mueble de trabajo con tapa en cuarzo/mármol blanco y faldón en lamas verticales de madera roble a juego con el muro.' },
+                    { icon: 'fa-layer-group text-amber-400', title: 'Doble Librería Iluminada & Muro WPC', desc: 'Dos estanterías simétricas en madera nogal con iluminación LED cálida en cada nivel, conectadas por un panel alistonado 3D con luz rasante vertical.' },
+                    { icon: 'fa-tv text-blue-400', title: 'Pantalla Ejecutiva con Luz Indirecta', desc: 'Televisor Smart TV empotrado sobre muro liso con retroiluminación perimetral LED cálida 3000K para presentaciones y llamadas privadas.' },
+                    { icon: 'fa-door-closed text-emerald-400', title: 'Puerta Corredera Pivotante Dorada / Miel', desc: 'Acceso principal con cerramiento de gran formato en acabado satinado cálido para total privacidad.' },
+                    { icon: 'fa-seedling text-green-400', title: 'Toques Biofílicos & Vidrio Laminado', desc: 'Vegetación interior en maceta cerámica de gran formato y cerramiento perimetral en vidrio de seguridad transparente.' }
+                ]
+            }
+        ];
+
+        let curOficinaIdx = 0;
+
+        function setOficinaTab(idx) {
+            curOficinaIdx = idx;
+            const data = oficinaTabs[idx];
+            const img = document.getElementById('oficinaImg');
+
+            img.style.opacity = '0';
+            setTimeout(() => {
+                img.src = data.src;
+                document.getElementById('oficinaFullLink').href = data.src;
+                document.getElementById('oficinaBadge').textContent = data.badge;
+                document.getElementById('oficinaBadgeIcon').className = `fa-solid ${data.badgeIcon}`;
+                document.getElementById('oficinaTag').textContent = data.tag;
+                document.getElementById('oficinaTitle').textContent = data.title;
+                document.getElementById('oficinaDesc').textContent = data.desc;
+                document.getElementById('indicadorOficina').textContent = `${idx + 1} de 2`;
+
+                const puntosContainer = document.getElementById('oficinaPuntos');
+                puntosContainer.innerHTML = data.puntos.map(p => `
+                    <div class="p-3.5 bg-slate-900 rounded-2xl border border-slate-800 flex items-start gap-3">
+                        <i class="fa-solid ${p.icon} text-base mt-1"></i>
+                        <div>
+                            <h4 class="text-xs font-bold text-white">${p.title}</h4>
+                            <p class="text-[11px] text-gray-400 mt-0.5">${p.desc}</p>
+                        </div>
+                    </div>
+                `).join('');
+
+                for (let i = 0; i < oficinaTabs.length; i++) {
+                    const btn = document.getElementById(`btnTabOficina${i}`);
+                    if (i === idx) {
+                        btn.className = 'px-5 py-3 rounded-2xl font-bold text-xs sm:text-sm transition flex items-center gap-2 shadow-sm bg-slate-900 text-white border-2 border-slate-900';
+                    } else {
+                        btn.className = 'px-5 py-3 rounded-2xl font-bold text-xs sm:text-sm transition flex items-center gap-2 shadow-sm bg-gray-100 hover:bg-gray-200 text-gray-800 border-2 border-transparent';
+                    }
+                }
+
+                img.style.opacity = '1';
+            }, 150);
+        }
+
+        function nextOficinaTab() {
+            setOficinaTab((curOficinaIdx + 1) % oficinaTabs.length);
+        }
+
+        function prevOficinaTab() {
+            setOficinaTab((curOficinaIdx - 1 + oficinaTabs.length) % oficinaTabs.length);
+        }
+    </script>
 </body>
 </html>
