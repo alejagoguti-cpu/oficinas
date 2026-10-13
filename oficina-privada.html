@@ -83,11 +83,11 @@
             </div>
 
             <!-- Visualizador Principal en Gran Formato -->
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-slate-950 p-4 sm:p-8 rounded-3xl border border-slate-800 shadow-2xl">
-                <!-- Imagen en Alta Resolución -->
-                <div class="lg:col-span-8 flex flex-col items-center justify-center">
-                    <div class="relative w-full overflow-hidden rounded-2xl bg-slate-900 flex items-center justify-center group">
-                        <img id="oficinaImg" src="referente_oficina_interior.jpg" alt="Referente Arquitectónico Oficina Interior" class="w-full max-h-[78vh] object-contain transition duration-500">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start bg-slate-950 p-4 sm:p-8 rounded-3xl border border-slate-800 shadow-2xl">
+                <!-- Imagen en Alta Resolución y Axonometría debajo -->
+                <div class="lg:col-span-8 flex flex-col space-y-4">
+                    <div class="relative w-full overflow-hidden rounded-2xl bg-slate-900 flex items-center justify-center group shadow-md">
+                        <img id="oficinaImg" src="referente_oficina_interior.jpg" alt="Referente Arquitectónico Oficina Interior" class="w-full max-h-[72vh] object-contain transition duration-500">
                         <div class="absolute bottom-3 left-3 bg-slate-950/80 backdrop-blur-md px-3.5 py-1.5 rounded-xl border border-white/10 text-white text-xs flex items-center gap-2">
                             <i id="oficinaBadgeIcon" class="fa-solid fa-camera text-rose-400"></i>
                             <span id="oficinaBadge">Referente Conceptual • Cielo Raso en Madera & Terraza</span>
@@ -96,10 +96,31 @@
                             <i class="fa-solid fa-expand text-xs"></i>
                         </a>
                     </div>
+
+                    <!-- Bloque directamente debajo del referente: Axonometría con la terraza resaltada en madera -->
+                    <div id="axonometriaSubCard" class="relative w-full overflow-hidden rounded-2xl bg-slate-900 p-4 sm:p-5 border border-slate-800 shadow-xl flex flex-col transition-all duration-300">
+                        <div class="flex flex-wrap items-center justify-between gap-2 mb-3 text-white">
+                            <span class="text-xs font-bold uppercase tracking-wider flex items-center gap-2 text-amber-400">
+                                <i class="fa-solid fa-draw-polygon text-sm"></i> Localización en Axonometría • Terraza Piso 3
+                            </span>
+                            <span class="text-[11px] font-mono text-amber-300 bg-amber-500/20 border border-amber-500/30 px-2.5 py-0.5 rounded-full font-bold">
+                                Zona Resaltada en Madera
+                            </span>
+                        </div>
+                        <div class="relative w-full overflow-hidden rounded-xl bg-white p-2.5 flex items-center justify-center group shadow-inner">
+                            <img src="axonometria_terraza_piso3.png" alt="Axonometría Piso 3 • Localización de Terraza" class="w-full max-h-[55vh] object-contain">
+                            <a href="axonometria_terraza_piso3.png" target="_blank" class="absolute top-3 right-3 bg-slate-950/80 hover:bg-amber-600 text-white w-9 h-9 rounded-xl flex items-center justify-center transition shadow-lg border border-white/20" title="Ver axonometría en tamaño completo">
+                                <i class="fa-solid fa-expand text-xs"></i>
+                            </a>
+                        </div>
+                        <p class="text-xs text-gray-400 mt-2.5 text-center leading-relaxed">
+                            Esquema axonométrico del Piso 3: la zona perimetral sombreada en madera (ocre) corresponde con precisión a la terraza exterior y cielo raso continuo del referente, integrándose con las oficinas ejecutivas y la sala de juntas.
+                        </p>
+                    </div>
                 </div>
 
                 <!-- Detalles Arquitectónicos y Ficha de Características -->
-                <div class="lg:col-span-4 text-white space-y-5">
+                <div class="lg:col-span-4 text-white space-y-5 lg:sticky lg:top-28">
                     <div>
                         <span id="oficinaTag" class="text-xs font-mono uppercase tracking-wider text-rose-400 font-bold block mb-1">
                             Referente 1 • Estilo Biofílico, Madera & Ventanales
@@ -382,6 +403,11 @@
                     } else {
                         btn.className = 'px-5 py-3 rounded-2xl font-bold text-xs sm:text-sm transition flex items-center gap-2 shadow-sm bg-gray-100 hover:bg-gray-200 text-gray-800 border-2 border-transparent';
                     }
+                }
+
+                const axoCard = document.getElementById('axonometriaSubCard');
+                if (axoCard) {
+                    axoCard.style.display = (idx === 0) ? 'flex' : 'none';
                 }
 
                 img.style.opacity = '1';
