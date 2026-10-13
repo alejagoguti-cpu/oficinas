@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafetería & Zona de Café • Rivers Mall Cúcuta</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        slate: { 850: '#151f32', 950: '#070d18' }
+                    }
+                }
+            }
+        };
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap');
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 antialiased selection:bg-amber-500 selection:text-white">
+
+    <!-- Header Navigation -->
+    <header class="bg-white/95 backdrop-blur-md border-b border-gray-200 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <a href="index.html" class="bg-slate-900 text-white font-black px-3.5 py-1.5 text-lg tracking-wider rounded-xl shadow-md hover:bg-amber-600 transition">
+                    RIVERS MALL
+                </a>
+                <div class="border-l border-gray-300 pl-3">
+                    <span class="text-xs text-amber-700 font-extrabold tracking-wider uppercase block">Cafetería & Coffee Break</span>
+                    <span class="text-[11px] text-gray-500 font-medium">Piso 3 • Área de Bienestar Corporativo</span>
+                </div>
+            </div>
+            <nav class="flex items-center space-x-2 sm:space-x-4 text-xs sm:text-sm font-bold text-gray-700">
+                <a href="index.html" class="hover:text-amber-700 transition flex items-center gap-1.5">
+                    <i class="fa-solid fa-building text-xs"></i>
+                    <span class="hidden md:inline">Principal</span>
+                </a>
+                <a href="sala-juntas.html" class="hover:text-amber-700 transition flex items-center gap-1.5">
+                    <i class="fa-solid fa-users-rectangle text-xs"></i>
+                    <span class="hidden md:inline">Juntas</span>
+                </a>
+                <a href="oficina-privada.html" class="hover:text-amber-700 transition flex items-center gap-1.5">
+                    <i class="fa-solid fa-user-tie text-xs"></i>
+                    <span class="hidden md:inline">Oficina Privada</span>
+                </a>
+                <a href="cafeteria.html" class="text-amber-700 font-bold hover:text-amber-800 transition flex items-center gap-1.5">
+                    <i class="fa-solid fa-mug-saucer text-xs"></i>
+                    <span>Cafetería</span>
+                </a>
+                <a href="banos.html" class="hover:text-amber-700 transition flex items-center gap-1.5">
+                    <i class="fa-solid fa-restroom text-xs"></i>
+                    <span class="hidden sm:inline">Baños & PMR</span>
+                </a>
+                <a href="#moodboard" class="hidden lg:flex px-3 py-1.5 bg-slate-900 hover:bg-slate-800 text-white rounded-xl shadow-sm transition items-center gap-1.5">
+                    <i class="fa-solid fa-cart-shopping text-xs"></i>
+                    <span>Materiales</span>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- SECCIÓN 1: DISEÑO ARQUITECTÓNICO & RENDER ISOMÉTRICO (SIN HERO BANNER) -->
+    <section id="diseno" class="py-10 sm:py-16 bg-white border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-8">
+                <span class="text-xs font-bold text-amber-700 uppercase tracking-widest block mb-2">Comedor Corporativo & Zona de Bienestar</span>
+                <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-gray-900 tracking-tight">Cafetería & Barra Panorámica</h1>
+                <p class="mt-3 text-gray-600 text-sm sm:text-base">Espacio de descanso, alimentación y reuniones informales con carpintería en madera nogal, mesones en terrazo beige, isla comunal y mirador acristalado de piso a techo.</p>
+            </div>
+
+            <!-- Visualizador Principal en Gran Formato -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start bg-slate-950 p-4 sm:p-8 rounded-3xl border border-slate-800 shadow-2xl">
+                <!-- Imagen Isométrica en Alta Resolución -->
+                <div class="lg:col-span-8 flex flex-col items-center justify-center">
+                    <div class="relative w-full overflow-hidden rounded-2xl bg-slate-900 flex items-center justify-center group shadow-md">
+                        <img id="cafeteriaImg" src="cafeteria_render.jpg" alt="Render Isométrico Cafetería Corporativa Rivers Mall" class="w-full max-h-[78vh] object-contain transition duration-500">
+                        <div class="absolute bottom-3 left-3 bg-slate-950/80 backdrop-blur-md px-3.5 py-1.5 rounded-xl border border-white/10 text-white text-xs flex items-center gap-2">
+                            <i class="fa-solid fa-cube text-amber-400"></i>
+                            <span>Isométrico 3D • Cafetería & Mirador Corporativo</span>
+                        </div>
+                        <a href="cafeteria_render.jpg" target="_blank" class="absolute top-3 right-3 bg-slate-950/80 hover:bg-amber-600 text-white w-9 h-9 rounded-xl flex items-center justify-center transition shadow-lg border border-white/20" title="Ver render en tamaño completo">
+                            <i class="fa-solid fa-expand text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Detalles Arquitectónicos y Ficha de Características -->
+                <div class="lg:col-span-4 text-white space-y-5 lg:sticky lg:top-28">
+                    <div>
+                        <span class="text-xs font-mono uppercase tracking-wider text-amber-400 font-bold block mb-1">
+                            Piso 3 • Área de Desconexión & Encuentro
+                        </span>
+                        <h2 class="text-2xl sm:text-3xl font-extrabold text-white leading-tight">
+                            Cafetería con Vista Panorámica
+                        </h2>
+                        <p class="mt-2.5 text-gray-300 text-xs sm:text-sm leading-relaxed">
+                            Diseñada para fomentar la interacción entre equipos y el confort diario, con acabados higiénicos de alta gama, iluminación focal cálida y dos zonas diferenciadas de estancia.
+                        </p>
+                    </div>
+
+                    <!-- Fichas de Características Específicas -->
+                    <div class="space-y-3 pt-1">
+                        <div class="p-3.5 bg-slate-900 rounded-2xl border border-slate-800 flex items-start gap-3">
+                            <i class="fa-solid fa-window-maximize text-amber-400 text-base mt-1"></i>
+                            <div>
+                                <h4 class="text-xs font-bold text-white">Barra Corrida Mirador</h4>
+                                <p class="text-[11px] text-gray-400 mt-0.5">Mesón longitudinal en terrazo/granito beige adosado a los ventanales de piso a techo con capacidad para 4 personas y taburetes modernos.</p>
+                            </div>
+                        </div>
+
+                        <div class="p-3.5 bg-slate-900 rounded-2xl border border-slate-800 flex items-start gap-3">
+                            <i class="fa-solid fa-table-cells-large text-yellow-400 text-base mt-1"></i>
+                            <div>
+                                <h4 class="text-xs font-bold text-white">Isla Central Comunal</h4>
+                                <p class="text-[11px] text-gray-400 mt-0.5">Mesa alta para almuerzos rápidos o trabajo informal con enchape de piedra y tomas eléctricas empotradas para portátiles.</p>
+                            </div>
+                        </div>
+
+                        <div class="p-3.5 bg-slate-900 rounded-2xl border border-slate-800 flex items-start gap-3">
+                            <i class="fa-solid fa-cabinet-filing text-orange-400 text-base mt-1"></i>
+                            <div>
+                                <h4 class="text-xs font-bold text-white">Mobiliario Integral en Madera Nogal</h4>
+                                <p class="text-[11px] text-gray-400 mt-0.5">Gabinetes superiores e inferiores con cierre amortiguado, mesón en granito veteado y estantes abiertos retroiluminados con LED 3000K.</p>
+                            </div>
+                        </div>
+
+                        <div class="p-3.5 bg-slate-900 rounded-2xl border border-slate-800 flex items-start gap-3">
+                            <i class="fa-solid fa-snowflake text-blue-400 text-base mt-1"></i>
+                            <div>
+                                <h4 class="text-xs font-bold text-white">Equipamiento Electro & Fontanería</h4>
+                                <p class="text-[11px] text-gray-400 mt-0.5">Espacio para refrigerador French Door en acero titanio/negro mate, poceta bajo encimera y grifería monomando flexible de diseño.</p>
+                            </div>
+                        </div>
+
+                        <div class="p-3.5 bg-slate-900 rounded-2xl border border-slate-800 flex items-start gap-3">
+                            <i class="fa-solid fa-gem text-emerald-400 text-base mt-1"></i>
+                            <div>
+                                <h4 class="text-xs font-bold text-white">Piso Continuo Boss Beige 60×60</h4>
+                                <p class="text-[11px] text-gray-400 mt-0.5">Porcelanato pulido rectificado de alto brillo y resistencia al tránsito frecuente con fácil mantenimiento y asepsia.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 2: MOODBOARD DE MATERIALES & ENLACES DE COMPRA HOMECENTER -->
+    <section id="moodboard" class="py-16 sm:py-24 bg-gray-50 border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-bold text-amber-700 uppercase tracking-widest block mb-2">Especificaciones de Materiales Reales</span>
+                <h2 class="text-3xl sm:text-4xl font-black text-gray-900 tracking-tight">Moodboard de Materiales • Cafetería Corporativa</h2>
+                <p class="mt-3 text-gray-600 text-sm sm:text-base">Haz clic en cada producto para adquirirlo directamente en Homecenter Colombia con las referencias exactas de catálogo.</p>
+            </div>
+
+            <!-- Grid de Muestras Reales (4 Columnas) -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+                <!-- Material 1: Porcelanato Corona Boss Beige 60x60 (Piso Brillante) -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-gray-200 flex flex-col group">
+                    <div class="relative bg-slate-100 h-44 overflow-hidden">
+                        <img src="material_terrazzo_beige.jpg" alt="Piso Porcelanato Boss Beige Corona 60x60" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <span class="absolute top-2.5 left-2.5 bg-amber-800/95 backdrop-blur-sm text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full shadow">
+                            Piso Continuo
+                        </span>
+                        <a href="https://www.homecenter.com.co/homecenter-co/product/722868/Piso-Porcelanato-Rectificado-Nuevo-Boss-Beige-Caras-Diferenciadas-60X60-Caja-Por-1.8-M2/722868" target="_blank" class="absolute top-2.5 right-2.5 bg-slate-950/80 hover:bg-amber-700 text-white w-7 h-7 rounded-full flex items-center justify-center transition shadow-md border border-white/20" title="Comprar en Homecenter">
+                            <i class="fa-solid fa-cart-shopping text-[10px]"></i>
+                        </a>
+                    </div>
+                    <div class="p-4 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="text-[10px] font-mono text-amber-800 font-bold uppercase tracking-wider mb-1">SKU Homecenter: 722868 • 60×60 cm</div>
+                            <h3 class="text-sm font-bold text-gray-900 group-hover:text-amber-800 transition leading-snug">Porcelanato Boss Beige Corona</h3>
+                            <p class="text-xs text-gray-600 mt-1.5 leading-relaxed">
+                                Porcelanato rectificado pulido brillante en tono crema con vetas cálidas. Refleja la luz de los ventanales y resiste el tránsito diario del comedor.
+                            </p>
+                        </div>
+                        <div class="mt-3 pt-3 border-t border-gray-100 flex items-center justify-between">
+                            <span class="text-[10px] font-semibold text-amber-800 bg-amber-50 px-2 py-0.5 rounded">PEI V • Pulido Espejo</span>
+                            <a href="https://www.homecenter.com.co/homecenter-co/product/722868/Piso-Porcelanato-Rectificado-Nuevo-Boss-Beige-Caras-Diferenciadas-60X60-Caja-Por-1.8-M2/722868" target="_blank" class="text-xs font-bold text-amber-800 hover:text-amber-950 flex items-center gap-1.5">
+                                <span>Comprar</span>
+                                <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Material 2: Panel Ranurado 3D WPC Holztek (Acentos en Muros & Muebles) -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-gray-200 flex flex-col group">
+                    <div class="relative bg-slate-100 h-44 overflow-hidden">
+                        <img src="panel_ranurado_wpc_madera_brown.jpg" alt="Panel Ranurado 3D WPC Madera Brown Holztek" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <span class="absolute top-2.5 left-2.5 bg-amber-900/95 backdrop-blur-sm text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full shadow">
+                            Mobiliario & Muro
+                        </span>
+                        <a href="https://www.homecenter.com.co/homecenter-co/product/906822/panel-ranurado-3d-wpc-madera-brown-16x240x22cm-holztek/906822/" target="_blank" class="absolute top-2.5 right-2.5 bg-slate-950/80 hover:bg-amber-800 text-white w-7 h-7 rounded-full flex items-center justify-center transition shadow-md border border-white/20" title="Comprar en Homecenter">
+                            <i class="fa-solid fa-cart-shopping text-[10px]"></i>
+                        </a>
+                    </div>
+                    <div class="p-4 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="text-[10px] font-mono text-amber-900 font-bold uppercase tracking-wider mb-1">SKU Homecenter: 906822 • 16×240 cm</div>
+                            <h3 class="text-sm font-bold text-gray-900 group-hover:text-amber-900 transition leading-snug">Panel Ranurado 3D WPC Holztek</h3>
+                            <p class="text-xs text-gray-600 mt-1.5 leading-relaxed">
+                                Lamas alistonadas de madera brown hidrófugas para faldones de muebles, revestimientos perimetrales y calidez visual.
+                            </p>
+                        </div>
+                        <div class="mt-3 pt-3 border-t border-gray-100 flex items-center justify-between">
+                            <span class="text-[10px] font-semibold text-amber-900 bg-amber-50 px-2 py-0.5 rounded">WPC Antihumedad</span>
+                            <a href="https://www.homecenter.com.co/homecenter-co/product/906822/panel-ranurado-3d-wpc-madera-brown-16x240x22cm-holztek/906822/" target="_blank" class="text-xs font-bold text-amber-800 hover:text-amber-950 flex items-center gap-1.5">
+                                <span>Comprar</span>
+                                <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Material 3: Pared Arabia ARD PRO Beige Corona (Salpicadero & Muros) -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-gray-200 flex flex-col group">
+                    <div class="relative bg-slate-100 h-44 overflow-hidden">
+                        <img src="corona_arabia_ard_pro_beige.jpg" alt="Pared Arabia ARD PRO Beige Corona 30x60" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <span class="absolute top-2.5 left-2.5 bg-amber-600/95 backdrop-blur-sm text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full shadow">
+                            Salpicadero Cocina
+                        </span>
+                        <a href="https://www.homecenter.com.co/homecenter-co/product/3027950/Piso-Pared-Ceramico-Arabia-Alta-Resistencia-al-Deslizamiento-ARD-PRO-Beige-30X60-cm-Caja-1.8-m2-Corona/3027950" target="_blank" class="absolute top-2.5 right-2.5 bg-slate-950/80 hover:bg-amber-600 text-white w-7 h-7 rounded-full flex items-center justify-center transition shadow-md border border-white/20" title="Comprar en Homecenter">
+                            <i class="fa-solid fa-cart-shopping text-[10px]"></i>
+                        </a>
+                    </div>
+                    <div class="p-4 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="text-[10px] font-mono text-amber-700 font-bold uppercase tracking-wider mb-1">SKU Homecenter: 3027950 • 30×60 cm</div>
+                            <h3 class="text-sm font-bold text-gray-900 group-hover:text-amber-700 transition leading-snug">Piso Pared Arabia ARD PRO Beige</h3>
+                            <p class="text-xs text-gray-600 mt-1.5 leading-relaxed">
+                                Cerámica esmaltada beige marmoleada con alta resistencia al agua y grasas. Fácil limpieza en el área húmeda de preparación.
+                            </p>
+                        </div>
+                        <div class="mt-3 pt-3 border-t border-gray-100 flex items-center justify-between">
+                            <span class="text-[10px] font-semibold text-gray-500 bg-gray-100 px-2 py-0.5 rounded">Fácil Asepsia</span>
+                            <a href="https://www.homecenter.com.co/homecenter-co/product/3027950/Piso-Pared-Ceramico-Arabia-Alta-Resistencia-al-Deslizamiento-ARD-PRO-Beige-30X60-cm-Caja-1.8-m2-Corona/3027950" target="_blank" class="text-xs font-bold text-amber-700 hover:text-amber-900 flex items-center gap-1.5">
+                                <span>Comprar</span>
+                                <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Material 4: Iluminación LED Cálida 3000K (Repisas & Bajo Muebles) -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-gray-200 flex flex-col group">
+                    <div class="relative bg-slate-900 h-44 overflow-hidden flex items-center justify-center p-4">
+                        <i class="fa-solid fa-lightbulb text-amber-400 text-6xl group-hover:scale-110 transition duration-500"></i>
+                        <span class="absolute top-2.5 left-2.5 bg-yellow-500/95 backdrop-blur-sm text-slate-950 text-[10px] font-bold px-2.5 py-0.5 rounded-full shadow">
+                            Luz Oculta 3000K
+                        </span>
+                        <a href="https://www.homecenter.com.co/homecenter-co/category/cat10022/iluminacion-led/" target="_blank" class="absolute top-2.5 right-2.5 bg-slate-950/80 hover:bg-yellow-500 text-white hover:text-slate-950 w-7 h-7 rounded-full flex items-center justify-center transition shadow-md border border-white/20" title="Ver en Homecenter">
+                            <i class="fa-solid fa-cart-shopping text-[10px]"></i>
+                        </a>
+                    </div>
+                    <div class="p-4 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="text-[10px] font-mono text-amber-600 font-bold uppercase tracking-wider mb-1">Cinta LED COB • 3000K Luz Cálida</div>
+                            <h3 class="text-sm font-bold text-gray-900 group-hover:text-amber-600 transition leading-snug">Iluminación LED en Repisas & Bajo Mueble</h3>
+                            <p class="text-xs text-gray-600 mt-1.5 leading-relaxed">
+                                Tiras de iluminación indirecta LED cálida empotradas en los entrepaños de vajilla y bajo los gabinetes sobre el mesón de preparación.
+                            </p>
+                        </div>
+                        <div class="mt-3 pt-3 border-t border-gray-100 flex items-center justify-between">
+                            <span class="text-[10px] font-semibold text-amber-600 bg-amber-50 px-2 py-0.5 rounded">3000K • Luz Indirecta</span>
+                            <a href="https://www.homecenter.com.co/homecenter-co/category/cat10022/iluminacion-led/" target="_blank" class="text-xs font-bold text-amber-700 hover:text-amber-950 flex items-center gap-1.5">
+                                <span>Ver Luces</span>
+                                <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to action de navegación -->
+    <section class="py-16 bg-slate-900 text-white text-center">
+        <div class="max-w-4xl mx-auto px-4">
+            <h3 class="text-2xl sm:text-3xl font-black mb-3">Rivers Mall Cúcuta • Corporativo Piso 3</h3>
+            <p class="text-gray-400 text-xs sm:text-sm mb-8">Navega libremente entre todas las áreas arquitectónicas del proyecto:</p>
+            <div class="flex flex-wrap justify-center gap-3 sm:gap-4">
+                <a href="index.html" class="inline-flex items-center gap-2 px-5 py-3 bg-white text-slate-900 font-bold rounded-xl hover:bg-gray-100 transition shadow-lg text-sm">
+                    <i class="fa-solid fa-house"></i>
+                    <span>Inicio</span>
+                </a>
+                <a href="sala-juntas.html" class="inline-flex items-center gap-2 px-5 py-3 bg-amber-600 hover:bg-amber-700 text-white font-bold rounded-xl transition shadow-lg text-sm">
+                    <i class="fa-solid fa-users-rectangle"></i>
+                    <span>Sala de Juntas</span>
+                </a>
+                <a href="oficina-privada.html" class="inline-flex items-center gap-2 px-5 py-3 bg-rose-600 hover:bg-rose-700 text-white font-bold rounded-xl transition shadow-lg text-sm">
+                    <i class="fa-solid fa-user-tie"></i>
+                    <span>Oficina Privada</span>
+                </a>
+                <a href="banos.html" class="inline-flex items-center gap-2 px-5 py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl transition shadow-lg text-sm">
+                    <i class="fa-solid fa-restroom"></i>
+                    <span>Baños, PMR & Cajeros</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 text-white py-8 border-t border-slate-800 text-center text-xs text-gray-500">
+        &copy; 2026 Rivers Mall Cúcuta. Cafetería & Comedor Corporativo • Piso 3.
+    </footer>
+
+</body>
+</html>
