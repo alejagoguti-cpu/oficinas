@@ -21,12 +21,6 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap');
         body { font-family: 'Plus Jakarta Sans', sans-serif; }
-
-        .config-card.active {
-            border-color: #059669;
-            background: linear-gradient(135deg, rgba(16, 185, 129, 0.08) 0%, rgba(5, 150, 105, 0.03) 100%);
-            box-shadow: 0 10px 25px -5px rgba(16, 185, 129, 0.15);
-        }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-900 antialiased selection:bg-emerald-600 selection:text-white">
@@ -68,9 +62,9 @@
                     <i class="fa-solid fa-restroom text-xs"></i>
                     <span class="hidden sm:inline">Baños & PMR</span>
                 </a>
-                <a href="#ficha-tecnica" class="hidden lg:flex px-3 py-1.5 bg-slate-900 hover:bg-slate-800 text-white rounded-xl shadow-sm transition items-center gap-1.5">
-                    <i class="fa-solid fa-ruler-combined text-xs"></i>
-                    <span>Ficha Técnica</span>
+                <a href="#referente" class="hidden lg:flex px-3 py-1.5 bg-slate-900 hover:bg-slate-800 text-white rounded-xl shadow-sm transition items-center gap-1.5">
+                    <i class="fa-solid fa-camera text-xs"></i>
+                    <span>Referente Real</span>
                 </a>
             </nav>
         </div>
@@ -107,86 +101,156 @@
         </div>
     </section>
 
-    <!-- SECCIÓN 2: VISUALIZADOR PRINCIPAL DE LAS 3 CONFIGURACIONES -->
-    <section class="py-12 sm:py-16 bg-slate-950 text-white border-b border-slate-800">
+    <!-- SECCIÓN 2: VISUALIZADOR PRINCIPAL CON SELECTOR DE PESTAÑAS (REFERENTE REAL VS ESQUEMA MODULAR) -->
+    <section id="referente" class="py-12 sm:py-16 bg-slate-950 text-white border-b border-slate-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            
+            <!-- Selector de Pestañas Superior -->
+            <div class="flex flex-wrap justify-center gap-2 sm:gap-3 mb-8">
+                <button onclick="setMainTab(0)" id="tabBtn0" class="px-5 py-3 rounded-2xl font-bold text-xs sm:text-sm transition flex items-center gap-2 shadow-sm bg-emerald-600 text-white border-2 border-emerald-500">
+                    <i class="fa-solid fa-camera text-emerald-200"></i>
+                    <span>1. Referente Real de Interiorismo (Vidriera & Loft)</span>
+                </button>
+                <button onclick="setMainTab(1)" id="tabBtn1" class="px-5 py-3 rounded-2xl font-bold text-xs sm:text-sm transition flex items-center gap-2 shadow-sm bg-slate-900 hover:bg-slate-800 text-gray-300 border-2 border-slate-800">
+                    <i class="fa-solid fa-cubes text-emerald-400"></i>
+                    <span>2. Esquema Técnico Modular (3 Opciones de Escalera)</span>
+                </button>
+            </div>
+
+            <!-- Panel de Contenido Dinámico -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start bg-slate-900/90 p-4 sm:p-8 rounded-3xl border border-slate-800 shadow-2xl">
                 
-                <!-- Imagen en Alta Calidad con Zoom -->
+                <!-- Columna Izquierda: Imagen en Alta Calidad con Zoom -->
                 <div class="lg:col-span-7 flex flex-col items-center">
-                    <div class="relative w-full overflow-hidden rounded-3xl bg-slate-900 border border-slate-800 shadow-2xl p-4 sm:p-6 group flex items-center justify-center">
-                        <img id="mainMezzaninaImg" src="local_pequeno_mezzanina.png" alt="Configuraciones de Mezzanina Modular para Local Pequeño Rivers Mall" class="w-full max-h-[70vh] object-contain transition duration-500 rounded-xl">
+                    <div class="relative w-full overflow-hidden rounded-2xl bg-slate-950 border border-slate-800 shadow-xl flex items-center justify-center group min-h-[440px]">
+                        <img id="mainDisplayImg" src="referente_mezzanina_vidriera.jpg" alt="Referente de Mezzanina con Vidriera Industrial Rivers Mall" class="w-full max-h-[72vh] object-contain transition duration-500 rounded-xl">
                         
                         <!-- Badges informativos sobre la imagen -->
-                        <div class="absolute bottom-6 left-6 bg-slate-950/90 backdrop-blur-md px-4 py-2 rounded-xl border border-white/10 text-xs flex items-center gap-2">
-                            <i class="fa-solid fa-cubes text-emerald-400"></i>
-                            <span class="font-bold">3 Opciones de Acceso por Escalera</span>
+                        <div class="absolute bottom-4 left-4 bg-slate-950/90 backdrop-blur-md px-3.5 py-1.5 rounded-xl border border-white/10 text-xs flex items-center gap-2">
+                            <i id="badgeIcon" class="fa-solid fa-camera text-emerald-400"></i>
+                            <span id="badgeText" class="font-bold">Referente Real • Vidriera Industrial & Escalera Galvanizada</span>
                         </div>
-                        <a href="local_pequeno_mezzanina.png" target="_blank" class="absolute top-6 right-6 bg-slate-950/80 hover:bg-emerald-600 text-white w-10 h-10 rounded-xl flex items-center justify-center transition shadow-lg border border-white/20" title="Ver imagen en tamaño completo">
-                            <i class="fa-solid fa-expand text-sm"></i>
+                        <a id="fullImgLink" href="referente_mezzanina_vidriera.jpg" target="_blank" class="absolute top-4 right-4 bg-slate-950/80 hover:bg-emerald-600 text-white w-9 h-9 rounded-xl flex items-center justify-center transition shadow-lg border border-white/20" title="Ver imagen en tamaño completo">
+                            <i class="fa-solid fa-expand text-xs"></i>
                         </a>
                     </div>
-                    <p class="text-xs text-gray-400 mt-3 text-center">
-                        <i class="fa-solid fa-circle-info text-emerald-400 mr-1"></i> Sistema de entrepiso autoportante en estructura de acero negro mate y deck de piso en madera clara.
+                    <p id="imgCaption" class="text-xs text-gray-400 mt-3 text-center">
+                        <i class="fa-solid fa-circle-info text-emerald-400 mr-1"></i> Referente fotográfico real de altillo habitado con mampara industrial acristalada y escalera metálica.
                     </p>
                 </div>
 
-                <!-- Resumen de las 3 Opciones -->
+                <!-- Columna Derecha: Detalles Arquitectónicos según la Pestaña Activa -->
                 <div class="lg:col-span-5 space-y-4">
-                    <span class="text-xs font-mono uppercase tracking-wider text-emerald-400 font-bold block">
-                        Ingeniería y Adaptabilidad
-                    </span>
-                    <h2 class="text-2xl sm:text-3xl font-extrabold text-white leading-tight">
-                        Versatilidad según la Fachada y Fondo del Local
-                    </h2>
-                    <p class="text-gray-300 text-xs sm:text-sm leading-relaxed">
-                        Cada local del Rivers Mall cuenta con proporciones específicas de fachada y fondo. El sistema modular permite ubicar la escalera de acceso según el flujo del cliente:
-                    </p>
-
-                    <!-- Selector Interactivo de Configuraciones -->
-                    <div class="space-y-3 pt-2">
-                        <!-- Opción 1 -->
-                        <div onclick="selectConfig(1)" id="btn-config-1" class="p-4 bg-slate-900 rounded-2xl border-2 border-emerald-500/80 cursor-pointer hover:border-emerald-400 transition">
-                            <div class="flex items-center justify-between mb-1.5">
-                                <span class="text-xs font-extrabold text-emerald-400 uppercase tracking-wider flex items-center gap-2">
-                                    <span class="w-6 h-6 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-xs">1</span>
-                                    Opción A: Escalera Frontal Recta
-                                </span>
-                                <i class="fa-solid fa-arrow-up-right text-gray-400 text-xs"></i>
-                            </div>
-                            <p class="text-[12px] text-gray-300 leading-snug">
-                                Adosada directamente al frente de la plataforma. Máxima superficie superior continua y despejada, con acceso directo y visualmente imponente.
+                    
+                    <!-- Contenido Pestaña 0: Referente Real -->
+                    <div id="panelTab0" class="space-y-4">
+                        <div>
+                            <span class="text-xs font-mono uppercase tracking-wider text-emerald-400 font-bold block mb-1">
+                                Interiorismo & Estética
+                            </span>
+                            <h2 class="text-2xl sm:text-3xl font-extrabold text-white leading-tight">
+                                Vidriera Industrial & Escalera Metálica
+                            </h2>
+                            <p class="text-gray-300 text-xs sm:text-sm mt-2 leading-relaxed">
+                                Este referente ilustra cómo el sistema de mezzanina cobra vida en un local real: una atmósfera luminosa con cerramiento en cuarterones de hierro negro, escalera estilizada y zonificación cromática.
                             </p>
                         </div>
 
-                        <!-- Opción 2 -->
-                        <div onclick="selectConfig(2)" id="btn-config-2" class="p-4 bg-slate-900/60 rounded-2xl border border-slate-800 cursor-pointer hover:border-emerald-500/50 transition">
-                            <div class="flex items-center justify-between mb-1.5">
-                                <span class="text-xs font-extrabold text-gray-200 uppercase tracking-wider flex items-center gap-2">
-                                    <span class="w-6 h-6 rounded-lg bg-slate-800 text-gray-300 flex items-center justify-center text-xs">2</span>
-                                    Opción B: Escalera Interior con Tronera
-                                </span>
-                                <i class="fa-solid fa-arrow-down-up-across-line text-gray-400 text-xs"></i>
+                        <!-- 4 Fichas Clave del Referente -->
+                        <div class="space-y-3 pt-1">
+                            <div class="p-3.5 bg-slate-950/70 rounded-2xl border border-slate-800 flex items-start gap-3">
+                                <i class="fa-solid fa-table-cells text-emerald-400 text-base mt-1"></i>
+                                <div>
+                                    <h4 class="text-xs font-bold text-white">Mampara Acristalada de Piso a Techo</h4>
+                                    <p class="text-[11.5px] text-gray-400 mt-0.5">Estructura en perfiles de acero negro con cuadrícula de vidrio transparente que aísla el nivel superior sin bloquear la luz ni la vista de la doble altura.</p>
+                                </div>
                             </div>
-                            <p class="text-[12px] text-gray-300 leading-snug">
-                                Pasa a través de un hueco en el piso de la mezzanina. Cero invasión de fachada exterior comercial; ideal para locales estrechos y profundos.
-                            </p>
-                        </div>
 
-                        <!-- Opción 3 -->
-                        <div onclick="selectConfig(3)" id="btn-config-3" class="p-4 bg-slate-900/60 rounded-2xl border border-slate-800 cursor-pointer hover:border-emerald-500/50 transition">
-                            <div class="flex items-center justify-between mb-1.5">
-                                <span class="text-xs font-extrabold text-gray-200 uppercase tracking-wider flex items-center gap-2">
-                                    <span class="w-6 h-6 rounded-lg bg-slate-800 text-gray-300 flex items-center justify-center text-xs">3</span>
-                                    Opción C: Escalera Lateral con Descanso
-                                </span>
-                                <i class="fa-solid fa-turn-up text-gray-400 text-xs"></i>
+                            <div class="p-3.5 bg-slate-950/70 rounded-2xl border border-slate-800 flex items-start gap-3">
+                                <i class="fa-solid fa-stairs text-cyan-400 text-base mt-1"></i>
+                                <div>
+                                    <h4 class="text-xs font-bold text-white">Escalera en Acero Galvanizado / Industrial</h4>
+                                    <p class="text-[11.5px] text-gray-400 mt-0.5">Peldaños en chapa perforada antideslizante con barandilla de tubos verticales de alta seguridad y ligereza estructural adosada al muro.</p>
+                                </div>
                             </div>
-                            <p class="text-[12px] text-gray-300 leading-snug">
-                                Desembarco lateral con rellano de esquina en 'L'. Deja el frente comercial 100% despejado para escaparates, vitrinas y barra de cobro.
-                            </p>
+
+                            <div class="p-3.5 bg-slate-950/70 rounded-2xl border border-slate-800 flex items-start gap-3">
+                                <i class="fa-solid fa-paint-roller text-amber-400 text-base mt-1"></i>
+                                <div>
+                                    <h4 class="text-xs font-bold text-white">Muro de Contraste en Gris Grafito</h4>
+                                    <p class="text-[11.5px] text-gray-400 mt-0.5">En el área bajo el entrepiso, una pared oscura genera profundidad y delimita la zona de reunión, atención o caja.</p>
+                                </div>
+                            </div>
+
+                            <div class="p-3.5 bg-slate-950/70 rounded-2xl border border-slate-800 flex items-start gap-3">
+                                <i class="fa-solid fa-seedling text-green-400 text-base mt-1"></i>
+                                <div>
+                                    <h4 class="text-xs font-bold text-white">Piso Claro & Toques Biofílicos</h4>
+                                    <p class="text-[11.5px] text-gray-400 mt-0.5">Pavimento en madera clara que amplía la percepción del espacio, complementado con plantas de interior para frescura ambiental.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
+
+                    <!-- Contenido Pestaña 1: Esquema Modular -->
+                    <div id="panelTab1" class="hidden space-y-4">
+                        <div>
+                            <span class="text-xs font-mono uppercase tracking-wider text-emerald-400 font-bold block mb-1">
+                                Ingeniería y Adaptabilidad
+                            </span>
+                            <h2 class="text-2xl sm:text-3xl font-extrabold text-white leading-tight">
+                                3 Variantes según Fachada y Fondo
+                            </h2>
+                            <p class="text-gray-300 text-xs sm:text-sm mt-2 leading-relaxed">
+                                Selecciona la disposición de la escalera que mejor se acomode a la proporción de tu local comercial en Rivers Mall:
+                            </p>
+                        </div>
+
+                        <!-- Botones de las 3 Opciones -->
+                        <div class="space-y-3 pt-1">
+                            <div onclick="scrollToConfig(1)" class="p-3.5 bg-slate-950/70 rounded-2xl border border-emerald-500/60 cursor-pointer hover:border-emerald-400 transition">
+                                <div class="flex items-center justify-between mb-1">
+                                    <span class="text-xs font-extrabold text-emerald-400 uppercase tracking-wider flex items-center gap-2">
+                                        <span class="w-5 h-5 rounded-md bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-[11px]">1</span>
+                                        Opción A: Escalera Frontal Recta
+                                    </span>
+                                    <i class="fa-solid fa-arrow-right text-gray-400 text-xs"></i>
+                                </div>
+                                <p class="text-[11.5px] text-gray-400">Adosada al frente. Deck superior 100% libre y continuo. Máxima presencia visual.</p>
+                            </div>
+
+                            <div onclick="scrollToConfig(2)" class="p-3.5 bg-slate-950/70 rounded-2xl border border-slate-800 cursor-pointer hover:border-emerald-500/60 transition">
+                                <div class="flex items-center justify-between mb-1">
+                                    <span class="text-xs font-extrabold text-gray-200 uppercase tracking-wider flex items-center gap-2">
+                                        <span class="w-5 h-5 rounded-md bg-slate-800 text-gray-300 flex items-center justify-center text-[11px]">2</span>
+                                        Opción B: Escalera Interior con Tronera
+                                    </span>
+                                    <i class="fa-solid fa-arrow-right text-gray-400 text-xs"></i>
+                                </div>
+                                <p class="text-[11.5px] text-gray-400">Desembarco interno por hueco en el piso. Cero invasión de fachada para locales estrechos.</p>
+                            </div>
+
+                            <div onclick="scrollToConfig(3)" class="p-3.5 bg-slate-950/70 rounded-2xl border border-slate-800 cursor-pointer hover:border-emerald-500/60 transition">
+                                <div class="flex items-center justify-between mb-1">
+                                    <span class="text-xs font-extrabold text-gray-200 uppercase tracking-wider flex items-center gap-2">
+                                        <span class="w-5 h-5 rounded-md bg-slate-800 text-gray-300 flex items-center justify-center text-[11px]">3</span>
+                                        Opción C: Escalera Lateral con Descanso
+                                    </span>
+                                    <i class="fa-solid fa-arrow-right text-gray-400 text-xs"></i>
+                                </div>
+                                <p class="text-[11.5px] text-gray-400">Rellano en 'L' adosado a la pared. Frente comercial 100% despejado para escaparates y vitrina.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Botón para alternar pestaña -->
+                    <div class="pt-2">
+                        <button onclick="toggleMainTab()" class="w-full py-2.5 px-4 bg-slate-800 hover:bg-slate-700 text-white rounded-xl text-xs font-bold transition flex items-center justify-center gap-2 border border-slate-700">
+                            <i class="fa-solid fa-repeat text-emerald-400"></i>
+                            <span id="toggleTabBtnText">Ver Esquema Técnico Modular</span>
+                        </button>
+                    </div>
+
                 </div>
 
             </div>
@@ -205,7 +269,7 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
 
                 <!-- Card 1 -->
-                <div class="bg-white rounded-3xl p-6 sm:p-7 border border-gray-200 shadow-sm hover:shadow-xl transition duration-300 flex flex-col justify-between">
+                <div id="cfg-card-1" class="bg-white rounded-3xl p-6 sm:p-7 border border-gray-200 shadow-sm hover:shadow-xl transition duration-300 flex flex-col justify-between">
                     <div>
                         <div class="flex items-center justify-between mb-4">
                             <span class="w-10 h-10 rounded-2xl bg-emerald-100 text-emerald-800 font-extrabold flex items-center justify-center text-base">A</span>
@@ -245,7 +309,7 @@
                 </div>
 
                 <!-- Card 2 -->
-                <div class="bg-white rounded-3xl p-6 sm:p-7 border-2 border-emerald-500 shadow-md hover:shadow-xl transition duration-300 flex flex-col justify-between relative">
+                <div id="cfg-card-2" class="bg-white rounded-3xl p-6 sm:p-7 border-2 border-emerald-500 shadow-md hover:shadow-xl transition duration-300 flex flex-col justify-between relative">
                     <span class="absolute -top-3 right-6 bg-emerald-600 text-white text-[10px] font-black uppercase tracking-wider px-3 py-1 rounded-full shadow">
                         Más Ahorro de Espacio
                     </span>
@@ -280,15 +344,15 @@
                     <div class="mt-6 pt-4 border-t border-gray-100 bg-emerald-50/50 -mx-6 -mb-6 p-4 rounded-b-3xl">
                         <span class="text-[10px] font-mono text-emerald-800 uppercase font-bold block mb-1">Rubros Recomendados:</span>
                         <div class="text-xs font-semibold text-slate-800 flex flex-wrap gap-1.5">
-                            <span class="bg-white px-2 py-0.5 rounded border border-emerald-200">Tecnología & Celulares</span>
-                            <span class="bg-white px-2 py-0.5 rounded border border-emerald-200">Farmacia / Perfumería</span>
-                            <span class="bg-white px-2 py-0.5 rounded border border-emerald-200">Café al Paso / Takeaway</span>
+                            <span class="bg-white px-2 py-0.5 rounded border border-gray-200">Tecnología & Celulares</span>
+                            <span class="bg-white px-2 py-0.5 rounded border border-gray-200">Farmacia / Perfumería</span>
+                            <span class="bg-white px-2 py-0.5 rounded border border-gray-200">Café al Paso / Takeaway</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- Card 3 -->
-                <div class="bg-white rounded-3xl p-6 sm:p-7 border border-gray-200 shadow-sm hover:shadow-xl transition duration-300 flex flex-col justify-between">
+                <div id="cfg-card-3" class="bg-white rounded-3xl p-6 sm:p-7 border border-gray-200 shadow-sm hover:shadow-xl transition duration-300 flex flex-col justify-between">
                     <div>
                         <div class="flex items-center justify-between mb-4">
                             <span class="w-10 h-10 rounded-2xl bg-slate-800 text-white font-extrabold flex items-center justify-center text-base">C</span>
@@ -380,12 +444,12 @@
                                 <i class="fa-solid fa-shield-cat"></i>
                             </div>
                             <div>
-                                <h4 class="text-base font-bold text-gray-900">Barandillas & Seguridad Anticaídas</h4>
-                                <span class="text-xs text-gray-500 font-mono">Altura reglamentaria 1.00 m con tensores de acero</span>
+                                <h4 class="text-base font-bold text-gray-900">Barandillas & Cerramiento Acristalado</h4>
+                                <span class="text-xs text-gray-500 font-mono">Altura reglamentaria 1.00 m o mampara completa en vidrio</span>
                             </div>
                         </div>
                         <p class="text-xs text-gray-600 leading-relaxed">
-                            Postes tubulares en acero con pasamanos ergonómico superior y líneas intermedias en cable de acero inoxidable templado con rodapié perimetral de 10 cm que previene la caída accidental de objetos hacia el piso inferior comercial.
+                            Opciones de protección mediante barandilla abierta con tensores de acero inoxidable o cerramiento hermético con mampara industrial de vidrio laminado de seguridad (como se aprecia en el referente de diseño).
                         </p>
                     </div>
                 </div>
@@ -422,7 +486,7 @@
                         <div class="p-4 bg-slate-800/80 rounded-2xl border border-slate-700">
                             <div class="text-xs text-gray-400 font-mono mb-1">Pendiente de Escalera</div>
                             <div class="text-2xl font-black text-white">45° - 55°</div>
-                            <div class="text-[11px] text-gray-400 mt-1">Huella de madera profunda con pasamanos doble</div>
+                            <div class="text-[11px] text-gray-400 mt-1">Huella profunda con barandilla tubular doble</div>
                         </div>
                     </div>
 
@@ -519,7 +583,7 @@
                             </li>
                             <li class="flex items-start gap-3">
                                 <i class="fa-solid fa-circle-check text-emerald-600 text-base mt-0.5"></i>
-                                <span><strong>Opciones Adicionales:</strong> Puede configurarse como vestier/probador exclusivo VIP o pequeña zona de descanso para el personal.</span>
+                                <span><strong>Cerramiento Vidriado Acústico:</strong> Posibilidad de instalar mampara de cuarterones para silencio total durante reuniones o llamadas.</span>
                             </li>
                         </ul>
                     </div>
@@ -544,70 +608,70 @@
 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
 
-                <!-- Material 1: Estructura Negro Mate -->
+                <!-- Material 1: Vidriera y Acero Negro -->
                 <div class="bg-gray-50 rounded-2xl overflow-hidden border border-gray-200 shadow-sm hover:shadow-lg transition">
                     <div class="h-44 bg-gradient-to-br from-slate-900 via-zinc-900 to-black flex items-center justify-center p-6 text-center">
                         <div>
-                            <i class="fa-solid fa-bars-staggered text-4xl text-gray-400 mb-2"></i>
-                            <div class="text-xs font-mono text-gray-300 font-bold">Acero Electrostático</div>
+                            <i class="fa-solid fa-table-cells text-4xl text-gray-300 mb-2"></i>
+                            <div class="text-xs font-mono text-gray-300 font-bold">Cuarterones de Hierro</div>
                         </div>
                     </div>
                     <div class="p-5">
-                        <span class="text-[10px] font-mono text-emerald-800 font-bold uppercase tracking-wider block mb-1">Estructura</span>
-                        <h4 class="text-sm font-bold text-gray-900">Perfiles Tubulares Negro Mate</h4>
+                        <span class="text-[10px] font-mono text-emerald-800 font-bold uppercase tracking-wider block mb-1">Mampara & Cerramiento</span>
+                        <h4 class="text-sm font-bold text-gray-900">Vidriera Industrial Negra</h4>
                         <p class="text-xs text-gray-600 mt-1.5 leading-relaxed">
-                            Pintura en polvo horneada de alta adherencia y resistencia al rayado. Aporta una imagen sobria y moderna.
+                            Perfiles tubulares negros con vidrios templados de seguridad para división acústica sin renunciar a la luz.
                         </p>
                     </div>
                 </div>
 
-                <!-- Material 2: Madera Roble Natural -->
+                <!-- Material 2: Escalera Galvanizada / Acero -->
+                <div class="bg-gray-50 rounded-2xl overflow-hidden border border-gray-200 shadow-sm hover:shadow-lg transition">
+                    <div class="h-44 bg-gradient-to-br from-slate-300 via-zinc-400 to-gray-500 flex items-center justify-center p-6 text-center">
+                        <div>
+                            <i class="fa-solid fa-stairs text-4xl text-slate-800 mb-2"></i>
+                            <div class="text-xs font-mono text-slate-900 font-bold">Acero Galvanizado</div>
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <span class="text-[10px] font-mono text-emerald-800 font-bold uppercase tracking-wider block mb-1">Escalera & Barandilla</span>
+                        <h4 class="text-sm font-bold text-gray-900">Estructura Metálica Texturizada</h4>
+                        <p class="text-xs text-gray-600 mt-1.5 leading-relaxed">
+                            Peldaños en acero de alta durabilidad y barandilla tubular de seguridad continua con tacto ergonómico.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Material 3: Pintura Gris Grafito Oscuro -->
+                <div class="bg-gray-50 rounded-2xl overflow-hidden border border-gray-200 shadow-sm hover:shadow-lg transition">
+                    <div class="h-44 bg-gradient-to-br from-gray-700 via-zinc-800 to-slate-900 flex items-center justify-center p-6 text-center">
+                        <div>
+                            <i class="fa-solid fa-paint-roller text-4xl text-gray-400 mb-2"></i>
+                            <div class="text-xs font-mono text-gray-300 font-bold">Gris Grafito Profundo</div>
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <span class="text-[10px] font-mono text-emerald-800 font-bold uppercase tracking-wider block mb-1">Muros de Acento</span>
+                        <h4 class="text-sm font-bold text-gray-900">Pared de Fondo Satinada</h4>
+                        <p class="text-xs text-gray-600 mt-1.5 leading-relaxed">
+                            Crea un punto focal sobrio bajo la mezzanina que resalta el mobiliario de atención y la iluminación suspendida.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Material 4: Madera Clara & Biofilia -->
                 <div class="bg-gray-50 rounded-2xl overflow-hidden border border-gray-200 shadow-sm hover:shadow-lg transition">
                     <div class="h-44 bg-gradient-to-br from-amber-100 via-amber-200 to-amber-300 flex items-center justify-center p-6 text-center">
                         <div>
-                            <i class="fa-solid fa-tree text-4xl text-amber-800/70 mb-2"></i>
-                            <div class="text-xs font-mono text-amber-950 font-bold">Madera Clara Tratada</div>
+                            <i class="fa-solid fa-tree text-4xl text-amber-800 mb-2"></i>
+                            <div class="text-xs font-mono text-amber-950 font-bold">Piso Roble Claro</div>
                         </div>
                     </div>
                     <div class="p-5">
-                        <span class="text-[10px] font-mono text-emerald-800 font-bold uppercase tracking-wider block mb-1">Deck & Huellas</span>
-                        <h4 class="text-sm font-bold text-gray-900">Tablero Roble Escandinavo</h4>
+                        <span class="text-[10px] font-mono text-emerald-800 font-bold uppercase tracking-wider block mb-1">Pavimento & Bienestar</span>
+                        <h4 class="text-sm font-bold text-gray-900">Piso Vinílico SPC / Madera Clara</h4>
                         <p class="text-xs text-gray-600 mt-1.5 leading-relaxed">
-                            Calidez táctil y visual para la pisada, con laca poliuretánica de alto tránsito y fácil limpieza.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Material 3: Vidrio Templado & Tensores -->
-                <div class="bg-gray-50 rounded-2xl overflow-hidden border border-gray-200 shadow-sm hover:shadow-lg transition">
-                    <div class="h-44 bg-gradient-to-br from-blue-50 via-sky-100 to-slate-200 flex items-center justify-center p-6 text-center">
-                        <div>
-                            <i class="fa-solid fa-grip-lines-vertical text-4xl text-blue-600/70 mb-2"></i>
-                            <div class="text-xs font-mono text-slate-800 font-bold">Inox & Cristal Templado</div>
-                        </div>
-                    </div>
-                    <div class="p-5">
-                        <span class="text-[10px] font-mono text-emerald-800 font-bold uppercase tracking-wider block mb-1">Seguridad & Fachada</span>
-                        <h4 class="text-sm font-bold text-gray-900">Guayas y Barandas en Acero Inoxidable</h4>
-                        <p class="text-xs text-gray-600 mt-1.5 leading-relaxed">
-                            Líneas de seguridad estilizadas que garantizan máxima transparencia y luminosidad interior.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Material 4: Riel de Spots LED 3000K -->
-                <div class="bg-gray-50 rounded-2xl overflow-hidden border border-gray-200 shadow-sm hover:shadow-lg transition">
-                    <div class="h-44 bg-gradient-to-br from-yellow-50 via-amber-100 to-yellow-200 flex items-center justify-center p-6 text-center">
-                        <div>
-                            <i class="fa-regular fa-lightbulb text-4xl text-amber-600 mb-2"></i>
-                            <div class="text-xs font-mono text-amber-900 font-bold">LED Magnético 3000K</div>
-                        </div>
-                    </div>
-                    <div class="p-5">
-                        <span class="text-[10px] font-mono text-emerald-800 font-bold uppercase tracking-wider block mb-1">Iluminación</span>
-                        <h4 class="text-sm font-bold text-gray-900">Riel Magnético Direccionable</h4>
-                        <p class="text-xs text-gray-600 mt-1.5 leading-relaxed">
-                            Proyectores ajustables para resaltar productos en vitrina y tiras LED bajo la losa para una luz indirecta acogedora.
+                            Superficie continua de alto tráfico que refleja la luz natural e infunde calidez nórdica a todo el local.
                         </p>
                     </div>
                 </div>
@@ -700,25 +764,76 @@
         </div>
     </footer>
 
-    <!-- Script para Interactividad -->
+    <!-- Script de Interactividad -->
     <script>
-        function selectConfig(num) {
-            // Actualizar botones
-            [1, 2, 3].forEach(i => {
-                const btn = document.getElementById('btn-config-' + i);
-                if (btn) {
-                    if (i === num) {
-                        btn.className = 'p-4 bg-slate-900 rounded-2xl border-2 border-emerald-500 shadow-lg cursor-pointer transition';
-                    } else {
-                        btn.className = 'p-4 bg-slate-900/60 rounded-2xl border border-slate-800 cursor-pointer hover:border-emerald-500/50 transition';
-                    }
-                }
-            });
+        let currentTab = 0;
 
-            // Smooth scroll a configuraciones si el usuario desea
-            const targetSection = document.getElementById('configuraciones');
-            if (targetSection) {
-                targetSection.scrollIntoView({ behavior: 'smooth' });
+        const tabsData = [
+            {
+                img: 'referente_mezzanina_vidriera.jpg',
+                badgeText: 'Referente Real • Vidriera Industrial & Escalera Galvanizada',
+                badgeIcon: 'fa-camera text-emerald-400',
+                caption: 'Referente fotográfico real de altillo habitado con mampara industrial acristalada y escalera metálica.',
+                toggleBtnText: 'Ver Esquema Técnico Modular'
+            },
+            {
+                img: 'local_pequeno_mezzanina.png',
+                badgeText: 'Esquema Técnico • 3 Opciones de Acceso por Escalera',
+                badgeIcon: 'fa-cubes text-emerald-400',
+                caption: 'Sistema de entrepiso autoportante en estructura de acero negro mate y deck de piso en madera clara.',
+                toggleBtnText: 'Ver Referente Real de Interiorismo'
+            }
+        ];
+
+        function setMainTab(index) {
+            currentTab = index;
+            const data = tabsData[index];
+
+            // Imagen principal y enlaces
+            const imgEl = document.getElementById('mainDisplayImg');
+            imgEl.style.opacity = '0.3';
+            setTimeout(() => {
+                imgEl.src = data.img;
+                imgEl.style.opacity = '1';
+            }, 150);
+
+            document.getElementById('fullImgLink').href = data.img;
+            document.getElementById('badgeText').textContent = data.badgeText;
+            document.getElementById('badgeIcon').className = 'fa-solid ' + data.badgeIcon;
+            document.getElementById('imgCaption').innerHTML = '<i class="fa-solid fa-circle-info text-emerald-400 mr-1"></i> ' + data.caption;
+            document.getElementById('toggleTabBtnText').textContent = data.toggleBtnText;
+
+            // Botones superiores
+            const tabBtn0 = document.getElementById('tabBtn0');
+            const tabBtn1 = document.getElementById('tabBtn1');
+            const panel0 = document.getElementById('panelTab0');
+            const panel1 = document.getElementById('panelTab1');
+
+            if (index === 0) {
+                tabBtn0.className = 'px-5 py-3 rounded-2xl font-bold text-xs sm:text-sm transition flex items-center gap-2 shadow-sm bg-emerald-600 text-white border-2 border-emerald-500';
+                tabBtn1.className = 'px-5 py-3 rounded-2xl font-bold text-xs sm:text-sm transition flex items-center gap-2 shadow-sm bg-slate-900 hover:bg-slate-800 text-gray-300 border-2 border-slate-800';
+                panel0.classList.remove('hidden');
+                panel1.classList.add('hidden');
+            } else {
+                tabBtn1.className = 'px-5 py-3 rounded-2xl font-bold text-xs sm:text-sm transition flex items-center gap-2 shadow-sm bg-emerald-600 text-white border-2 border-emerald-500';
+                tabBtn0.className = 'px-5 py-3 rounded-2xl font-bold text-xs sm:text-sm transition flex items-center gap-2 shadow-sm bg-slate-900 hover:bg-slate-800 text-gray-300 border-2 border-slate-800';
+                panel1.classList.remove('hidden');
+                panel0.classList.add('hidden');
+            }
+        }
+
+        function toggleMainTab() {
+            setMainTab(currentTab === 0 ? 1 : 0);
+        }
+
+        function scrollToConfig(optionNumber) {
+            const card = document.getElementById('cfg-card-' + optionNumber);
+            if (card) {
+                card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                card.classList.add('ring-4', 'ring-emerald-400');
+                setTimeout(() => {
+                    card.classList.remove('ring-4', 'ring-emerald-400');
+                }, 1600);
             }
         }
     </script>
