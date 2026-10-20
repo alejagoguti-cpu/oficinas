@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Pequeño & Mezzanina Modular | Rivers Mall Cúcuta</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        slate: { 850: '#151f32', 950: '#070d18' },
+                        emerald: { 750: '#088a5b', 850: '#066342' }
+                    }
+                }
+            }
+        };
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap');
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+
+        .config-card.active {
+            border-color: #059669;
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.08) 0%, rgba(5, 150, 105, 0.03) 100%);
+            box-shadow: 0 10px 25px -5px rgba(16, 185, 129, 0.15);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 antialiased selection:bg-emerald-600 selection:text-white">
+
+    <!-- Header Navigation -->
+    <header class="bg-white/95 backdrop-blur-md border-b border-gray-200 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <a href="index.html" class="bg-slate-900 text-white font-black px-3.5 py-1.5 text-lg tracking-wider rounded-xl shadow-md hover:bg-emerald-600 transition">
+                    RIVERS MALL
+                </a>
+                <div class="border-l border-gray-300 pl-3">
+                    <span class="text-xs text-emerald-700 font-extrabold tracking-wider uppercase block">Local Pequeño & Mezzanina</span>
+                    <span class="text-[11px] text-gray-500 font-medium">Solución Doble Altura • Optimización Espacial</span>
+                </div>
+            </div>
+            <nav class="flex items-center space-x-2 sm:space-x-4 text-xs sm:text-sm font-bold text-gray-700">
+                <a href="index.html" class="hover:text-emerald-700 transition flex items-center gap-1.5">
+                    <i class="fa-solid fa-building text-xs"></i>
+                    <span class="hidden md:inline">Principal</span>
+                </a>
+                <a href="sala-juntas.html" class="hover:text-amber-700 transition flex items-center gap-1.5">
+                    <i class="fa-solid fa-users-rectangle text-xs"></i>
+                    <span class="hidden md:inline">Juntas</span>
+                </a>
+                <a href="oficina-privada.html" class="hover:text-rose-700 transition flex items-center gap-1.5">
+                    <i class="fa-solid fa-user-tie text-xs"></i>
+                    <span class="hidden md:inline">Oficina Privada</span>
+                </a>
+                <a href="cafeteria.html" class="hover:text-amber-800 transition flex items-center gap-1.5">
+                    <i class="fa-solid fa-mug-saucer text-xs"></i>
+                    <span class="hidden sm:inline">Cafetería</span>
+                </a>
+                <a href="local-pequeno.html" class="text-emerald-700 bg-emerald-50 border border-emerald-200 px-3 py-1.5 rounded-xl font-bold flex items-center gap-1.5">
+                    <i class="fa-solid fa-store text-xs"></i>
+                    <span>Local Pequeño</span>
+                </a>
+                <a href="banos.html" class="hover:text-blue-900 transition flex items-center gap-1.5">
+                    <i class="fa-solid fa-restroom text-xs"></i>
+                    <span class="hidden sm:inline">Baños & PMR</span>
+                </a>
+                <a href="#ficha-tecnica" class="hidden lg:flex px-3 py-1.5 bg-slate-900 hover:bg-slate-800 text-white rounded-xl shadow-sm transition items-center gap-1.5">
+                    <i class="fa-solid fa-ruler-combined text-xs"></i>
+                    <span>Ficha Técnica</span>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- SECCIÓN 1: CABECERA Y CONTEXTO -->
+    <section class="py-10 sm:py-14 bg-white border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto">
+                <span class="text-xs font-bold text-emerald-700 uppercase tracking-widest block mb-2">
+                    <i class="fa-solid fa-layer-group mr-1.5"></i> Arquitectura Modular de Doble Altura
+                </span>
+                <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-gray-900 tracking-tight">
+                    Local Pequeño con Mezzanina Modular
+                </h1>
+                <p class="mt-3.5 text-gray-600 text-sm sm:text-base leading-relaxed">
+                    Maximización de la superficie comercial en el <strong>Rivers Mall Cúcuta</strong> mediante entrepisos metálicos desmontables. Duplica el área utilizable sin requerir obra húmeda, habilitando zona de atención en planta baja y área de bodega, administración o probador en el altillo.
+                </p>
+                <div class="mt-6 flex flex-wrap justify-center gap-2 sm:gap-4 text-xs font-semibold text-gray-700">
+                    <span class="px-3.5 py-1.5 bg-emerald-50 text-emerald-800 rounded-full border border-emerald-200 flex items-center gap-1.5">
+                        <i class="fa-solid fa-bolt text-emerald-600"></i> Montaje en Seco Rápido
+                    </span>
+                    <span class="px-3.5 py-1.5 bg-slate-100 text-slate-800 rounded-full border border-slate-200 flex items-center gap-1.5">
+                        <i class="fa-solid fa-arrows-up-down-left-right text-slate-600"></i> 100% Modulable & Desmontable
+                    </span>
+                    <span class="px-3.5 py-1.5 bg-blue-50 text-blue-800 rounded-full border border-blue-200 flex items-center gap-1.5">
+                        <i class="fa-solid fa-shield-halved text-blue-600"></i> Sin Afectación Estructural al Mall
+                    </span>
+                    <span class="px-3.5 py-1.5 bg-amber-50 text-amber-800 rounded-full border border-amber-200 flex items-center gap-1.5">
+                        <i class="fa-solid fa-coins text-amber-600"></i> +80% Rentabilidad por m²
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 2: VISUALIZADOR PRINCIPAL DE LAS 3 CONFIGURACIONES -->
+    <section class="py-12 sm:py-16 bg-slate-950 text-white border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                
+                <!-- Imagen en Alta Calidad con Zoom -->
+                <div class="lg:col-span-7 flex flex-col items-center">
+                    <div class="relative w-full overflow-hidden rounded-3xl bg-slate-900 border border-slate-800 shadow-2xl p-4 sm:p-6 group flex items-center justify-center">
+                        <img id="mainMezzaninaImg" src="local_pequeno_mezzanina.png" alt="Configuraciones de Mezzanina Modular para Local Pequeño Rivers Mall" class="w-full max-h-[70vh] object-contain transition duration-500 rounded-xl">
+                        
+                        <!-- Badges informativos sobre la imagen -->
+                        <div class="absolute bottom-6 left-6 bg-slate-950/90 backdrop-blur-md px-4 py-2 rounded-xl border border-white/10 text-xs flex items-center gap-2">
+                            <i class="fa-solid fa-cubes text-emerald-400"></i>
+                            <span class="font-bold">3 Opciones de Acceso por Escalera</span>
+                        </div>
+                        <a href="local_pequeno_mezzanina.png" target="_blank" class="absolute top-6 right-6 bg-slate-950/80 hover:bg-emerald-600 text-white w-10 h-10 rounded-xl flex items-center justify-center transition shadow-lg border border-white/20" title="Ver imagen en tamaño completo">
+                            <i class="fa-solid fa-expand text-sm"></i>
+                        </a>
+                    </div>
+                    <p class="text-xs text-gray-400 mt-3 text-center">
+                        <i class="fa-solid fa-circle-info text-emerald-400 mr-1"></i> Sistema de entrepiso autoportante en estructura de acero negro mate y deck de piso en madera clara.
+                    </p>
+                </div>
+
+                <!-- Resumen de las 3 Opciones -->
+                <div class="lg:col-span-5 space-y-4">
+                    <span class="text-xs font-mono uppercase tracking-wider text-emerald-400 font-bold block">
+                        Ingeniería y Adaptabilidad
+                    </span>
+                    <h2 class="text-2xl sm:text-3xl font-extrabold text-white leading-tight">
+                        Versatilidad según la Fachada y Fondo del Local
+                    </h2>
+                    <p class="text-gray-300 text-xs sm:text-sm leading-relaxed">
+                        Cada local del Rivers Mall cuenta con proporciones específicas de fachada y fondo. El sistema modular permite ubicar la escalera de acceso según el flujo del cliente:
+                    </p>
+
+                    <!-- Selector Interactivo de Configuraciones -->
+                    <div class="space-y-3 pt-2">
+                        <!-- Opción 1 -->
+                        <div onclick="selectConfig(1)" id="btn-config-1" class="p-4 bg-slate-900 rounded-2xl border-2 border-emerald-500/80 cursor-pointer hover:border-emerald-400 transition">
+                            <div class="flex items-center justify-between mb-1.5">
+                                <span class="text-xs font-extrabold text-emerald-400 uppercase tracking-wider flex items-center gap-2">
+                                    <span class="w-6 h-6 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-xs">1</span>
+                                    Opción A: Escalera Frontal Recta
+                                </span>
+                                <i class="fa-solid fa-arrow-up-right text-gray-400 text-xs"></i>
+                            </div>
+                            <p class="text-[12px] text-gray-300 leading-snug">
+                                Adosada directamente al frente de la plataforma. Máxima superficie superior continua y despejada, con acceso directo y visualmente imponente.
+                            </p>
+                        </div>
+
+                        <!-- Opción 2 -->
+                        <div onclick="selectConfig(2)" id="btn-config-2" class="p-4 bg-slate-900/60 rounded-2xl border border-slate-800 cursor-pointer hover:border-emerald-500/50 transition">
+                            <div class="flex items-center justify-between mb-1.5">
+                                <span class="text-xs font-extrabold text-gray-200 uppercase tracking-wider flex items-center gap-2">
+                                    <span class="w-6 h-6 rounded-lg bg-slate-800 text-gray-300 flex items-center justify-center text-xs">2</span>
+                                    Opción B: Escalera Interior con Tronera
+                                </span>
+                                <i class="fa-solid fa-arrow-down-up-across-line text-gray-400 text-xs"></i>
+                            </div>
+                            <p class="text-[12px] text-gray-300 leading-snug">
+                                Pasa a través de un hueco en el piso de la mezzanina. Cero invasión de fachada exterior comercial; ideal para locales estrechos y profundos.
+                            </p>
+                        </div>
+
+                        <!-- Opción 3 -->
+                        <div onclick="selectConfig(3)" id="btn-config-3" class="p-4 bg-slate-900/60 rounded-2xl border border-slate-800 cursor-pointer hover:border-emerald-500/50 transition">
+                            <div class="flex items-center justify-between mb-1.5">
+                                <span class="text-xs font-extrabold text-gray-200 uppercase tracking-wider flex items-center gap-2">
+                                    <span class="w-6 h-6 rounded-lg bg-slate-800 text-gray-300 flex items-center justify-center text-xs">3</span>
+                                    Opción C: Escalera Lateral con Descanso
+                                </span>
+                                <i class="fa-solid fa-turn-up text-gray-400 text-xs"></i>
+                            </div>
+                            <p class="text-[12px] text-gray-300 leading-snug">
+                                Desembarco lateral con rellano de esquina en 'L'. Deja el frente comercial 100% despejado para escaparates, vitrinas y barra de cobro.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 3: DETALLE COMPARATIVO DE CADA CONFIGURACIÓN -->
+    <section id="configuraciones" class="py-16 sm:py-20 bg-gray-50 border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-14">
+                <span class="text-xs font-bold text-emerald-700 uppercase tracking-widest block mb-2">Análisis de Distribución Comercial</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900">Configuraciones en Detalle</h2>
+                <p class="mt-3 text-gray-600 text-sm sm:text-base">Selecciona la alternativa que mejor se adapte al rubro comercial y a las dimensiones de tu local en Rivers Mall.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+                <!-- Card 1 -->
+                <div class="bg-white rounded-3xl p-6 sm:p-7 border border-gray-200 shadow-sm hover:shadow-xl transition duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="w-10 h-10 rounded-2xl bg-emerald-100 text-emerald-800 font-extrabold flex items-center justify-center text-base">A</span>
+                            <span class="text-[11px] font-bold uppercase tracking-wider text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-200">
+                                Acceso Frontal
+                            </span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Escalera Externa Recta</h3>
+                        <p class="text-xs text-gray-600 leading-relaxed mb-5">
+                            La escalera se monta perpendicular al frente de la mezzanina, ofreciendo una subida continua y cómoda sin restar un solo centímetro al piso superior.
+                        </p>
+                        
+                        <div class="space-y-3 pt-2 border-t border-gray-100 text-xs">
+                            <div class="flex items-start gap-2 text-gray-700">
+                                <i class="fa-solid fa-check text-emerald-600 mt-0.5"></i>
+                                <span><strong>Piso superior 100% aprovechable:</strong> Sin perforaciones ni troneras en el deck.</span>
+                            </div>
+                            <div class="flex items-start gap-2 text-gray-700">
+                                <i class="fa-solid fa-check text-emerald-600 mt-0.5"></i>
+                                <span><strong>Mayor visibilidad:</strong> El cliente ve el nivel superior como un destino comercial atractivo.</span>
+                            </div>
+                            <div class="flex items-start gap-2 text-gray-500">
+                                <i class="fa-solid fa-circle-exclamation text-amber-500 mt-0.5"></i>
+                                <span><strong>Requerimiento:</strong> Requiere profundidad mínima en planta baja para el arranque de la escalera (~2.40 m de desarrollo).</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-6 pt-4 border-t border-gray-100 bg-slate-50 -mx-6 -mb-6 p-4 rounded-b-3xl">
+                        <span class="text-[10px] font-mono text-gray-500 uppercase font-bold block mb-1">Rubros Recomendados:</span>
+                        <div class="text-xs font-semibold text-slate-800 flex flex-wrap gap-1.5">
+                            <span class="bg-white px-2 py-0.5 rounded border border-gray-200">Boutique & Showroom</span>
+                            <span class="bg-white px-2 py-0.5 rounded border border-gray-200">Galería de Joyería</span>
+                            <span class="bg-white px-2 py-0.5 rounded border border-gray-200">Estudio Creativo</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white rounded-3xl p-6 sm:p-7 border-2 border-emerald-500 shadow-md hover:shadow-xl transition duration-300 flex flex-col justify-between relative">
+                    <span class="absolute -top-3 right-6 bg-emerald-600 text-white text-[10px] font-black uppercase tracking-wider px-3 py-1 rounded-full shadow">
+                        Más Ahorro de Espacio
+                    </span>
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="w-10 h-10 rounded-2xl bg-emerald-600 text-white font-extrabold flex items-center justify-center text-base">B</span>
+                            <span class="text-[11px] font-bold uppercase tracking-wider text-emerald-800 bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-200">
+                                Tronera Integrada
+                            </span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Escalera Interior con Hueco</h3>
+                        <p class="text-xs text-gray-600 leading-relaxed mb-5">
+                            La escalera asciende contenida por debajo del perímetro del altillo, desembarcando en una apertura acotada y protegida con barandilla perimetral.
+                        </p>
+                        
+                        <div class="space-y-3 pt-2 border-t border-gray-100 text-xs">
+                            <div class="flex items-start gap-2 text-gray-700">
+                                <i class="fa-solid fa-check text-emerald-600 mt-0.5"></i>
+                                <span><strong>Cero invasión perimetral:</strong> No sobresale de la huella estructural básica.</span>
+                            </div>
+                            <div class="flex items-start gap-2 text-gray-700">
+                                <i class="fa-solid fa-check text-emerald-600 mt-0.5"></i>
+                                <span><strong>Ideal para locales angostos:</strong> Conserva las paredes laterales para estanterías y exhibidores.</span>
+                            </div>
+                            <div class="flex items-start gap-2 text-gray-500">
+                                <i class="fa-solid fa-circle-exclamation text-amber-500 mt-0.5"></i>
+                                <span><strong>Requerimiento:</strong> Resta aprox. 1.80 m² del área útil del piso superior por el vano de subida.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-6 pt-4 border-t border-gray-100 bg-emerald-50/50 -mx-6 -mb-6 p-4 rounded-b-3xl">
+                        <span class="text-[10px] font-mono text-emerald-800 uppercase font-bold block mb-1">Rubros Recomendados:</span>
+                        <div class="text-xs font-semibold text-slate-800 flex flex-wrap gap-1.5">
+                            <span class="bg-white px-2 py-0.5 rounded border border-emerald-200">Tecnología & Celulares</span>
+                            <span class="bg-white px-2 py-0.5 rounded border border-emerald-200">Farmacia / Perfumería</span>
+                            <span class="bg-white px-2 py-0.5 rounded border border-emerald-200">Café al Paso / Takeaway</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white rounded-3xl p-6 sm:p-7 border border-gray-200 shadow-sm hover:shadow-xl transition duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="w-10 h-10 rounded-2xl bg-slate-800 text-white font-extrabold flex items-center justify-center text-base">C</span>
+                            <span class="text-[11px] font-bold uppercase tracking-wider text-slate-700 bg-slate-100 px-2.5 py-1 rounded-full border border-gray-200">
+                                Lateral en 'L'
+                            </span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Escalera con Descanso Lateral</h3>
+                        <p class="text-xs text-gray-600 leading-relaxed mb-5">
+                            La escalera se coloca adosada al costado perimetral con una plataforma de desembarco en ángulo, liberando por completo el eje longitudinal del local.
+                        </p>
+                        
+                        <div class="space-y-3 pt-2 border-t border-gray-100 text-xs">
+                            <div class="flex items-start gap-2 text-gray-700">
+                                <i class="fa-solid fa-check text-emerald-600 mt-0.5"></i>
+                                <span><strong>Frente comercial 100% abierto:</strong> La vitrina queda completamente diáfana sin interferencias visuales.</span>
+                            </div>
+                            <div class="flex items-start gap-2 text-gray-700">
+                                <i class="fa-solid fa-check text-emerald-600 mt-0.5"></i>
+                                <span><strong>Seguridad ergonómica:</strong> El descanso reduce la sensación de pendiente pronunciada.</span>
+                            </div>
+                            <div class="flex items-start gap-2 text-gray-500">
+                                <i class="fa-solid fa-circle-exclamation text-amber-500 mt-0.5"></i>
+                                <span><strong>Requerimiento:</strong> Exige un ancho de local suficiente para acomodar la escalera y el ancho de pasillo reglamentario.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-6 pt-4 border-t border-gray-100 bg-slate-50 -mx-6 -mb-6 p-4 rounded-b-3xl">
+                        <span class="text-[10px] font-mono text-gray-500 uppercase font-bold block mb-1">Rubros Recomendados:</span>
+                        <div class="text-xs font-semibold text-slate-800 flex flex-wrap gap-1.5">
+                            <span class="bg-white px-2 py-0.5 rounded border border-gray-200">Calzado & Marroquinería</span>
+                            <span class="bg-white px-2 py-0.5 rounded border border-gray-200">Barbería / Estética</span>
+                            <span class="bg-white px-2 py-0.5 rounded border border-gray-200">Accesorios & Moda</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 4: FICHA TÉCNICA Y ESPECIFICACIONES CONSTRUCTIVAS -->
+    <section id="ficha-tecnica" class="py-16 sm:py-24 bg-white border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-bold text-emerald-700 uppercase tracking-widest block mb-2">Ingeniería & Normativa</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900">Ficha Técnica del Sistema</h2>
+                <p class="mt-3 text-gray-600 text-sm sm:text-base">Detalle de componentes, capacidad de carga y requerimientos de altura libre para locales comerciales en Rivers Mall.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+                
+                <!-- Columna Izquierda: Especificaciones Estructurales -->
+                <div class="space-y-4">
+                    <div class="p-6 bg-slate-50 rounded-2xl border border-gray-200">
+                        <div class="flex items-center space-x-3 mb-3">
+                            <div class="w-10 h-10 rounded-xl bg-slate-900 text-white flex items-center justify-center text-sm">
+                                <i class="fa-solid fa-cubes-stacked"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-base font-bold text-gray-900">Estructura Portante de Acero</h4>
+                                <span class="text-xs text-gray-500 font-mono">Columnas tubulares cuadradas & vigas de celosía</span>
+                            </div>
+                        </div>
+                        <p class="text-xs text-gray-600 leading-relaxed">
+                            Fabricada en perfiles de acero estructural conformados en frío con recubrimiento de pintura en polvo electrostática color negro mate horneada a 200 °C. Las vigas cuentan con perforaciones circulares predispuestas para el paso ordenado de tubería eléctrica EMT y cableado de red sin perforar en obra.
+                        </p>
+                    </div>
+
+                    <div class="p-6 bg-slate-50 rounded-2xl border border-gray-200">
+                        <div class="flex items-center space-x-3 mb-3">
+                            <div class="w-10 h-10 rounded-xl bg-emerald-600 text-white flex items-center justify-center text-sm">
+                                <i class="fa-solid fa-tree"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-base font-bold text-gray-900">Deck de Piso en Madera Estructural</h4>
+                                <span class="text-xs text-gray-500 font-mono">Tableros fenólicos machihembrados de alta densidad</span>
+                            </div>
+                        </div>
+                        <p class="text-xs text-gray-600 leading-relaxed">
+                            Plataforma de piso de 30 mm de espesor en madera clara prensada con acabado superficial antideslizante, sellado hidrófugo y protección contra el desgaste de tráfico comercial. Soporta instalación directa de pisos vinílicos SPC o alfombra modular de alto tráfico.
+                        </p>
+                    </div>
+
+                    <div class="p-6 bg-slate-50 rounded-2xl border border-gray-200">
+                        <div class="flex items-center space-x-3 mb-3">
+                            <div class="w-10 h-10 rounded-xl bg-blue-600 text-white flex items-center justify-center text-sm">
+                                <i class="fa-solid fa-shield-cat"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-base font-bold text-gray-900">Barandillas & Seguridad Anticaídas</h4>
+                                <span class="text-xs text-gray-500 font-mono">Altura reglamentaria 1.00 m con tensores de acero</span>
+                            </div>
+                        </div>
+                        <p class="text-xs text-gray-600 leading-relaxed">
+                            Postes tubulares en acero con pasamanos ergonómico superior y líneas intermedias en cable de acero inoxidable templado con rodapié perimetral de 10 cm que previene la caída accidental de objetos hacia el piso inferior comercial.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Columna Derecha: Parámetros Numéricos & Dimensiones -->
+                <div class="p-6 sm:p-8 bg-slate-900 text-white rounded-3xl border border-slate-800 shadow-xl space-y-6">
+                    <div>
+                        <span class="text-xs font-mono uppercase tracking-wider text-emerald-400 font-bold block mb-1">
+                            Dimensionamiento Óptimo
+                        </span>
+                        <h3 class="text-2xl font-black text-white">Parámetros de Diseño</h3>
+                        <p class="text-xs text-gray-400 mt-1">Criterios técnicos recomendados para la instalación en locales de Rivers Mall:</p>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="p-4 bg-slate-800/80 rounded-2xl border border-slate-700">
+                            <div class="text-xs text-gray-400 font-mono mb-1">Altura Libre Inferior</div>
+                            <div class="text-2xl font-black text-emerald-400">2.10 - 2.40 m</div>
+                            <div class="text-[11px] text-gray-400 mt-1">Confortable para clientes y mobiliario bajo</div>
+                        </div>
+
+                        <div class="p-4 bg-slate-800/80 rounded-2xl border border-slate-700">
+                            <div class="text-xs text-gray-400 font-mono mb-1">Altura Piso a Placa Mall</div>
+                            <div class="text-2xl font-black text-white">≥ 4.20 m</div>
+                            <div class="text-[11px] text-gray-400 mt-1">Gálibo total para doble altura reglamentaria</div>
+                        </div>
+
+                        <div class="p-4 bg-slate-800/80 rounded-2xl border border-slate-700">
+                            <div class="text-xs text-gray-400 font-mono mb-1">Sobrecarga de Uso</div>
+                            <div class="text-2xl font-black text-emerald-400">250 - 350 kg/m²</div>
+                            <div class="text-[11px] text-gray-400 mt-1">Apta para bodegaje ligero y permanencia</div>
+                        </div>
+
+                        <div class="p-4 bg-slate-800/80 rounded-2xl border border-slate-700">
+                            <div class="text-xs text-gray-400 font-mono mb-1">Pendiente de Escalera</div>
+                            <div class="text-2xl font-black text-white">45° - 55°</div>
+                            <div class="text-[11px] text-gray-400 mt-1">Huella de madera profunda con pasamanos doble</div>
+                        </div>
+                    </div>
+
+                    <!-- Cuadro de Ventajas de Instalación -->
+                    <div class="p-4 bg-emerald-950/40 rounded-2xl border border-emerald-500/30 text-xs space-y-2">
+                        <div class="flex items-center gap-2 text-emerald-400 font-bold uppercase tracking-wider text-[11px]">
+                            <i class="fa-solid fa-check-double text-emerald-400"></i>
+                            <span>Ventajas para el Copropietario e Inversionista</span>
+                        </div>
+                        <p class="text-gray-300 leading-relaxed text-[11.5px]">
+                            1. <strong>Cero licencias complejas:</strong> Al ser un mueble técnico desmontable y no una obra estructural húmeda, reduce tiempos y trámites de adecuación.<br>
+                            2. <strong>Rápido retorno de inversión:</strong> Permite operar en 48 horas tras su ensamblaje mecánico.<br>
+                            3. <strong>Reubicable:</strong> En caso de mudanza o ampliación del local, se desmonta y traslada íntegramente.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 5: DISTRIBUCIÓN FUNCIONAL (PLANTA BAJA VS MEZZANINA) -->
+    <section class="py-16 sm:py-20 bg-gray-50 border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-14">
+                <span class="text-xs font-bold text-emerald-700 uppercase tracking-widest block mb-2">Zonificación Comercial</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900">Distribución por Niveles</h2>
+                <p class="mt-3 text-gray-600 text-sm sm:text-base">Cómo organizar el programa comercial para lograr máxima facturación y confort operativo.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Nivel 1: Zona Comercial -->
+                <div class="bg-white rounded-3xl p-8 border border-gray-200 shadow-md flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3.5 py-1 bg-slate-900 text-white text-xs font-mono font-bold rounded-lg uppercase tracking-wider">
+                                Planta Baja (Nivel 0.00)
+                            </span>
+                            <span class="text-xs font-bold text-emerald-700 flex items-center gap-1.5">
+                                <i class="fa-solid fa-door-open"></i> Acceso Público
+                            </span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Zona Comercial & Atención al Cliente</h3>
+                        <p class="text-xs sm:text-sm text-gray-600 leading-relaxed mb-6">
+                            Espacio de alto impacto visual diseñado para cautivar a los visitantes del centro comercial desde el pasillo principal.
+                        </p>
+
+                        <ul class="space-y-3 text-xs sm:text-sm text-gray-700">
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-circle-check text-emerald-600 text-base mt-0.5"></i>
+                                <span><strong>Vitrina y Fachada en Vidrio Templado:</strong> Exposición de productos destacados con iluminación focal LED.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-circle-check text-emerald-600 text-base mt-0.5"></i>
+                                <span><strong>Mostrador de Cobro / Caja POS:</strong> Punto de venta ergonómico con terminales de pago y envoltorio de compras.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-circle-check text-emerald-600 text-base mt-0.5"></i>
+                                <span><strong>Góndolas y Racks Perimetrales:</strong> Exhibición al alcance de la mano con pasillo amplio de circulación libre.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="mt-8 pt-4 border-t border-gray-100 flex items-center justify-between text-xs text-gray-500 font-semibold">
+                        <span>Enfoque: Facturación & Venta</span>
+                        <span class="text-emerald-700 font-bold">100% Accesible</span>
+                    </div>
+                </div>
+
+                <!-- Nivel 2: Zona Privada / Altillo -->
+                <div class="bg-white rounded-3xl p-8 border border-gray-200 shadow-md flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3.5 py-1 bg-emerald-600 text-white text-xs font-mono font-bold rounded-lg uppercase tracking-wider">
+                                Altillo Mezzanina (+2.30 m)
+                            </span>
+                            <span class="text-xs font-bold text-slate-800 flex items-center gap-1.5">
+                                <i class="fa-solid fa-lock"></i> Uso Privado / Staff
+                            </span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Área de Soporte, Bodega & Gerencia</h3>
+                        <p class="text-xs sm:text-sm text-gray-600 leading-relaxed mb-6">
+                            Nivel superior privado que retira del campo visual del cliente las labores operativas, duplicando la capacidad de stockaje.
+                        </p>
+
+                        <ul class="space-y-3 text-xs sm:text-sm text-gray-700">
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-circle-check text-emerald-600 text-base mt-0.5"></i>
+                                <span><strong>Oficina de Administración / Facturación:</strong> Escritorio privado para gerencia, archivo contable y monitoreo de cámaras.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-circle-check text-emerald-600 text-base mt-0.5"></i>
+                                <span><strong>Bodega de Stock Seguro:</strong> Estanterías metálicas ligeras para inventario de alta rotación, calzado o confección.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-circle-check text-emerald-600 text-base mt-0.5"></i>
+                                <span><strong>Opciones Adicionales:</strong> Puede configurarse como vestier/probador exclusivo VIP o pequeña zona de descanso para el personal.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="mt-8 pt-4 border-t border-gray-100 flex items-center justify-between text-xs text-gray-500 font-semibold">
+                        <span>Enfoque: Gestión & Almacenamiento</span>
+                        <span class="text-emerald-700 font-bold">+Área Útil Comercial</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 6: MOODBOARD DE MATERIALES RECOMENDADOS -->
+    <section id="moodboard" class="py-16 sm:py-24 bg-white border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-bold text-emerald-700 uppercase tracking-widest block mb-2">Paleta de Materiales</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900">Moodboard & Acabados</h2>
+                <p class="mt-3 text-gray-600 text-sm sm:text-base">Combinación equilibrada entre estética industrial contemporánea y calidez escandinava.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+                <!-- Material 1: Estructura Negro Mate -->
+                <div class="bg-gray-50 rounded-2xl overflow-hidden border border-gray-200 shadow-sm hover:shadow-lg transition">
+                    <div class="h-44 bg-gradient-to-br from-slate-900 via-zinc-900 to-black flex items-center justify-center p-6 text-center">
+                        <div>
+                            <i class="fa-solid fa-bars-staggered text-4xl text-gray-400 mb-2"></i>
+                            <div class="text-xs font-mono text-gray-300 font-bold">Acero Electrostático</div>
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <span class="text-[10px] font-mono text-emerald-800 font-bold uppercase tracking-wider block mb-1">Estructura</span>
+                        <h4 class="text-sm font-bold text-gray-900">Perfiles Tubulares Negro Mate</h4>
+                        <p class="text-xs text-gray-600 mt-1.5 leading-relaxed">
+                            Pintura en polvo horneada de alta adherencia y resistencia al rayado. Aporta una imagen sobria y moderna.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Material 2: Madera Roble Natural -->
+                <div class="bg-gray-50 rounded-2xl overflow-hidden border border-gray-200 shadow-sm hover:shadow-lg transition">
+                    <div class="h-44 bg-gradient-to-br from-amber-100 via-amber-200 to-amber-300 flex items-center justify-center p-6 text-center">
+                        <div>
+                            <i class="fa-solid fa-tree text-4xl text-amber-800/70 mb-2"></i>
+                            <div class="text-xs font-mono text-amber-950 font-bold">Madera Clara Tratada</div>
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <span class="text-[10px] font-mono text-emerald-800 font-bold uppercase tracking-wider block mb-1">Deck & Huellas</span>
+                        <h4 class="text-sm font-bold text-gray-900">Tablero Roble Escandinavo</h4>
+                        <p class="text-xs text-gray-600 mt-1.5 leading-relaxed">
+                            Calidez táctil y visual para la pisada, con laca poliuretánica de alto tránsito y fácil limpieza.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Material 3: Vidrio Templado & Tensores -->
+                <div class="bg-gray-50 rounded-2xl overflow-hidden border border-gray-200 shadow-sm hover:shadow-lg transition">
+                    <div class="h-44 bg-gradient-to-br from-blue-50 via-sky-100 to-slate-200 flex items-center justify-center p-6 text-center">
+                        <div>
+                            <i class="fa-solid fa-grip-lines-vertical text-4xl text-blue-600/70 mb-2"></i>
+                            <div class="text-xs font-mono text-slate-800 font-bold">Inox & Cristal Templado</div>
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <span class="text-[10px] font-mono text-emerald-800 font-bold uppercase tracking-wider block mb-1">Seguridad & Fachada</span>
+                        <h4 class="text-sm font-bold text-gray-900">Guayas y Barandas en Acero Inoxidable</h4>
+                        <p class="text-xs text-gray-600 mt-1.5 leading-relaxed">
+                            Líneas de seguridad estilizadas que garantizan máxima transparencia y luminosidad interior.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Material 4: Riel de Spots LED 3000K -->
+                <div class="bg-gray-50 rounded-2xl overflow-hidden border border-gray-200 shadow-sm hover:shadow-lg transition">
+                    <div class="h-44 bg-gradient-to-br from-yellow-50 via-amber-100 to-yellow-200 flex items-center justify-center p-6 text-center">
+                        <div>
+                            <i class="fa-regular fa-lightbulb text-4xl text-amber-600 mb-2"></i>
+                            <div class="text-xs font-mono text-amber-900 font-bold">LED Magnético 3000K</div>
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <span class="text-[10px] font-mono text-emerald-800 font-bold uppercase tracking-wider block mb-1">Iluminación</span>
+                        <h4 class="text-sm font-bold text-gray-900">Riel Magnético Direccionable</h4>
+                        <p class="text-xs text-gray-600 mt-1.5 leading-relaxed">
+                            Proyectores ajustables para resaltar productos en vitrina y tiras LED bajo la losa para una luz indirecta acogedora.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 7: NAVEGACIÓN GLOBAL ENTRE AMBIENTES -->
+    <section class="py-14 sm:py-20 bg-slate-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <span class="text-xs font-bold text-emerald-400 uppercase tracking-widest block mb-2">Proyecto Integral Rivers Mall</span>
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-white">Explora los Demás Espacios</h2>
+                <p class="mt-2 text-gray-400 text-xs sm:text-sm">Conoce los diseños ejecutivos de las oficinas corporativas, zonas comunes y servicios sanitarios.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                
+                <a href="index.html" class="p-5 bg-slate-800/80 hover:bg-slate-800 rounded-2xl border border-slate-700 transition flex flex-col justify-between group">
+                    <div>
+                        <div class="w-10 h-10 rounded-xl bg-blue-600/20 text-blue-400 flex items-center justify-center mb-3">
+                            <i class="fa-solid fa-building"></i>
+                        </div>
+                        <h4 class="text-sm font-bold text-white group-hover:text-blue-400 transition">Diseño General</h4>
+                        <p class="text-xs text-gray-400 mt-1 leading-relaxed">Arquitectura, niveles y normativa POT de Cúcuta.</p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-slate-700/60 text-xs text-blue-400 flex items-center gap-1 font-bold">
+                        <span>Ver Proyecto</span>
+                        <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    </div>
+                </a>
+
+                <a href="sala-juntas.html" class="p-5 bg-slate-800/80 hover:bg-slate-800 rounded-2xl border border-slate-700 transition flex flex-col justify-between group">
+                    <div>
+                        <div class="w-10 h-10 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center mb-3">
+                            <i class="fa-solid fa-users-rectangle"></i>
+                        </div>
+                        <h4 class="text-sm font-bold text-white group-hover:text-amber-400 transition">Sala de Juntas</h4>
+                        <p class="text-xs text-gray-400 mt-1 leading-relaxed">4 variantes arquitectónicas con cerramientos acústicos.</p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-slate-700/60 text-xs text-amber-400 flex items-center gap-1 font-bold">
+                        <span>Ver Sala de Juntas</span>
+                        <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    </div>
+                </a>
+
+                <a href="oficina-privada.html" class="p-5 bg-slate-800/80 hover:bg-slate-800 rounded-2xl border border-slate-700 transition flex flex-col justify-between group">
+                    <div>
+                        <div class="w-10 h-10 rounded-xl bg-rose-500/20 text-rose-400 flex items-center justify-center mb-3">
+                            <i class="fa-solid fa-user-tie"></i>
+                        </div>
+                        <h4 class="text-sm font-bold text-white group-hover:text-rose-400 transition">Oficina Privada</h4>
+                        <p class="text-xs text-gray-400 mt-1 leading-relaxed">Despacho de presidencia, terraza privada y cotas acotadas.</p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-slate-700/60 text-xs text-rose-400 flex items-center gap-1 font-bold">
+                        <span>Ver Oficina Privada</span>
+                        <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    </div>
+                </a>
+
+                <a href="cafeteria.html" class="p-5 bg-slate-800/80 hover:bg-slate-800 rounded-2xl border border-slate-700 transition flex flex-col justify-between group">
+                    <div>
+                        <div class="w-10 h-10 rounded-xl bg-amber-600/20 text-amber-500 flex items-center justify-center mb-3">
+                            <i class="fa-solid fa-mug-saucer"></i>
+                        </div>
+                        <h4 class="text-sm font-bold text-white group-hover:text-amber-500 transition">Cafetería Corporativa</h4>
+                        <p class="text-xs text-gray-400 mt-1 leading-relaxed">Comedor con vista panorámica, barra corrida y moodboard.</p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-slate-700/60 text-xs text-amber-500 flex items-center gap-1 font-bold">
+                        <span>Ver Cafetería</span>
+                        <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 text-gray-400 py-10 border-t border-slate-800 text-xs text-center">
+        <div class="max-w-7xl mx-auto px-4 space-y-3">
+            <div class="flex items-center justify-center space-x-2 text-white font-extrabold tracking-wider">
+                <span>RIVERS MALL CÚCUTA</span>
+                <span class="text-emerald-500">•</span>
+                <span class="text-gray-400 font-normal">Oficinas Corporativas & Comercio</span>
+            </div>
+            <p class="text-gray-500">Diseño arquitectónico preliminar y optimización de locales comerciales con entrepiso técnico desmontable.</p>
+            <p class="text-gray-600 text-[11px]">&copy; 2026 Rivers Mall Cúcuta. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Script para Interactividad -->
+    <script>
+        function selectConfig(num) {
+            // Actualizar botones
+            [1, 2, 3].forEach(i => {
+                const btn = document.getElementById('btn-config-' + i);
+                if (btn) {
+                    if (i === num) {
+                        btn.className = 'p-4 bg-slate-900 rounded-2xl border-2 border-emerald-500 shadow-lg cursor-pointer transition';
+                    } else {
+                        btn.className = 'p-4 bg-slate-900/60 rounded-2xl border border-slate-800 cursor-pointer hover:border-emerald-500/50 transition';
+                    }
+                }
+            });
+
+            // Smooth scroll a configuraciones si el usuario desea
+            const targetSection = document.getElementById('configuraciones');
+            if (targetSection) {
+                targetSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+    </script>
+
+</body>
+</html>
